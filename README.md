@@ -56,9 +56,37 @@ User stories will closely follow the above opportunities.  Full disclosure, they
 *Artisan Yarns* will draw quite extensively from the *Boutique Ado* codebase given current developer experience, a 7 week completion deadline and the common themes found on many e-commerce sites.
 
 ## **Scope**
+The above oppurtunities should be prioritised by balancing completion effort and the importance/value of each desired feature.
+User Design (UX) efforts can be categorized into *must*, *should* and *could have*.
 
-  
-## **Structure**   
+**Must Have**
+- Users can view all products
+- Users can view individual product details
+- Users can search for a product by name / description using the searchbar
+- Store owner can add a product
+- Store owner can edit a product
+- Store owner can delete a product
+- Users can register for an account
+- Users can login
+- Users can logout
+- Users can edit their own unique profile
+- Users can view items in their shopping basket
+- Users can adjust the number of items by product line in their shopping basket
+- Users can enter payment details to make a purchase
+
+**Should Have**
+- Users can view products by category
+- Users can view products by cost
+- Users can recover their password
+- Users can receive a confirmation email following their purchase
+- Users can contact the site owners using a webform
+
+**Could Have**
+- n/a
+
+Exploring the scope shows the above features to be critical even for a basic e-commerce site.
+
+## **Structure**
 flowcharts
   
 ### **User Stories:**  
