@@ -1,5 +1,13 @@
 # **Artisan Yarns**
-Introduction paragraph for the project
+Arts and crafts have always been a part of our lives and have enjoyed a resurgence in recent years, not least for their well documented health benefits.
+
+There is a great satisfaction to be gained from embarking on and completing a new project that reflects ones own personal style. (Not unlike coding).
+
+*Artisan* Yarns is is a small e-commerce store for a hypothetical wool supply shop.  Whilst not a unique offering, it is my hope to further develop it after this course.
+
+The demographic of those who knit and crochet goes well beyond the stereotypical grandparent!
+
+Whilst most prefer the experience of going to a store and getting a feel for the goods, sometimes we just want the convenience of an online order delivered straight to our homes.
 
 ![Responsive screenshot showing site on different screen sizes]()
 link to [deployed site]())
@@ -8,9 +16,16 @@ link to [deployed site]())
 # **Planning Phase**
 ## **Strategy** 
 ### **Site Aims:**
-What should the site include?
-Think of it as a way to identify eics from which user stories will be categorised and developed.
+As an *e-commerce* store, a few minimal requirements ought to be included. A user needs to:
+- view the products being sold
+- have a way to make a payment 
+- be able to provide a delivery address.
 
+To customise the user experience, could they save their details for future visits or see their own order history?
+
+How could the store administer their inventory and update their product list and prices?
+
+A *thought shower* with the above questions in mind can help identify features of the store and separate them into epics. 
 
 ### Opportunities:
 What features to include
