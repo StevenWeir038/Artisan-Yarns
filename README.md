@@ -25,22 +25,35 @@ To customise the user experience, could they save their details for future visit
 
 How could the store administer their inventory and update their product list and prices?
 
-A *thought shower* with the above questions in mind can help identify features of the store and separate them into epics. 
+A *thought shower* with the above questions in mind can help identify desired store features and separate them into epics. 
 
 ### Opportunities:
-What features to include
-
-
-Tabulate
+(Scored from 1 minimum to 5 maximum)
 Opportunity | Importance | Viability/Feasibility
 ---|---|---
-Product search | 5 | 5
-Landing page with site overview | 5 | 5
+Users can view all products | 5 | 5
+Users can view products by category | 5 | 5
+Users can view products by cost | 5 | 5
+Users can view individual product details | 5 | 5
+Users can search for a product by name / description using the searchbar | 5 | 5
+Store owner can add a product | 5 | 5
+Store owner can edit a product | 5 | 5
+Store owner can delete a product | 5 | 5
+Users can register for an account | 5 | 5
+Users can login | 5 | 5
+Users can logout | 5 | 5
+Users can recover their password | 5 | 5
+Users can edit their own unique profile | 5 | 5
+Users can view items in their shopping basket | 5 | 5
+Users can adjust the number of items by product line in their shopping basket | 5 | 5
+Users can enter payment details to make a purchase | 5 | 5
+Users can receive a confirmation email following their purchase | 5 | 5
+Users can contact the site owners using a webform | 5 | 5
+Totals | 90 | 90
 
----|---|---
-Totals |  | 
+User stories will closely follow the above opportunities.  Full disclosure, they have been identified in the *Boutique Ado* walkthrough project.
 
-
+*Artisan Yarns* will draw quite extensively from the *Boutique Ado* codebase given current developer experience, a 7 week completion deadline and the common themes found on many e-commerce sites.
 
 ## **Scope**
 
