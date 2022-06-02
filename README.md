@@ -89,7 +89,34 @@ Exploring the scope shows the above features to be critical even for a basic e-c
 ## **Structure**
 flowcharts
   
-### **User Stories:**  
+### **User Stories:**
+
+*EPIC - Correspondance*
+- **As a** site user, **I can** contact the site owners using a webform, **so that** I can correspond with the store.
+
+*EPIC - Viewing and Searching Products*
+- **As a** site user, **I can** view all products, **so that** I can decide what to purchase.
+- **As a** site user, **I can** view products by category, **so that** I can narrow my search range.
+- **As a** site user, **I can** view products by cost, **so that** I can shop within my budget.
+- **As a** site user, **I can** view individual product details, **so that** I can view each product in greater detail.
+- **As a** site user, **I can** search for a product by name / description using the searchbar, **so that** I can see if the store has a product I want.
+
+*EPIC - Authentication and User Profiles*
+- **As a** site user, **I can** register for an account, **so that** I can create my own personal account.
+- **As a** site user, **I can** login/logout, **so that** I can access my personal account.
+- **As a** site user, **I can** recover my password, **so that** I can recover access to my personal account. 
+- **As a** site user, **I can** edit my own unique profile, **so that** I can update my personal details, payment and delivery address information.
+
+*EPIC - Payments & Checkout*
+- **As a** site user, **I can** view items in their shopping basket, **so that** I can see what I am purchasing.
+- **As a** site user, **I can** adjust the number of items by product line in their shopping basket, **so that** I can purchase multiples of the same item.
+- **As a** site user, **I can** enter payment details to make a purchase, **so that** I can make a payment.
+- **As a** site user, **I can** receive a confirmation email following their purchase, **so that** I can confirm I made a purchase.
+
+*EPIC - Inventory Administration and Store Management*
+- **As a** site administrator, **I can** add a product, **so that** I can add new items to the store.
+- **As a** site administrator, **I can** edit a product, **so that** I can change product prices, images and descriptions in the store.
+- **As a** site administrator, **I can** delete a product, **so that** I can remove items from the store.
 
 ## **Skeleton**
 
