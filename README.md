@@ -140,6 +140,7 @@ erd chart
 
 ## **Surface**
 ### **Color scheme**
+The submission of this project falls close to Her Majestys Platinum Jubilee.  In celebration of tohis milestone I have adopted the [official](https://www.royal.uk/sites/default/files/queens_platinum_jubilee_guidelines_2022.pdf) colour scheme of Platinum *#E5E4E2*, Pantone *#61007D* and Gold *#BF9D5E*.
 
 ### **Typography**:
 Fonts used
