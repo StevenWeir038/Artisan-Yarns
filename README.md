@@ -44,12 +44,15 @@ Users can login | 5 | 5
 Users can logout | 5 | 5
 Users can recover their password | 5 | 5
 Users can edit their own unique profile | 5 | 5
+Users can add products to their wishlist.  They may wish to view it further before commiting to a purchase | 5 | 5
 Users can view items in their shopping basket | 5 | 5
 Users can adjust the number of items by product line in their shopping basket | 5 | 5
 Users can enter payment details to make a purchase | 5 | 5
 Users can receive a confirmation email following their purchase | 5 | 5
 Users can contact the site owners using a webform | 5 | 5
-Totals | 90 | 90
+Users can leave reviews/ratings for each product | 5 | 5
+Users can sign up to recieve a newsletter from the site  | 5 | 5
+Totals | 105 | 105
 
 User stories will closely follow the above opportunities.  Full disclosure, they have been identified in the *Boutique Ado* walkthrough project.
 
@@ -80,6 +83,9 @@ User Design (UX) efforts can be categorized into *must*, *should* and *could hav
 - Users can recover their password
 - Users can receive a confirmation email following their purchase
 - Users can contact the site owners using a webform
+- Users can add products to their wishlist.  They may wish to view it further before commiting to a purchase
+- Users can leave reviews/ratings for each product
+- Users can sign up to recieve a newsletter from the site
 
 **Could Have**
 - n/a
@@ -93,6 +99,7 @@ flowcharts
 
 *EPIC - Correspondance*
 - **As a** site user, **I can** contact the site owners using a webform, **so that** I can correspond with the store.
+- **As a** site user, **I can** enter an email address, **so that** I can receive a newsletter from the site
 
 *EPIC - Viewing and Searching Products*
 - **As a** site user, **I can** view all products, **so that** I can decide what to purchase.
@@ -100,6 +107,10 @@ flowcharts
 - **As a** site user, **I can** view products by cost, **so that** I can shop within my budget.
 - **As a** site user, **I can** view individual product details, **so that** I can view each product in greater detail.
 - **As a** site user, **I can** search for a product by name / description using the searchbar, **so that** I can see if the store has a product I want.
+
+*EPIC - Reviewing Products*
+- **As a** site user, **I can** add products to a wishlist, **so that** I can view each product in greater detail before commiting to a purchase.
+- **As a** site user, **I can** leave a review / rating for each product **so that** others can decide if they want to buy the product based upon my experience.
 
 *EPIC - Authentication and User Profiles*
 - **As a** site user, **I can** register for an account, **so that** I can create my own personal account.
@@ -122,13 +133,13 @@ flowcharts
 
 
 ### **Wireframes:**
-
+links to wireframes.
 
 ### **Database Schema**
 erd chart
 
 ## **Surface**
-### **Color scheme:**
+### **Color scheme**
 
 ### **Typography**:
 Fonts used
