@@ -152,20 +152,22 @@ Main areas as seen in varying viewport sizes.  Created using [Balsamiq Cloud](ht
 - [Pay Now](documents/readme/wireframes/pay-now.png "pay now")
 
 ### **Database Schema**
-Initial Entity Relationship Diagram for the project createdusing [Lucidchart](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning).
+Initial Entity Relationship Diagram for the project created using [Lucidchart](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning).
 - ![Pay Now](documents/readme/erd/artisan-yarns-erd.png "artisan yards erd")
 
 ## **Surface**
 ### **Color scheme**
-The submission of this project falls close to Her Majestys Platinum Jubilee.  In celebration of tohis milestone I have adopted the [official](https://www.royal.uk/sites/default/files/queens_platinum_jubilee_guidelines_2022.pdf) colour scheme of Platinum *#E5E4E2*, Pantone *#61007D* and Gold *#BF9D5E*.
+The submission of this project falls close to Her Majestys Platinum Jubilee.  In celebration of this milestone I have adopted the [official](https://www.royal.uk/sites/default/files/queens_platinum_jubilee_guidelines_2022.pdf) colour scheme of Platinum *#E5E4E2*, Pantone *#61007D* and Gold *#BF9D5E*.
 
 ### **Typography**:
 Fonts used
 
 
 # **Agile Development Process**
-Kanban, application used
-  
+[Github Projects](https://github.com/StevenWeir038/Artisan-Yarns/projects) servses as an Agile tool for this project.
+Through it, user stories, issues and tasks are planned and tracked on a weely basis using a basic Kanban.
+
+
 # **Features**
 For example, logo, landing page, site nav, headeer, footer, allauth authentication, pagination, error pages etc
 ## **Logo**
