@@ -191,5 +191,11 @@ Separate document [DEPLOYMENT.md](DEPLOYMENT.md).
 - Logo created using [Tailor Brands](https://studio.tailorbrands.com/)
   
 # **Credits**
-## Mentions  
+## Mentions
+- My mentor [Tim Nelson](https://tim.2bn.dev/) always goes top of the list.  My thanks to him for a year of encouragement and insight.  He truely is committed to his students coding knowledge and personal growth.
+
+- David Bowers and Helena Johansson for their personal support and input.  Just being there means alot.
+
+- The CI Slack community
+
 ## Images
