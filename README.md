@@ -188,8 +188,14 @@ The final Deployed site can be found [here])
 Separate document [DEPLOYMENT.md](DEPLOYMENT.md).
 
 # **Technologies used**
+- Github for repository storage
+- Gitpod IDE/ CI template to develop site
 - Logo created using [Tailor Brands](https://studio.tailorbrands.com/)
-  
+- [Balsamiq Cloud](https://balsamiq.cloud/) to build wireframes
+- [Lucidchart](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning) to build/contectualize database tables/fields and their relationships.
+
+
+
 # **Credits**
 ## Mentions
 - My mentor [Tim Nelson](https://tim.2bn.dev/) always goes top of the list.  My thanks to him for a year of encouragement and insight.  He truely is committed to his students coding knowledge and personal growth.
