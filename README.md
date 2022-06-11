@@ -136,7 +136,7 @@ flowcharts
 
 
 ### **Wireframes**
-Main areas as seen in varying viewport sizes.
+Main areas as seen in varying viewport sizes.  Created using [Balsamiq Cloud](https://balsamiq.cloud/).
 
 - [Home](documents/readme/wireframes/home.png "home")
 - [Contact Us](documents/readme/wireframes/contact-us.png "contact us")
@@ -152,7 +152,8 @@ Main areas as seen in varying viewport sizes.
 - [Pay Now](documents/readme/wireframes/pay-now.png "pay now")
 
 ### **Database Schema**
-erd chart
+Initial Entity Relationship Diagram for the project createdusing [Lucidchart](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning).
+- ![Pay Now](documents/readme/erd/artisan-yarns-erd.png "artisan yards erd")
 
 ## **Surface**
 ### **Color scheme**
