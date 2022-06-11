@@ -11,9 +11,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% endblock %}
 
+    {% block extra_meta %}
+    {% endblock %}
+
     {% block corecss %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    {% endblock %}
+
+    {% block extra_css %}
     {% endblock %}
 
     {% block corejs %}
@@ -25,7 +31,10 @@
     </script>
     {% endblock %}
 
-    <title>Artisan Yarns</title>
+    {% block extra_js %}
+    {% endblock %}
+
+    <title>Artisan Yarns {% block extra_title %}{% endblock %}</title>
 </head>
 
 <body>
