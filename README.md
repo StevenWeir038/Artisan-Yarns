@@ -15,7 +15,7 @@ link to [deployed site]())
 
 # **Planning Phase**
 ## **Strategy** 
-### **Site Aims:**
+### **Site Aims**
 As an *e-commerce* store, a few minimal requirements ought to be included. A user needs to:
 - view the products being sold
 - have a way to make a payment 
@@ -27,7 +27,7 @@ How could the store administer their inventory and update their product list and
 
 A *thought shower* with the above questions in mind can help identify desired store features and separate them into epics. 
 
-### Opportunities:
+### Opportunities
 (Scored from 1 minimum to 5 maximum)
 Opportunity | Importance | Viability/Feasibility
 ---|---|---
@@ -95,45 +95,61 @@ Exploring the scope shows the above features to be critical even for a basic e-c
 ## **Structure**
 flowcharts
   
-### **User Stories:**
+### **User Stories**
 
 *EPIC - Correspondance*
-- **As a** site user, **I can** contact the site owners using a webform, **so that** I can correspond with the store.
-- **As a** site user, **I can** enter an email address, **so that** I can receive a newsletter from the site
+
+1- **As a** site user, **I can** contact the site owners using a webform, **so that** I can correspond with the store.
+
+2- **As a** site user, **I can** enter an email address, **so that** I can receive a newsletter from the site.
 
 *EPIC - Viewing and Searching Products*
-- **As a** site user, **I can** view all products, **so that** I can decide what to purchase.
-- **As a** site user, **I can** view products by category, **so that** I can narrow my search range.
-- **As a** site user, **I can** view products by cost, **so that** I can shop within my budget.
-- **As a** site user, **I can** view individual product details, **so that** I can view each product in greater detail.
-- **As a** site user, **I can** search for a product by name / description using the searchbar, **so that** I can see if the store has a product I want.
+
+3 - **As a** site user, **I can** view all products, **so that** I can decide what to purchase.
+4 - **As a** site user, **I can** view products by category, **so that** I can narrow my search range.
+5 - **As a** site user, **I can** view products by cost, **so that** I can shop within my budget.
+6 - **As a** site user, **I can** view individual product details, **so that** I can view each product in greater detail.
+7 - **As a** site user, **I can** search for a product by name / description using the searchbar, **so that** I can see if the store has a product I want.
 
 *EPIC - Reviewing Products*
-- **As a** site user, **I can** add products to a wishlist, **so that** I can view each product in greater detail before commiting to a purchase.
-- **As a** site user, **I can** leave a review / rating for each product **so that** others can decide if they want to buy the product based upon my experience.
+8 - **As a** site user, **I can** add products to a wishlist, **so that** I can view each product in greater detail before commiting to a purchase.
+9 - **As a** site user, **I can** leave a review / rating for each product **so that** others can decide if they want to buy the product based upon my experience.
 
 *EPIC - Authentication and User Profiles*
-- **As a** site user, **I can** register for an account, **so that** I can create my own personal account.
-- **As a** site user, **I can** login/logout, **so that** I can access my personal account.
-- **As a** site user, **I can** recover my password, **so that** I can recover access to my personal account. 
-- **As a** site user, **I can** edit my own unique profile, **so that** I can update my personal details, payment and delivery address information.
+10 - **As a** site user, **I can** register for an account, **so that** I can create my own personal account.
+11 - **As a** site user, **I can** login/logout, **so that** I can access my personal account.
+12 - **As a** site user, **I can** recover my password, **so that** I can recover access to my personal account. 
+13 - **As a** site user, **I can** edit my own unique profile, **so that** I can update my personal details, payment and delivery address information.
 
 *EPIC - Payments & Checkout*
-- **As a** site user, **I can** view items in their shopping basket, **so that** I can see what I am purchasing.
-- **As a** site user, **I can** adjust the number of items by product line in their shopping basket, **so that** I can purchase multiples of the same item.
-- **As a** site user, **I can** enter payment details to make a purchase, **so that** I can make a payment.
-- **As a** site user, **I can** receive a confirmation email following their purchase, **so that** I can confirm I made a purchase.
+14 - **As a** site user, **I can** view items in their shopping basket, **so that** I can see what I am purchasing.
+15 - **As a** site user, **I can** adjust the number of items by product line in their shopping basket, **so that** I can purchase multiples of the same item.
+16 - **As a** site user, **I can** enter payment details to make a purchase, **so that** I can make a payment.
+17 - **As a** site user, **I can** receive a confirmation email following their purchase, **so that** I can confirm I made a purchase.
 
 *EPIC - Inventory Administration and Store Management*
-- **As a** site administrator, **I can** add a product, **so that** I can add new items to the store.
-- **As a** site administrator, **I can** edit a product, **so that** I can change product prices, images and descriptions in the store.
-- **As a** site administrator, **I can** delete a product, **so that** I can remove items from the store.
+18 - **As a** site administrator, **I can** add a product, **so that** I can add new items to the store.
+19 - **As a** site administrator, **I can** edit a product, **so that** I can change product prices, images and descriptions in the store.
+20 - **As a** site administrator, **I can** delete a product, **so that** I can remove items from the store.
 
 ## **Skeleton**
 
 
-### **Wireframes:**
-links to wireframes.
+### **Wireframes**
+Main areas as seen in varying viewport sizes.
+
+- [Home](documents/readme/wireframes/home.png "home")
+- [Contact Us](documents/readme/wireframes/contact-us.png "contact us")
+- [Products](documents/readme/wireframes/products.png "products")
+- [Product Detail](documents/readme/wireframes/product-detail.png "product detail")
+- [Sign Up](documents/readme/wireframes/sign-up.png "sign up")
+- [Sign In](documents/readme/wireframes/sign-in.png "sign in")
+- [Sign Out](documents/readme/wireframes/sign-out.png "sign out")
+- [Profile](documents/readme/wireframes/profile.png "profile")
+- [Wishlist](documents/readme/wireframes/wishlist.png "wishlist")
+- [Basket](documents/readme/wireframes/basket.png "basket")
+- [Order Confirmation](documents/readme/wireframes/order-confirmation.png "order confirmation")
+- [Pay Now](documents/readme/wireframes/pay-now.png "pay now")
 
 ### **Database Schema**
 erd chart
