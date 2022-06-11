@@ -153,7 +153,8 @@ Main areas as seen in varying viewport sizes.  Created using [Balsamiq Cloud](ht
 
 ### **Database Schema**
 Initial Entity Relationship Diagram for the project created using [Lucidchart](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning).
-- ![Pay Now](documents/readme/erd/artisan-yarns-erd.png "artisan yards erd")
+
+![Pay Now](documents/readme/erd/artisan-yarns-erd.png "artisan yards erd")
 
 ## **Surface**
 ### **Color scheme**
@@ -164,14 +165,16 @@ Fonts used
 
 
 # **Agile Development Process**
-[Github Projects](https://github.com/StevenWeir038/Artisan-Yarns/projects) servses as an Agile tool for this project.
+[Github Projects](https://github.com/StevenWeir038/Artisan-Yarns/projects) serves as an Agile tool for this project.
 Through it, user stories, issues and tasks are planned and tracked on a weely basis using a basic Kanban.
 
 
 # **Features**
 For example, logo, landing page, site nav, headeer, footer, allauth authentication, pagination, error pages etc
-## **Logo**
+After frontend development pass images into README.
 
+## **Logo**
+![Logo](static/images/artisan-logo.png "logo")
 
 # **Future development**
 
@@ -185,7 +188,7 @@ The final Deployed site can be found [here])
 Separate document [DEPLOYMENT.md](DEPLOYMENT.md).
 
 # **Technologies used**
-
+- Logo created using [Tailor Brands](https://studio.tailorbrands.com/)
   
 # **Credits**
 ## Mentions  
