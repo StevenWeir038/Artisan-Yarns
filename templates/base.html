@@ -8,18 +8,26 @@
 </head>
 
 <body>
-    <header class="container-fluid fixed-top"></header>
-    
+    <header class="container-fluid fixed-top">
+        {% include 'includes/header.html' %}
+    </header>
+
+    <!-- messages -->
     {% if messages %}
-    <div class="message-container"></div>
+        <div class="message-container"></div>
     {% endif %}
 
-    {% block page_header %}
+    <!-- main content -->
+    {% block maincontent %}
     {% endblock %}
 
-    {% block content %}
+    <!-- footer (place inside block to give option to use footer on individual pages)-->
+    {% block footer %}
+        {% include 'includes/mobile-footer.html' %}
+        {% include 'includes/main-footer.html' %}
     {% endblock %}
-
+    
+    <!-- js scripts to load at end of page -->
     {% block postloadjs %}
     {% endblock %}
 
