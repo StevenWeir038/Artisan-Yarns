@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-=4p+u)0x+qo9tbm5iciq5!kdgf(b$*8flf2-u!^mn_dmlowdek
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
@@ -43,6 +43,9 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+
+    # custom apps
+    'home',
 ]
 
 MIDDLEWARE = [
@@ -60,7 +63,10 @@ ROOT_URLCONF = 'artisan_yarns.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'templates', 'allauth'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
