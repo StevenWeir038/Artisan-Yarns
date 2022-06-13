@@ -13,3 +13,19 @@
 html {
     scroll-behavior: smooth;
 }
+
+/* header */
+header {
+    background: orange;
+}
+
+/* body */
+
+/* footer */
+#main-footer {
+    background: orangered;
+}
+
+#mobile-footer {
+    background: lightblue;
+}
