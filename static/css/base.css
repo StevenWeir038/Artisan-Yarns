@@ -1,4 +1,4 @@
-/* fonts */
+/* fonts/typography */
 
 
 /* general */
@@ -9,6 +9,17 @@
     box-sizing: border-box;
 }
 
+/* Platinum Jubiliee colors */
+/* hex # to RGB conversion using https://www.rapidtables.com/convert/color/hex-to-rgb.html */
+:root {
+    /* Platinum #E5E4E2 */
+    --theme-platinum: 229, 228, 226;
+    /* Pantone #61007D */
+    --theme-pantone: 97, 0, 125;
+    /* Gold #BF9D5E */
+    --theme-gold: 191, 157, 94;
+}
+
 /* html */
 html {
     scroll-behavior: smooth;
@@ -16,7 +27,7 @@ html {
 
 /* header */
 header {
-    background: orange;
+    background: white;
 }
 
 /* body */
@@ -28,4 +39,26 @@ header {
 
 #mobile-footer {
     background: lightblue;
+}
+
+.footer-newsletter {
+    background: rgba(var(--theme-pantone), 1);
+    border: rgba(var(--theme-gold), 1);
+}
+
+.footer-newsletter p {
+    color: white;
+}
+
+.footer-dev-info {
+    background: rgba(var(--theme-gold), 1);
+}
+
+.btt-btn {
+    background: white;
+    color: rgba(var(--theme-gold), 1);
+}
+
+.footer-envelope {
+    color: rgba(var(--theme-gold), 1);
 }
