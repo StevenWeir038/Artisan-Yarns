@@ -3,19 +3,22 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-    {% include 'includes/head.html' %}
-</head>
+<!-- head -->
+{% include 'includes/head.html' %}
 
 <body>
-    <header class="container-fluid fixed-top">
-        {% include 'includes/header.html' %}
-    </header>
+    <!-- header -->
+    {% include 'includes/header.html' %}
 
     <!-- messages -->
     {% if messages %}
         <div class="message-container"></div>
     {% endif %}
+
+    <!-- to act as an additional header on pages that extend this base template in case we
+    want to put something at the top of those pages but underneath the main header -->
+    {% block page_header %}
+    {% endblock %}
 
     <!-- main content -->
     {% block maincontent %}
@@ -26,7 +29,7 @@
         {% include 'includes/mobile-footer.html' %}
         {% include 'includes/main-footer.html' %}
     {% endblock %}
-    
+
     <!-- js scripts to load at end of page -->
     {% block postloadjs %}
     {% endblock %}
