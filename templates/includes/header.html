@@ -1,7 +1,19 @@
-{% block header %}
-{% endblock %}
+<header class="container-fluid">
 
-<!-- to act as an additional header on pages that extend this base template in case we
-want to put something at the top of those pages but underneath the main header -->
-{% block page_header %}
-{% endblock %}
+    <div class="row">
+        <div class="col-12">
+            <h1>Artisan Yarns</h1>
+        </div>
+        <div class="col-2">Menu
+            <!-- Navigation -->
+            {% include 'includes/navbar.html' %}
+        </div>
+        <div class="col-2">Contact</div>
+        <div class="col-2">Help</div>
+        <div class="col-2">Wishlist</div>
+        <div class="col-2">Account</div>
+        <div class="col-2">Basket</div>
+        <div class="col-12">Searchbar</div>
+    </div>
+
+</header>
