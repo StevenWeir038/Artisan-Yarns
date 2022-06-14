@@ -22,6 +22,7 @@
 
 /* html */
 html {
+    height: 100%;
     scroll-behavior: smooth;
 }
 
@@ -30,7 +31,15 @@ header {
     background: white;
 }
 
+/* spacer to keep header unobstructed*/
+.spacer {
+    height: 164px;
+}
+
 /* body */
+body {
+    height: calc(100vh - 164px);
+}
 
 /* footer */
 #main-footer {
@@ -50,6 +59,16 @@ header {
     color: white;
 }
 
+.footer-contact {
+    background:rgba(var(--theme-platinum), 1);
+    color: black;
+}
+
+.footer-social {
+    background:rgba(var(--theme-platinum), 1);
+    color: black;
+}
+
 .footer-dev-info {
     background: rgba(var(--theme-gold), 1);
 }
@@ -61,4 +80,9 @@ header {
 
 .footer-envelope {
     color: rgba(var(--theme-gold), 1);
+}
+
+.newsletter-button {
+    background:rgba(var(--theme-platinum), 1);
+    color: black;
 }
