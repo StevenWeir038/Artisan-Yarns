@@ -56,6 +56,11 @@ body {
     background: lightblue;
 }
 
+.btt-btn {
+    background: white;
+    color: rgba(var(--theme-gold), 1);
+}
+
 .footer-newsletter {
     background: rgba(var(--theme-pantone), 1);
     border: rgba(var(--theme-gold), 1);
@@ -63,6 +68,15 @@ body {
 
 .footer-newsletter p {
     color: white;
+}
+
+.footer-envelope {
+    color: rgba(var(--theme-gold), 1);
+}
+
+.newsletter-button {
+    background:rgba(var(--theme-platinum), 1);
+    color: black;
 }
 
 .footer-contact {
@@ -86,18 +100,4 @@ body {
 
 .footer-dev-info {
     background: rgba(var(--theme-gold), 1);
-}
-
-.btt-btn {
-    background: white;
-    color: rgba(var(--theme-gold), 1);
-}
-
-.footer-envelope {
-    color: rgba(var(--theme-gold), 1);
-}
-
-.newsletter-button {
-    background:rgba(var(--theme-platinum), 1);
-    color: black;
 }
