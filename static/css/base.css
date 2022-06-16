@@ -20,6 +20,12 @@
     --theme-gold: 191, 157, 94;
 }
 
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+
 /* html */
 html {
     height: 100%;
@@ -67,6 +73,15 @@ body {
 .footer-social {
     background:rgba(var(--theme-platinum), 1);
     color: black;
+}
+
+.footer-social a {
+    color: black;
+}
+
+.footer-social a:hover,
+.footer-social a:focus {
+    color: rgba(var(--theme-pantone), 1);
 }
 
 .footer-dev-info {
