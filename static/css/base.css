@@ -59,6 +59,8 @@ body {
 .btt-btn {
     background: white;
     color: rgba(var(--theme-gold), 1);
+    transform: scale(1.75);
+    margin: 8px 0;
 }
 
 .footer-newsletter {
@@ -74,9 +76,34 @@ body {
     color: rgba(var(--theme-gold), 1);
 }
 
+.footer-newsletter input[type="email"] {
+    border-radius: 18px;
+    padding: 2px 8px;
+    border: 4px solid rgba(var(--theme-gold), 1);
+}
+
+.footer-newsletter input[type="email"]:focus {
+    border-radius: 18px;
+    padding: 2px 8px;
+    background:rgba(var(--theme-platinum), 1);
+}
+
 .newsletter-button {
     background:rgba(var(--theme-platinum), 1);
     color: black;
+    border-radius: 18px;
+    padding: 2px 8px;
+    text-decoration: none;
+    border: 4px solid rgba(var(--theme-gold), 1);
+}
+
+.newsletter-button:hover {
+    background:rgba(var(--theme-gold), 1);
+    color: black;
+    border-radius: 18px;
+    padding: 2px 8px;
+    text-decoration: none;
+    border: 4px solid rgba(var(--theme-platinum), 1);
 }
 
 .footer-contact {
