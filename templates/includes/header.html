@@ -1,23 +1,65 @@
 <header class="container-fluid fixed-top">
 
     <div class="row">
+        <!-- logo -->
         <div class="col-12">
             <h1>Artisan Yarns</h1>
         </div>
-        <div class="col-2">Menu <i class="fa-solid fa-bars"></i>
-            <!-- Navigation -->
-            {% include 'includes/navbar.html' %}
+
+        <!-- Navigation -->
+        <div class="col-2 d-flex align-items-center">
+            <div class="row">
+                <div class="col-6">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="col-6 p-0 text-left">
+                    Menu
+                </div>
+            </div>
+
+        <!-- collapsible navbar-->
+        {% include 'includes/navbar.html' %}
         </div>
+
+        <!-- contact -->
         <div class="col-2 text-center">
             <div class="row">
                 <div class="col-12"><i class="fa-solid fa-phone"></i></div>
                 <div class="col-12">Contact</div>
             </div> 
         </div>
-        <div class="col-2">Help <i class="fa-solid fa-circle-question"></i></div>
-        <div class="col-2">Wishlist <i class="fa-solid fa-heart"></i></div>
-        <div class="col-2">Account <i class="fa-solid fa-user-large"></i></div>
-        <div class="col-2">Basket <i class="fa-solid fa-basket-shopping"></i></div>
+
+        <!-- help -->
+        <div class="col-2 text-center">
+            <div class="row">
+                <div class="col-12"><i class="fa-solid fa-circle-question"></i></div>
+                <div class="col-12">Help</div>
+            </div> 
+        </div>
+
+        <!-- wishlist -->
+        <div class="col-2 text-center">
+            <div class="row">
+                <div class="col-12"><i class="fa-solid fa-heart"></i></div>
+                <div class="col-12">Wishlist</div>
+            </div> 
+        </div>
+
+        <!-- account -->
+        <div class="col-2 text-center">
+            <div class="row">
+                <div class="col-12"><i class="fa-solid fa-user-large"></i></div>
+                <div class="col-12">Account</div>
+            </div> 
+        </div>
+
+        <!-- basket -->
+        <div class="col-2 text-center">
+            <div class="row">
+                <div class="col-12"><i class="fa-solid fa-basket-shopping"></i></div>
+                <div class="col-12">Basket</div>
+            </div> 
+        </div>
 
         <!-- searchbar -->
         <div class="col-12">Searchbar <i class="fa-solid fa-magnifying-glass"></i></div>
