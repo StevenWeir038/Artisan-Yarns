@@ -37,14 +37,40 @@ header {
     background: white;
 }
 
+.gold-icon-border {
+    border: 2px solid rgba(var(--theme-gold), 1);
+}
+
+.pantone-icon-text {
+    color: rgba(var(--theme-pantone), 1);
+    font-size: 0.75em;
+}
+
+.account-icon {
+    color: rgba(var(--theme-pantone), 1);
+}
+
+.searchbar {
+    background: rgba(var(--theme-platinum), 1);
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
 /* spacer to keep header unobstructed*/
 .spacer {
-    height: 164px;
+    height: 186px;
 }
 
 /* body */
 body {
-    height: calc(100vh - 164px);
+    height: calc(100vh - 186px);
 }
 
 /* footer */
@@ -79,13 +105,13 @@ body {
 .footer-newsletter input[type="email"] {
     border-radius: 6px;
     padding: 2px 6px;
-    border: 4px solid rgba(var(--theme-gold), 1);
+    border: 2px solid rgba(var(--theme-gold), 1);
 }
 
 .footer-newsletter input[type="email"]:focus {
     border-radius: 6px;
     padding: 2px 6px;
-    background:rgba(var(--theme-platinum), 1);
+    background: rgba(var(--theme-platinum), 1);
 }
 
 .newsletter-button {
@@ -94,7 +120,7 @@ body {
     border-radius: 6px;
     padding: 2px 6px;
     text-decoration: none;
-    border: 4px solid rgba(var(--theme-gold), 1);
+    border: 2px solid rgba(var(--theme-gold), 1);
 }
 
 .newsletter-button:hover {
@@ -103,7 +129,7 @@ body {
     border-radius: 6px;
     padding: 2px 6px;
     text-decoration: none;
-    border: 4px solid rgba(var(--theme-platinum), 1);
+    border: 2px solid rgba(var(--theme-platinum), 1);
 }
 
 .footer-contact {
