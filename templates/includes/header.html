@@ -1,7 +1,7 @@
-<header class="container-fluid fixed-top p-2">
+<header class="container-fluid fixed-top">
 
-    <!-- logo -->
     <div class="row">
+        <!-- logo -->
         <div class="col-12">
             <h1>Artisan Yarns</h1>
         </div>
@@ -23,7 +23,7 @@
         <!-- contact -->
         <div class="col-2 text-center">
             <div class="row">
-                <div class="col-12"><i class="fa-solid fa-phone gold-icon-border rounded p-2"></i></div>
+                <div class="col-12"><i class="fa-solid fa-phone header-icon gold-icon-border rounded p-2"></i></div>
                 <div class="col-12 pantone-icon-text d-none d-sm-block">Contact</div>
             </div> 
         </div>
@@ -31,7 +31,7 @@
         <!-- help -->
         <div class="col-2 text-center">
             <div class="row">
-                <div class="col-12"><i class="fa-solid fa-circle-question gold-icon-border rounded p-2"></i></div>
+                <div class="col-12"><i class="fa-solid fa-circle-question header-icon gold-icon-border rounded p-2"></i></div>
                 <div class="col-12 pantone-icon-text d-none d-sm-block">Help</div>
             </div> 
         </div>
@@ -39,7 +39,7 @@
         <!-- wishlist -->
         <div class="col-2 text-center">
             <div class="row">
-                <div class="col-12"><i class="fa-solid fa-heart gold-icon-border rounded p-2"></i></div>
+                <div class="col-12"><i class="fa-solid fa-heart header-icon gold-icon-border rounded p-2"></i></div>
                 <div class="col-12 pantone-icon-text d-none d-sm-block">Wishlist</div>
             </div> 
         </div>
@@ -47,7 +47,7 @@
         <!-- account -->
         <div class="col-2 text-center">
             <div class="row">
-                <div class="col-12 account-icon"><i class="fa-solid fa-user-large p-2"></i></div>
+                <div class="col-12 header-icon "><i class="fa-solid fa-user-large p-2"></i></div>
                 <div class="col-12 pantone-icon-text d-none d-sm-block">Account</div>
             </div>
         </div>
@@ -57,23 +57,24 @@
             <div class="row">
                 <div class="col-12"><i class="fa-solid fa-basket-shopping p-2"></i></div>
                 <div class="col-12 pantone-icon-text d-none d-sm-block">Basket</div>
-            </div> 
+            </div>
+        </div>
+
+        <!-- searchbar -->
+        <div class="col-12 py-2 d-flex justify-content-center justify-content-md-end">
+            <form method="GET" action="" class="">
+                <div class="input-group searchbar gold-icon-border rounded">
+                    <input type="text" class="form-control" name="query" placeholder="Search for an item..." aria-label="Type something and press enter or select the icon to search the site">
+                    <div class="input-group-append"></div>
+                        <button class="btn btn-outline-none" type="submit">
+                            <span class="icon">
+                                <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+                            </span>
+                        </button>
+                </div>
+            </form>
         </div>
 
     </div>
 
-    <!-- searchbar -->
-    <div class="col-12 text-center py-2">
-        <form method="GET" action="">
-            <div class="input-group searchbar gold-icon-border rounded">
-                <input type="text" class="form-control" name="query" placeholder="Search for an item..." aria-label="Type something and press enter or select the icon to search the site">
-                <div class="input-group-append"></div>
-                    <button class="btn btn-outline-none" type="submit">
-                        <span class="icon">
-                            <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-                        </span>
-                    </button>
-            </div>
-        </form>
-    </div>
 </header>

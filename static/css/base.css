@@ -46,7 +46,7 @@ header {
     font-size: 0.75em;
 }
 
-.account-icon {
+.header-icon {
     color: rgba(var(--theme-pantone), 1);
 }
 
@@ -54,23 +54,14 @@ header {
     background: rgba(var(--theme-platinum), 1);
 }
 
-/* from Bulma */
-.icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem;
-}
-
 /* spacer to keep header unobstructed*/
 .spacer {
-    height: 186px;
+    height: 208px;
 }
 
 /* body */
 body {
-    height: calc(100vh - 186px);
+    height: calc(100vh - 208px);
 }
 
 /* footer */
