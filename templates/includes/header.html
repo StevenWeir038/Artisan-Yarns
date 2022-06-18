@@ -2,11 +2,14 @@
 
     <div class="row">
         <!-- logo -->
-        <div class="col-12">
-            <h1>Artisan Yarns</h1>
+        <div class="col-12 d-flex align-items-center justify-content-center pb-2">
+            <a href="{% url 'home' %}" class="nav-link">  <!-- still have to create homepage delete comment ance completed and tested --> 
+                <img src="static 'images/artisan-logo.png'" alt="Site logo and home link">  <!-- fix issue - logo not displaying -->
+            </a>
+            
         </div>
 
-        <!-- Navigation -->
+        <!-- Navigation REPLACE THIS WIH COLLAPSIBLE NAV FROM BOOTSTRAP DOCS-->
         <div class="col-2 d-flex align-items-center justify-content-start">
             <div class="row">
                 <div class="col-5 offset-1">
@@ -61,7 +64,7 @@
         </div>
 
         <!-- searchbar -->
-        <div class="col-12 py-2 d-flex justify-content-center justify-content-md-end">
+        <div class="col-12 py-2 d-flex justify-content-center justify-content-sm-end">
             <form method="GET" action="" class="border-0">
                 <div class="input-group searchbar gold-icon-border rounded">
                     <input type="text" class="form-control border-0 searchbar" name="query" placeholder="Search for an item..." aria-label="Type something and press enter or select the icon to search the site">
