@@ -52,7 +52,7 @@ header {
 
 #search-form {
     background: rgba(var(--theme-platinum), 1);
-    max-width: 392px;
+    max-width: 384px;
 }
 
 .search-form-input:hover,
@@ -60,14 +60,19 @@ header {
     background: rgba(var(--theme-platinum), 1);
 }
 
-/* spacer to keep header unobstructed*/
-.spacer {
-    height: 208px;
+/* spacers to keep header unobstructed*/
+.spacer-mobile {
+    height: 240px;
 }
+
+.spacer-tablet {
+    height: 330px;
+}
+
 
 /* body */
 body {
-    height: calc(100vh - 208px);
+    height: calc(100vh - 240px);
 }
 
 /* footer */

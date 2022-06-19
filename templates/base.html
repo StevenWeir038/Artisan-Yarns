@@ -9,10 +9,13 @@
 <body>
     <!-- header -->
     {% include 'includes/header.html' %}
+    <!-- spacer div to prevent header/body overlap -->
+    <div class="spacer-mobile d-md-none"></div>
+    <div class="spacer-tablet d-none d-md-block"></div>
 
     <!-- messages -->
     {% if messages %}
-        <div class="message-container"></div>
+    <div class="message-container"></div>
     {% endif %}
 
     <!-- to act as an additional header on pages that extend this base template in case we
@@ -26,8 +29,8 @@
 
     <!-- footer (place inside block to give option to use footer on individual pages)-->
     {% block footer %}
-        {% include 'includes/mobile-footer.html' %}
-        {% include 'includes/main-footer.html' %}
+    {% include 'includes/mobile-footer.html' %}
+    {% include 'includes/main-footer.html' %}
     {% endblock %}
 
     <!-- js scripts to load at end of page -->
