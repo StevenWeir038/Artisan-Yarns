@@ -62,7 +62,7 @@ header {
 
 .product-nav {
     background: rgba(var(--theme-pantone), 1);
-    
+    max-height: 2em;
 }
 
 .product-nav a{
