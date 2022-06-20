@@ -2,7 +2,6 @@
 
 
 /* general */
-
 *,
 *::before,
 *::after {
@@ -36,6 +35,17 @@ html {
 header {
     background: white;
 }
+/* account menu */
+.dropdown-menu a {
+    text-decoration: none;
+}
+
+.dropdown-menu button:hover,
+.dropdown-menu button:focus {
+    background: rgba(var(--theme-pantone), 1);
+    color: white;
+}
+
 
 .gold-icon-border {
     border: 2px solid rgba(var(--theme-gold), 1);
