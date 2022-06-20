@@ -2,7 +2,9 @@
     <!-- logo -->
     <div class="row">
         <div class="col-8 col-md-12 d-flex justify-content-center">
-            <h1 class="pt-3 px-3">Artisan Yarns</h1>
+            <a href="{% url 'home' %}">
+                <h1 class="pt-3 px-3">Artisan Yarns</h1>
+            </a>
         </div>
         <!-- show collapsible navbar for small viewports -->
         <div class="col-1 offset-1 d-md-none order-first px-1">
@@ -13,28 +15,45 @@
         <!-- contact -->
         <div class="col-2 offset-1 text-center">
             <div class="row">
-                <div class="col-12"><i class="fa-solid fa-phone header-icon gold-icon-border rounded p-2"></i></div>
-                <div class="col-12 pantone-icon-text d-none d-sm-block">Contact</div>
+                <div class="col-12">
+                    <a href="{% url 'contact' %}">
+                        <i class="fa-solid fa-phone header-icon gold-icon-border rounded p-2"></i>
+                    </a>
+                </div>
+                <div class="col-12 pantone-icon-text d-none d-sm-block">
+                    Contact
+                </div>
             </div> 
         </div>
         <!-- help -->
         <div class="col-2 text-center">
             <div class="row">
-                <div class="col-12"><i class="fa-solid fa-circle-question header-icon gold-icon-border rounded p-2"></i></div>
-                <div class="col-12 pantone-icon-text d-none d-sm-block">Help</div>
+                <div class="col-12">
+                    <i class="fa-solid fa-circle-question header-icon gold-icon-border rounded p-2"></i>
+                </div>
+                <div class="col-12 pantone-icon-text d-none d-sm-block">
+                    Help
+                </div>
             </div> 
         </div>
         <!-- wishlist -->
         <div class="col-2 text-center">
             <div class="row">
-                <div class="col-12"><i class="fa-solid fa-heart header-icon gold-icon-border rounded p-2"></i></div>
-                <div class="col-12 pantone-icon-text d-none d-sm-block">Wishlist</div>
+                <div class="col-12">
+                    <a href="{% url 'wishlist' %}">
+                        <i class="fa-solid fa-heart header-icon gold-icon-border rounded p-2"></i>
+                    </a>
+                </div>
+                <div class="col-12 pantone-icon-text d-none d-sm-block">
+                    Wishlist
+                </div>
             </div> 
         </div>
         <!-- account -->
         <div class="col-2 text-center">
             <div class="row">
-                <div class="col-12 header-icon dropdown"><i class="fa-solid fa-user-large p-2 dropdown-toggle" type="button" id="account-menu" data-toggle="dropdown" aria-expanded="false"></i>
+                <div class="col-12 header-icon dropdown">
+                    <i class="fa-solid fa-user-large p-2 dropdown-toggle" type="button" id="account-menu"data-toggle="dropdown" aria-expanded="false"></i>
 
                     <!-- dropdown menu for authentication options et al -->
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="account-menu">
@@ -49,7 +68,6 @@
                         {% endif %}
                     </div>
                 </div>
-
                 <div class="col-12 pantone-icon-text d-none d-sm-block">Account</div>
             </div>
         </div>

@@ -15,16 +15,22 @@
         <!-- links -->
         <div class="row">
             <div class="col-10 offset-1">
-                <i class="fa-solid fa-house-chimney"></i> Home
+                <a href="{% url 'home' %}">
+                    <i class="fa-solid fa-house-chimney"></i> Home
+                </a>
             </div>
             <div class="col-10 offset-1">
-                <i class="fa-solid fa-phone"></i> Contact
+                <a href="{% url 'contact' %}">
+                    <i class="fa-solid fa-phone"></i> Contact
+                </a>
             </div>
             <div class="col-10 offset-1">
                 <i class="fa-solid fa-circle-question"></i> Help
             </div>
             <div class="col-10 offset-1">
-                <i class="fa-solid fa-heart"></i> Wishlist
+                <a href="{% url 'wishlist' %}">
+                    <i class="fa-solid fa-heart"></i> Wishlist
+                </a>
             </div>
         </div>
 
