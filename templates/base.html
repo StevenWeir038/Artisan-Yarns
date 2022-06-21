@@ -20,8 +20,14 @@
 
     <!-- to act as an additional header on pages that extend this base template in case we
     want to put something at the top of those pages but underneath the main header -->
-    {% block page_header %}
-    {% endblock %}
+    <div class="header-container">
+        <div class="row">
+            <div class="col">
+                {% block page_header %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
 
     <!-- main content -->
     {% block maincontent %}

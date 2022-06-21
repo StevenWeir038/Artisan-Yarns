@@ -42,6 +42,10 @@ header {
     background: rgba(var(--theme-platinum), 1);
     color: black;
     text-align: center;
+    font-weight: bold;
+    font-size: large;
+    margin: auto;
+    padding: 0 1em;
 }
 
 .site-logo {
