@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+
+    # allauth
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -53,6 +55,7 @@ INSTALLED_APPS = [
     'profiles',
     'contact',
     'wishlist',
+    'checkout',
 ]
 
 MIDDLEWARE = [
