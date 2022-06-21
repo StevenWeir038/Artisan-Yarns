@@ -1,10 +1,9 @@
 <header class="container-fluid fixed-top">
     <!-- logo -->
-    <div class="row">
-        <div class="col-8 col-md-12 d-flex justify-content-center site-logo">
-            <a href="{% url 'home' %}">
-            </a>
-        </div>
+    <div class="row d-flex justify-content-center">
+        <a href="{% url 'home' %}">
+            <div class="col-12 site-logo"></div>
+        </a>
         <!-- show collapsible navbar for small viewports -->
         <div class="col-1 offset-1 d-md-none order-first px-1">
             {% include 'includes/navbar.html' %}
@@ -94,11 +93,9 @@
         {% include 'includes/searchbar.html' %}
     </div>
 
-
-    
-</header>
-    <!-- help modal REVIEW BEST POSITION TO PLACE IN FILE -->
+    <!-- help modal -->
     {% include 'includes/help-modal.html' %}
+</header>
 
 
 
