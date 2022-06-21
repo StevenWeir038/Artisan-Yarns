@@ -38,6 +38,12 @@ header {
     background: white;
 }
 
+.site-logo {
+    background: url('/media/artisan-logo.png') center no-repeat;
+    height: 67px;
+    width: 216px;
+}
+
 /* menus */
 .navbar-collapse {
     background: rgba(var(--theme-pantone), 1);
