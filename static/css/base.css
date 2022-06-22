@@ -238,36 +238,52 @@ li .nav-item {
 }
 
 /* homepage */
-.home-clearance-img-1,
-.home-clearance-img-2 {
+.home-img-clearance h4 {
+    background: rgba(var(--theme-pantone), 1);
+    color: white;
+    position: relative;
+    bottom: -264px;
+    border-radius: 0 0 5px 5px;
+    margin-bottom: 0;
+}
+
+.home-img h4 span {
+    background: rgba(var(--theme-pantone), 1);
+    color: white;
+    border-radius: 5px 5px 0 0;
+    padding: 0 5px;
+    position: relative;
+    bottom: -262px;
+}
+.home-img-1 {
     background: url('/media/landing1.png') center no-repeat;
     background-size: cover;
     width: 600px;
     height: 300px;
 }
 
-.home-clearance-img-2 {
+.home-img-2 {
     background: url('/media/landing2.png') center no-repeat;
     background-size: cover;
     width: 600px;
     height: 300px;
 }
 
-.home-clearance-img-3 {
+.home-img-3 {
     background: url('/media/landing3.png') center no-repeat;
     background-size: cover;
     width: 50%;
     height: 300px;
 }
 
-.home-clearance-img-4 {
+.home-img-4 {
     background: url('/media/landing4.png') center no-repeat;
     background-size: cover;
     width: 50%;
     height: 300px;
 }
 
-.home-clearance-img-5 {
+.home-img-5 {
     background: url('/media/landing5.png') center no-repeat;
     background-size: cover;
     width: 50%;
