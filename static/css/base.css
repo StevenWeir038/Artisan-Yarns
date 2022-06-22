@@ -66,10 +66,6 @@ body {
     text-align: right;
 }
 
-.allauth-inner-content .signup button{
-    
-}
-
 /* header */
 header {
     background: white;
@@ -196,7 +192,8 @@ li .nav-item {
     background: rgba(var(--theme-platinum), 1);
 }
 
-.newsletter-button {
+.newsletter-button,
+.allauth-inner-content button {
     background:rgba(var(--theme-platinum), 1);
     color: black;
     border-radius: 6px;
@@ -205,7 +202,10 @@ li .nav-item {
     border: 2px solid rgba(var(--theme-gold), 1);
 }
 
-.newsletter-button:hover {
+.newsletter-button:hover,
+.newsletter-button:focus,
+.allauth-inner-content button:hover,
+.allauth-inner-content button:focus {
     background:rgba(var(--theme-gold), 1);
     color: black;
     border-radius: 6px;
