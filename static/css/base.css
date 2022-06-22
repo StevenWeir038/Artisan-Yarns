@@ -53,15 +53,15 @@ body {
 }
 
 /* allauth forms */
-.allauth-inner-content p a{
+.allauth-inner-content a {
     color: rgba(var(--theme-pantone), 1);
 }
 
-.allauth-inner-content p a:hover{
+.allauth-inner-content p a:hover {
     text-decoration: underline;
 }
 
-.allauth-inner-content .signup p label{
+.allauth-inner-content p label {
     min-width: 153px;
     text-align: right;
 }

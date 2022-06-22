@@ -8,8 +8,6 @@
 
 {% block inner_content %}
 
-<!-- <h1>{% trans "Sign Up" %}</h1> -->
-
 <p class="text-center">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a> instead.{% endblocktrans %}</p>
 
 <form class="signup d-flex-column align-items-center justify-content-center text-center" id="signup_form" method="post" action="{% url 'account_signup' %}">
