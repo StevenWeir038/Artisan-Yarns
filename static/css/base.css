@@ -237,6 +237,42 @@ li .nav-item {
     background: rgba(var(--theme-gold), 1);
 }
 
+/* homepage */
+.home-clearance-img-1,
+.home-clearance-img-2 {
+    background: url('/media/landing1.png') center no-repeat;
+    background-size: cover;
+    width: 600px;
+    height: 300px;
+}
+
+.home-clearance-img-2 {
+    background: url('/media/landing2.png') center no-repeat;
+    background-size: cover;
+    width: 600px;
+    height: 300px;
+}
+
+.home-clearance-img-3 {
+    background: url('/media/landing3.png') center no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 300px;
+}
+
+.home-clearance-img-4 {
+    background: url('/media/landing4.png') center no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 300px;
+}
+
+.home-clearance-img-5 {
+    background: url('/media/landing5.png') center no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 300px;
+}
 
 /* media query md / 768px */
 @media only screen and (min-width: 768px) {

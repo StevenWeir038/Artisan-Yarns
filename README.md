@@ -193,6 +193,7 @@ Separate document [DEPLOYMENT.md](DEPLOYMENT.md).
 - Logo created using [Tailor Brands](https://studio.tailorbrands.com/)
 - [Balsamiq Cloud](https://balsamiq.cloud/) to build wireframes
 - [Lucidchart](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning) to build/contectualize database tables/fields and their relationships.
+- [Adobe Express](https://express.adobe.com/sp) to resize images
 
 
 
@@ -205,3 +206,9 @@ Separate document [DEPLOYMENT.md](DEPLOYMENT.md).
 - The CI Slack community
 
 ## Images
+Images taken from unsplash.
+- Landing page image 1 by [Karen Penrose](https://unsplash.com/photos/06ZTGDcAQFs)
+- Landing page image 2 by [Olliss](https://unsplash.com/photos/bXYBPscCnQc)
+- Landing page image 3 by [Kelly Sikkema](https://unsplash.com/photos/M6lApC0hEpg)
+- Landing page image 4 by [Cintia](https://mypoppet.com.au/makes/make-a-giant-magic-yarn-ball-from-yarn-scraps/)
+- Landing page image 5 by [Olliss](https://unsplash.com/photos/7mJj0Boa4jc)
