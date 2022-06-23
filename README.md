@@ -156,12 +156,22 @@ Initial Entity Relationship Diagram for the project created using [Lucidchart](h
 
 ![Pay Now](documents/readme/erd/artisan-yarns-erd.png "artisan yards erd")
 
+UPDATE:
+
+A major flaw with the initial ERD is that items can only belong to one category.  This is too simplisic for the real world.
+
+A particular product will have the characteristics of belonging to both a brand and weight for example.
+
+The category table became somewhat more redundant and served to identify clearance items on queries.
+
+Best solution at this point was to add a brand and category field to the Product model.  Queries could be built of that.  This meant updating the model and making migrations again.
+
 ## **Surface**
 ### **Color scheme**
 The submission of this project falls close to Her Majestys Platinum Jubilee.  In celebration of this milestone I have adopted the [official](https://www.royal.uk/sites/default/files/queens_platinum_jubilee_guidelines_2022.pdf) colour scheme of Platinum *#E5E4E2*, Pantone *#61007D* and Gold *#BF9D5E*.
 
 ### **Typography**:
-Fonts used
+Crafting embues a homemade quality.  *Happy Monkey* cursive font supports this as it appears handwritten.  This has been limited to titles and subheadings for readability.
 
 
 # **Agile Development Process**
@@ -177,7 +187,7 @@ After frontend development pass images into README.
 ![Logo](static/images/artisan-logo.png "logo")
 
 # **Future development**
-
+Why not introduce a colour field into the product model to enhance product searches?  Matching colour is an integral part when selecting yarn for projects.
 
 # **Testing Phase**
 
@@ -195,8 +205,7 @@ Separate document [DEPLOYMENT.md](DEPLOYMENT.md).
 - [Balsamiq Cloud](https://balsamiq.cloud/) to build wireframes
 - [Lucidchart](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning) to build/contectualize database tables/fields and their relationships.
 - [Adobe Express](https://express.adobe.com/sp) to crop/resize images
-
-
+- [Pillow](https://pillow.readthedocs.io/en/stable/index.html) to display product image fields.
 
 # **Credits**
 ## Mentions
@@ -205,6 +214,7 @@ Separate document [DEPLOYMENT.md](DEPLOYMENT.md).
 - David Bowers and Helena Johansson for their personal support and input.  Just being there means alot.
 
 - The CI Slack community
+- [The Spruce](https://www.google.com/search?q=yarn+weights&rlz=1C1CHBF_enGB798GB798&tbm=isch&source=iu&ictx=1&vet=1&fir=BQ2vxWKzXIGV-M%252C2DziQcFqDw_1GM%252C_%253B-q9lbQ790NJA7M%252Cd0r7KMH96MKkXM%252C_%253BghAgYuU1Mkd0AM%252C5XxAZ9DCXUEpmM%252C_%253BoMKhkyb6LVgL8M%252C8DJRGcSzIT5FpM%252C_%253BoFmAvPyPDhLTeM%252CPOPUPMZDOIwXEM%252C_%253Bsio_5yPcSpblhM%252Cuw4hoiDQCPSziM%252C_%253BOtnXG_I689btLM%252Cn28eU-0aen0XWM%252C_%253Bb_G1ozWA-n8UrM%252CQ8f1TjrDlrkb8M%252C_%253BjKGTpBPrkFaduM%252COd35IuVvdS1RvM%252C_%253BnVH89PCPv7cvnM%252C94fp5E7wlZzEDM%252C_%253B__wvHj1OWU-14M%252Cg_I5WqW1b8Bx3M%252C_%253BB894wUvPOHINsM%252CAUX-s_h3V8VRRM%252C_%253BSLcEsJITgL1fqM%252CLss4mpiOTdrCBM%252C_%253BT6d04DPlKm4jzM%252CpL9IJwO0zlQgeM%252C_%253B555JRiZbSgTDhM%252CTtBoyL8JvpUmhM%252C_%253BqHYCDc1q9guQGM%252CTIhdpGfsdkoBiM%252C_&usg=AI4_-kQvtyzGRv7ffgq_pMRkGnpxrlOPkA&sa=X&ved=2ahUKEwjzi8zG08P4AhXTSUEAHUU6CNoQ9QF6BAgIEAE#imgrc=BQ2vxWKzXIGV-M) for their useful information on yarn weights.
 
 ## Images
 Images taken from unsplash.
