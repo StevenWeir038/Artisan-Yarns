@@ -191,9 +191,10 @@ Separate document [DEPLOYMENT.md](DEPLOYMENT.md).
 - Github for repository storage
 - Gitpod IDE/ CI template to develop site
 - Logo created using [Tailor Brands](https://studio.tailorbrands.com/)
+- Fonts generated using [Google Fonts](https://fonts.google.com/)
 - [Balsamiq Cloud](https://balsamiq.cloud/) to build wireframes
 - [Lucidchart](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning) to build/contectualize database tables/fields and their relationships.
-- [Adobe Express](https://express.adobe.com/sp) to resize images
+- [Adobe Express](https://express.adobe.com/sp) to crop/resize images
 
 
 
