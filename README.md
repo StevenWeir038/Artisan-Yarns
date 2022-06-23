@@ -223,3 +223,11 @@ Images taken from unsplash.
 - Landing page image 3 by [Kelly Sikkema](https://unsplash.com/photos/M6lApC0hEpg)
 - Landing page image 4 by [Cintia](https://mypoppet.com.au/makes/make-a-giant-magic-yarn-ball-from-yarn-scraps/)
 - Landing page image 5 by [Olliss](https://unsplash.com/photos/7mJj0Boa4jc)
+
+Product Images
+
+- [Yummy](https://www.chenilleyarn.co.uk/)
+- [Adriafil](https://www.woolstack.co.uk/)
+- [Scheppjes](https://www.scheepjes.com/)
+- [New Fashion](https://www.thewoolfactory.co.uk/)
+- [Needles and Hooks](https://www.etsy.com/)
