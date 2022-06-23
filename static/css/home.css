@@ -1,0 +1,77 @@
+/* home css */
+/* base.css file getting unwieldy so move classes used in home app only to this location */
+
+/* homepage */
+.home-img {
+    border: 3px solid rgba(var(--theme-platinum), 1);
+}
+
+.home-img:hover {
+    border: 3px solid rgba(var(--theme-gold), 1);
+}
+
+.home-img a:hover {
+    text-decoration: none;
+}
+
+.home-img-enter-store {
+    background:rgba(var(--theme-gold), 1);
+    color: black;
+    position: relative;
+    bottom: -258px;
+    border-radius: 0 0 3px 3px;
+    margin-bottom: 0;
+}
+
+.home-img-clearance h4 {
+    background: rgba(var(--theme-pantone), 1);
+    color: white;
+    position: relative;
+    bottom: -258px;
+    border-radius: 0 0 3px 3px;
+    margin-bottom: 0;
+}
+
+.home-img h4 span {
+    background: rgba(var(--theme-pantone), 1);
+    color: white;
+    border-radius: 5px 5px 0 0;
+    padding: 0 5px;
+    position: relative;
+    bottom: -257px;
+}
+
+.home-img-1 {
+    background: url('/media/landing1.png') center no-repeat;
+    background-size: cover;
+    width: 600px;
+    height: 300px;
+}
+
+.home-img-2 {
+    background: url('/media/landing2.png') center no-repeat;
+    background-size: cover;
+    width: 600px;
+    height: 300px;
+}
+
+.home-img-3 {
+    background: url('/media/landing3.png') center no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 300px;
+}
+
+.home-img-4 {
+    background: url('/media/landing4.png') center no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 300px;
+}
+
+.home-img-5 {
+    background: url('/media/landing5.png') center no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 300px;
+}
