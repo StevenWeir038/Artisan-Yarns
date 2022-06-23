@@ -1,16 +1,10 @@
 /* home css */
-/* base.css file getting unwieldy so move classes used in home app only to this location */
-
-/* homepage */
 .home-img {
     border: 3px solid rgba(var(--theme-platinum), 1);
 }
 
 .home-img:hover {
     border: 3px solid rgba(var(--theme-gold), 1);
-}
-
-.home-img a:hover {
     text-decoration: none;
 }
 
