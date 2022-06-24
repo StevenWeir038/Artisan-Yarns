@@ -20,10 +20,12 @@
                     </div>
                 </div>
                 <div class="products-container col-12 col-md-9 col-lg-10 border">
-                    Products Cards
-
-                    {{ products }}
-
+                    <div class="row">
+                    {% for product in products %}
+                        <!-- display individual product card-->
+                        {% include 'products/includes/product-card.html' %}
+                    {% endfor %}
+                    </div>
                 </div>
             </div>
 
