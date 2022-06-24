@@ -25,6 +25,7 @@ class Product(models.Model):
         ADRIAFIL = 'Adriafil'
         SCHEPPJES = 'Scheppjes'
         NEWFASHION = 'New Fashion'
+        OTHER = 'Other'
 
     class ProductWeight(models.TextChoices):
         """ subclass choices for weights """
@@ -35,11 +36,12 @@ class Product(models.Model):
         BULKY = 'Bulky (Chunky, Craft, Rug)'
         SUPER_BULKY = 'Super Bulky (Bulky, Roving)'
         JUMBO = 'Jumbo (Jumbo, Roving)'
+        OTHER = 'Other'
 
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
-    brand = models.CharField(max_length=50, choices=ProductBrand.choices)
-    weight = models.CharField(max_length=50, choices=ProductWeight.choices)
+    brand = models.CharField(max_length=20, choices=ProductBrand.choices, null=True, blank=True,)
+    weight = models.CharField(max_length=50, choices=ProductWeight.choices, null=True, blank=True,)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image = models.ImageField(null=True, blank=True)
