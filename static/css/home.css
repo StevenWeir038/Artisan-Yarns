@@ -13,7 +13,7 @@
     background:rgba(var(--theme-gold), 1);
     color: black;
     position: relative;
-    bottom: -258px;
+    bottom: -333px;
     border-radius: 0 0 3px 3px;
     margin-bottom: 0;
 }
@@ -22,7 +22,7 @@
     background: rgba(var(--theme-pantone), 1);
     color: white;
     position: relative;
-    bottom: -258px;
+    bottom: -333px;
     border-radius: 0 0 3px 3px;
     margin-bottom: 0;
 }
@@ -39,15 +39,15 @@
 .home-img-1 {
     background: url('/media/landing1.png') center no-repeat;
     background-size: cover;
-    width: 600px;
-    height: 300px;
+    width: 500px;
+    height: 375px;
 }
 
 .home-img-2 {
     background: url('/media/landing2.png') center no-repeat;
     background-size: cover;
-    width: 600px;
-    height: 300px;
+    width: 500px;
+    height: 375px;
 }
 
 .home-img-3 {
