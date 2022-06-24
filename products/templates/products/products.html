@@ -6,10 +6,24 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                Page content...
+    <div class="container-fluid text-center">
+        <div class="container-inner">
+            <div class="row">
+                <div class="border text-right col-12">Sort By Label and Dropdown</div>
+            </div>
+
+            <div class="row row-cols-md-2">
+                <div class="col-12 col-md-3 col-lg-2">
+                    <div class="border row">
+                        <div class="category-title col-12">Category Title</div>
+                        <div class="category-filter border text-left d-none d-md-block col-12">Category Filter (show on md screens +)</div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-9 col-lg-10 border">Products Cards</div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 border">Pagination</div>
             </div>
         </div>
     </div>
