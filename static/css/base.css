@@ -84,12 +84,6 @@ header {
     padding: 0 1em;
 }
 
-.site-logo {
-    background: url('/media/artisan-logo.png') center no-repeat;
-    min-height: 67px;
-    min-width: 216px;
-}
-
 /* menus */
 .navbar-collapse {
     background: rgba(var(--theme-pantone), 1);
