@@ -22,12 +22,34 @@
                 <div class="products-container col-12 col-md-9 col-lg-10 border">
                     <div class="row">
                         {% for product in products %}
-                        <div class="border col-12">
-        
-                            <!-- display individual product card-->
-                            {% include 'products/includes/product-card.html' %}
-                        </div>
+                            <div class="border p-2 col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                                <!-- display individual product card-->
+                                {% include 'products/includes/product-card.html' %}
+                            </div>
+                            
+                            {% if forloop.counter|divisibleby:1 %}
+                                <div class="col-12 d-md-none">
+                                    <hr>
+                                </div>
+                            {% endif %}
+                            {% if forloop.counter|divisibleby:2 %}
+                                <div class="col-12 d-none d-sm-none d-md-block d-lg-none">
+                                    <hr>
+                                </div>
+                            {% endif %}
+                            {% if forloop.counter|divisibleby:3 %}
+                                <div class="col-12 d-none d-lg-block d-xl-none">
+                                    <hr>
+                                </div>
+                            {% endif %}
+                            {% if forloop.counter|divisibleby:4 %}
+                                <div class="col-12 d-none d-xl-block">
+                                    <hr>
+                                </div>
+                            {% endif %}
+
                         {% endfor %}
+
                     </div>
                 </div>
             </div>
