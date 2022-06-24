@@ -1,0 +1,16 @@
+/* products css */
+
+/* to remove x-overflow */
+.container-inner {
+    margin: 1em 0;
+    padding: 0 1em;
+}
+
+.category-title {
+    background: rgba(var(--theme-pantone), 1);
+    color: white;
+}
+
+.category-filter {
+    background: rgba(var(--theme-platinum), 1);
+}
