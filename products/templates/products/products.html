@@ -12,8 +12,8 @@
                 <div class="border text-right col-12">Sort By Label and Dropdown</div>
             </div>
 
-            <div class="row row-cols-md-2">
-                <div class="col-12 col-md-3 col-lg-2">
+            <div class="row row-cols-md-3">
+                <div class="content-title-filter border col-12 col-md-3 col-lg-2">
                     <div class="border row">
                         <div class="category-title col-12">Category Title</div>
                         <div class="category-filter border text-left d-none d-md-block col-12">Category Filter (show on md screens +)</div>
@@ -21,10 +21,13 @@
                 </div>
                 <div class="products-container col-12 col-md-9 col-lg-10 border">
                     <div class="row">
-                    {% for product in products %}
-                        <!-- display individual product card-->
-                        {% include 'products/includes/product-card.html' %}
-                    {% endfor %}
+                        {% for product in products %}
+                        <div class="border col-12">
+        
+                            <!-- display individual product card-->
+                            {% include 'products/includes/product-card.html' %}
+                        </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>

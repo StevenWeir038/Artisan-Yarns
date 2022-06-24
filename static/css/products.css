@@ -6,15 +6,23 @@
     padding: 0 1em;
 }
 
+.content-title-filter,
+.category-filter {
+    background: rgba(var(--theme-platinum), 1);
+}
+
 .category-title {
     background: rgba(var(--theme-pantone), 1);
     color: white;
 }
 
-.category-filter {
-    background: rgba(var(--theme-platinum), 1);
-}
-
 .products-container {
     
+}
+
+/* media query md / 768px */
+    @media only screen and (min-width: 768px) {
+    .category-title {
+        text-align: left;
+    }
 }
