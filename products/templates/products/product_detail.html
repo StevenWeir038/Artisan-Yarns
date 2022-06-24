@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <h2>Product Detail</h2>
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid text-center">
+        <div class="container-inner">
+            <div class="row">
+                <div class="border text-right col-12">Sort By Label and Dropdown</div>
+            </div>
+            <div class="row row-cols-md-3">
+                <div class="content-title-filter border col-12 col-md-3 col-lg-2">
+                    <div class="border row">
+                        <div class="category-title col-12">Category Title</div>
+                        <div class="category-filter border text-left d-none d-md-block col-12">Category Filter (show on md screens +)</div>
+                    </div>
+                </div>
+                <div class="products-container col-12 col-md-9 col-lg-10 border">
+                    <div class="row py-3 d-flex-column align-items-center justify-content-start">
+                        {% for product in products %}
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                                <!-- display individual product card-->
+                                {% include 'products/includes/product-card.html' %}
+                            </div>
+                            {% if forloop.counter|divisibleby:1 %}
+                                <div class="col-12 d-md-none">
+                                    <hr>
+                                </div>
+                            {% endif %}
+                            {% if forloop.counter|divisibleby:2 %}
+                                <div class="col-12 d-none d-sm-none d-md-block d-lg-none">
+                                    <hr>
+                                </div>
+                            {% endif %}
+                            {% if forloop.counter|divisibleby:3 %}
+                                <div class="col-12 d-none d-lg-block d-xl-none">
+                                    <hr>
+                                </div>
+                            {% endif %}
+                            {% if forloop.counter|divisibleby:4 %}
+                                <div class="col-12 d-none d-xl-block">
+                                    <hr>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <!-- Pagination -->
+            <div class="row">
+                <div class="pagination d-flex align-items-center justify-content-center px-0 py-2 col-12 border">
+                    <span class="step-links">
+                        {% if products.has_previous %}
+                            <a href="?page=1">&laquo; First</a>
+                            <a href="?page={{ products.previous_page_number }}">Previous</a>
+                        {% endif %}
+                        <span class="current font-weight-bold">
+                            Page {{ products.number }} of {{ products.paginator.num_pages }}.
+                        </span>
+                        {% if products.has_next %}
+                            <a href="?page={{ products.next_page_number }}">Next</a>
+                            <a href="?page={{ products.paginator.num_pages }}">Last &raquo;</a>
+                        {% endif %}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
