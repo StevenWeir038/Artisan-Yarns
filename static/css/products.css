@@ -21,7 +21,16 @@
 }
 
 .product-card {
-    background: greenyellow;
+    background: rgba(var(--theme-platinum), 1);
+}
+
+.product-card-body {
+    background: rgba(var(--theme-platinum), 1);
+    min-height: 70px;
+}
+
+.product-card-footer {
+    background: rgba(var(--theme-platinum), 1);
 }
 
 .pagination {
