@@ -189,6 +189,7 @@ li .nav-item {
     background: rgba(var(--theme-platinum), 1);
 }
 
+.product-details-button,
 .newsletter-button,
 .allauth-inner-content button {
     background:rgba(var(--theme-platinum), 1);
@@ -199,6 +200,7 @@ li .nav-item {
     border: 2px solid rgba(var(--theme-gold), 1);
 }
 
+.product-details-button:hover,
 .newsletter-button:hover,
 .newsletter-button:focus,
 .allauth-inner-content button:hover,
