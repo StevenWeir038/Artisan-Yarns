@@ -4,7 +4,7 @@ from django.db.models import Q
 from .models import Product
 
 # Pagination
-from django.core.paginator import Paginator
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
 def all_products(request):
@@ -12,10 +12,17 @@ def all_products(request):
     query = None
 
     # Set up pagination
-    products = Product.objects.all()
-    products_list = Paginator(Product.objects.all(), 10)
-    page = request.GET.get('page')
-    products_list = products_list.get_page(page)
+    products_list = Product.objects.all()
+    page = request.GET.get('page', 1)
+
+    paginator = Paginator(products_list, 10)
+
+    try:
+        products = paginator.page(page)
+    except PageNotAnInteger:
+        products = paginator.page(1)
+    except EmptyPage:
+        products = paginator.page(paginator.num_pages)
 
     if request.GET:
         if 'q' in request.GET:
@@ -25,11 +32,10 @@ def all_products(request):
                 return redirect(reverse('products'))
 
             queries = Q(name__icontains=query) | Q(description__icontains=query)
-            products = products.filter(queries)
+            products = products_list.filter(queries)
 
     context = {
         'products': products,
-        'products_list': products_list,
         'search_term': query,
     }
 
@@ -37,7 +43,7 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-    """ how individual product details """
+    """ Show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
 
