@@ -16,10 +16,6 @@
     color: white;
 }
 
-.products-container {
-    
-}
-
 .product-card {
     background: rgba(var(--theme-platinum), 1);
 }
@@ -52,3 +48,5 @@
             text-align: left;
         }
     }
+
+/* product_details css */

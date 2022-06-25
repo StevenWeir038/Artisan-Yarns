@@ -11,11 +11,19 @@
             <!-- product detail section -->
             <div class="border row row-col-md-2">
                 <!-- Product Image -->
-                <div class="border col-12 col-md-4">
-                    Product Image
+                <div class="border p-0 col-12 col-md-4">
+                    {% if product.image %}
+                        <a href="{{ product.image.url }}" target="_blank">
+                            <img class=" rounded card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        </a>
+                        {% else %}
+                        <a href="">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no-image.png" alt="{{ product.name }}">
+                        </a>
+                    {% endif %}
                 </div>
                 <!-- Product Details -->
-                <div class="border col-12 col-md-8">
+                <div class="border d-flex align-items-stretch text-left col-12 col-md-8">
                     <div class="border row">
                         <div class="border col-12">Product Title</div>
                         <div class="border col-12">Add Review / Edit Delete Product (store owner only)</div>
@@ -23,7 +31,7 @@
                         <div class="border col-12">Product Description</div>
                         <div class="border col-12">Quantity (with Increment Bar)</div>
                         <div class="border col-12">Cost</div>
-                        <div class="border col-12">Buttons
+                        <div class="border col-12 col-md-auto">Buttons
                             <!-- Buttons -->
                             <div class="row">
                                 <div class="col-3">Button - Add to Wishlist</div>
