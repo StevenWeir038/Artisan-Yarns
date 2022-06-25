@@ -33,13 +33,13 @@
     background: rgba(var(--theme-platinum), 1);
 }
 
-
-/* media query pagination @ 430px */
-@media only screen and (max-width: 430px) {
-    .pagination {
-            font-size: x-small;
-        }
-    }
+.pagination li {
+    font-size: 1.5em;
+    border: 2px solid rgba(var(--theme-gold), 1);
+    border-radius: 0.25em;
+    padding: 10px;
+    margin: 10px;
+}
 
 
 /* media query md / 768px */
@@ -48,6 +48,7 @@
             text-align: left;
         }
     }
+
 
 /* product_details css */
 .product-details-title {
