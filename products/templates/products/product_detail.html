@@ -6,16 +6,40 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container-fluid text-center">
-        <div class="container-inner">
-            <!-- product detail card -->
-            <div class="row">
-                <div class="border col-12">Product Detail</div>
+    <div class="container-fluid">
+        <div class="container-inner d-flex align-items-center justify-content-center text-center">
+            <!-- product detail section -->
+            <div class="border row row-col-md-2">
+                <!-- Product Image -->
+                <div class="border col-12 col-md-4">
+                    Product Image
+                </div>
+                <!-- Product Details -->
+                <div class="border col-12 col-md-8">
+                    <div class="border row">
+                        <div class="border col-12">Product Title</div>
+                        <div class="border col-12">Add Review / Edit Delete Product (store owner only)</div>
+                        <div class="border col-12">Product Review Rating / Number of Reviews</div>
+                        <div class="border col-12">Product Description</div>
+                        <div class="border col-12">Quantity (with Increment Bar)</div>
+                        <div class="border col-12">Cost</div>
+                        <div class="border col-12">Buttons
+                            <!-- Buttons -->
+                            <div class="row">
+                                <div class="col-3">Button - Add to Wishlist</div>
+                                <div class="col-3">Button - Add to Basket</div>
+                                <div class="col-3">Button - Checkout</div>
+                                <div class="col-3">Button - Back to Store</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <!-- product review -->
-            <div class="row">
-                <div class="border col-12">Product Review</div>
+        </div>
+        <!-- product review section -->
+        <div class="container-inner">
+            <div class="border row">
+                <div class="border col-12">Product Review Section</div>
             </div>
         </div>
     </div>
