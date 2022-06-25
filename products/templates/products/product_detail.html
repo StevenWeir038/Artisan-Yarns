@@ -24,17 +24,17 @@
                 </div>
                 <!-- Product Details -->
                 <div class="border d-flex align-items-stretch text-left col-12 col-md-10 offset-md-1 col-lg-7 offset-lg-0">
-                    <div class="border row">
-                        <div class="border col-12">Product Title</div>
+                    <div class="product-details border row">
+                        <div class="product-details-title border col-12">{{ product.name }}</div>
                         <div class="border col-12">Add Review / [Edit | Delete Product (store owner only)]</div>
                         <div class="border col-12">Product Review Rating / Number of Reviews</div>
-                        <div class="border col-12">Category</div>
-                        <div class="border col-12">Product Brand</div>
-                        <div class="border col-12">Product Weight</div>
-                        <div class="border col-12">Product Description</div>
-                        <div class="border col-12">Cost</div>
-                        <div class="border col-12">Quantity (with Increment Bar)</div>
-                        <div class="border col-12 col-md-auto">Buttons
+                        <div class="border col-12"><span>Category: </span>{{ product.category }}</div>
+                        <div class="border col-12"><span>Brand: </span>{{ product.brand }}</div>
+                        <div class="border col-12"><span>Weight: </span>{{ product.weight }}</div>
+                        <div class="border col-12"><span>Description: </span>{{ product.description }}</div>
+                        <div class="border col-12"><span>Price: </span>£{{ product.price }}</div>
+                        <div class="border col-12"><span>Quantity: </span>(with Increment Bar)</div>
+                        <div class="border col-12 col-md-auto">
                             <!-- Buttons -->
                             <div class="row">
                                 <div class="col-3">Button - Add to Wishlist</div>
