@@ -141,6 +141,13 @@ li .nav-item {
     color: white;
 }
 
+.product-nav {
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 5000;
+}
+
 .navbar-toggler {
     color: black;
 }
@@ -248,7 +255,6 @@ li .nav-item {
 }
     .product-nav {
         background: rgba(var(--theme-pantone), 1);
-        max-height: 2.5em;
     }
 
     .product-nav a{
