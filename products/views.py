@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
+from django.db.models.functions import Lower
 from .models import Product, Category
 
 # Pagination
@@ -10,8 +11,9 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 def all_products(request):
     """ Show all products including sort by and search queries """
     query = None
-    categories = None
     products = None
+    categories = None
+    weights = None
     sort = None
     direction = None
 
@@ -34,12 +36,19 @@ def all_products(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 products = products.annotate(lower_name=Lower('name'))
-
+            if sortkey == 'category':
+                sortkey = 'category__name'
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
+
+        if 'weight_light' in request.GET:
+            weights = products_list.filter(weight__icontains='light')
+
+        if 'range' in request.GET:
+            range = products_list.filter(brand__icontains='Scheepjes')
 
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
@@ -65,6 +74,7 @@ def all_products(request):
         'products': products,
         'search_term': query,
         'current_categories': categories,
+        'weights': weights,
         'current_sorting': current_sorting,
     }
 

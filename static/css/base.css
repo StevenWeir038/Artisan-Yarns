@@ -142,10 +142,9 @@ li .nav-item {
 }
 
 .product-nav {
-    position: fixed;
-    top:0;
-    left: 0;
-    z-index: 5000;
+    position: relative;
+    top: -16px;
+    left: -35px;
 }
 
 .navbar-toggler {
@@ -255,6 +254,9 @@ li .nav-item {
 }
     .product-nav {
         background: rgba(var(--theme-pantone), 1);
+        position: relative;
+        top: 3px;
+        left: -0px;
     }
 
     .product-nav a{

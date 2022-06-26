@@ -20,21 +20,21 @@
     </div>
     <div class="row">
         <div class="col-12 gold-icon-border border-left-0 border-right-0">
-            <h3>Shop By Category</h3>
+            <h3>Things you may like...</h3>
         </div>
     </div>
     <div class="row d-flex justify-content-around">
-        <a href="" alt="Shop by yarn brand" aria-label="Shop by yarn brand"
+        <a href="{% url 'products' %}?range=Scheepjes" alt="Shop by yarn brand" aria-label="Shop by yarn brand"
             class="col-12 col-md-5 col-lg-3 p-0 mx-2 my-2 rounded home-img home-img-3">
-            <h4><span>Brand</span></h4>
+            <h4><span>Schweepjes Range</span></h4>
         </a>
-        <a href="" alt="Shop by yarn weight" aria-label="Shop by yarn weight"
+        <a href="{% url 'products' %}?weight_light=Light (DK, Light, Worsted)" alt="Shop by yarn weight" aria-label="Shop by yarn weight"
             class="col-12 col-md-5 col-lg-3 p-0 mx-2 my-2 rounded home-img home-img-4">
-            <h4><span>Weight</span></h4>
+            <h4><span>Lighter Weights</span></h4>
         </a>
         <a href="{% url 'products' %}?category=kit" alt="Shop for kit" aria-label="Shop for needles, hooks and other accessories"
             class="col-12 col-md-6 col-lg-3 p-0 mx-2 my-2 rounded home-img home-img-5">
-            <h4><span>Kit</span></h4>
+            <h4><span>Kit & Accessories</span></h4>
         </a>
     </div>
 </div>
