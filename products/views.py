@@ -11,6 +11,7 @@ def all_products(request):
     """ Show all products including sort by and search queries """
     query = None
     categories = None
+    products = None
 
     # Set up pagination
     products_list = Product.objects.all()
@@ -29,6 +30,10 @@ def all_products(request):
             categories = request.GET['category'].split(',')
             products = products_list.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
+
+        # Create search by brand and weight here.  Will need to add to dropdown menu.
+        # Shortcuts from homepage now redundant as individual options needed for
+        # each brand option.
 
         if 'q' in request.GET:
             query = request.GET['q']

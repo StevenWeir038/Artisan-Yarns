@@ -11,16 +11,13 @@
                     <a class="nav-link" href="{% url 'products' %}">All Products</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Brand</a>
+                    <a class="nav-link" href="{% url 'products' %}?category=yarn">Yarn</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Weight</a>
+                    <a class="nav-link" href="{% url 'products' %}?category=kit">Kit</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Kit</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Clearance</a>
+                    <a class="nav-link" href="{% url 'products' %}?category=clearance">Clearance</a>
                 </li>
             </ul>
         </div>
