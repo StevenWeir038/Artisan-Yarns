@@ -24,7 +24,7 @@
                 <div class="col-12 col-md-8 order-md-first">
                     <p class="text-muted text-center text-md-left">
                         <span><a href="{% url 'products' %}">Products Home</a> | </span>
-                        <span class="small">products on this page: {{ products|length }}{% if search_term %} found for </span><strong>"{{ search_term }}"</strong>{% endif %}
+                        <span class="small">products on page: {{ products|length }}{% if search_term %} found for </span><strong>"{{ search_term }}"</strong>{% endif %}
                     </p>
                 </div>
             </div>

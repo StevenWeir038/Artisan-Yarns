@@ -13,9 +13,10 @@ def all_products(request):
     query = None
     products = None
     categories = None
-    weights = None
     sort = None
     direction = None
+    home_range = None
+    home_weight = None
 
     # Set up pagination
     products_list = Product.objects.all()
@@ -30,6 +31,11 @@ def all_products(request):
         products = paginator.page(paginator.num_pages)
 
     if request.GET:
+        if 'category' in request.GET:
+            categories = request.GET['category'].split(',')
+            products = products_list.filter(category__name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
+
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
             sort = sortkey
@@ -44,16 +50,13 @@ def all_products(request):
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
 
-        if 'weight_light' in request.GET:
-            weights = products_list.filter(weight__icontains='light')
 
-        if 'range' in request.GET:
-            range = products_list.filter(brand__icontains='Scheepjes')
+        # BUG still displaying all products...
+        if 'home_range' in request.GET:
+            home_range = products_list.filter(brand__icontains='Scheppjes')
 
-        if 'category' in request.GET:
-            categories = request.GET['category'].split(',')
-            products = products_list.filter(category__name__in=categories)
-            categories = Category.objects.filter(name__in=categories)
+        if 'home_weight' in request.GET:
+            home_weight = products_list.filter(weight__icontains='Light')
 
         # Create search by brand and weight here.  Will need to add to dropdown menu.
         # Shortcuts from homepage now redundant as individual options needed for
@@ -74,7 +77,8 @@ def all_products(request):
         'products': products,
         'search_term': query,
         'current_categories': categories,
-        'weights': weights,
+        'home_range': home_range,
+        'home_weight': home_weight,
         'current_sorting': current_sorting,
     }
 
