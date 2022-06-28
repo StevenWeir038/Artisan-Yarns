@@ -51,7 +51,7 @@ def all_products(request):
             products = products.order_by(sortkey)
 
 
-        # BUG still displaying all products...
+        # BUGstill displaying all products...
         if 'home_range' in request.GET:
             home_range = products_list.filter(brand__icontains='Scheppjes')
 
