@@ -1,0 +1,1 @@
+web: gunicorn artisan_yarns.wsgi.application
