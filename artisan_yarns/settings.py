@@ -112,7 +112,7 @@ ACCOUNT_USERNAME_MIN_LENGTH = 6  # minimum user name length
 LOGIN_URL = '/accounts/login/'  # the login url
 LOGIN_REDIRECT_URL = '/'  # url to redirect back to after logging in
 
-WSGI_APPLICATION = 'artisan_yarns.wsgi.application'
+WSGI_APPLICATION = 'artisan-yarns.wsgi.application'
 
 
 # Database

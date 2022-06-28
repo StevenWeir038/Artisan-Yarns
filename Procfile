@@ -1,1 +1,1 @@
-web: gunicorn artisan_yarns.wsgi.application
+web: gunicorn artisan-yarns.wsgi.application
