@@ -33,7 +33,17 @@
                         <div class="border col-12"><span>Weight: </span>{{ product.weight }}</div>
                         <div class="border col-12"><span>Description: </span>{{ product.description }}</div>
                         <div class="border col-12"><span>Price: </span>£{{ product.price }}</div>
-                        <div class="border col-12"><span>Quantity: </span>(with Increment Bar)</div>
+
+                        <!-- Quantity inut -->
+                        <div class="border col-12 d-flex justify-content-start">
+                            <div class="input-group">
+                                <span class="pl-0 pr-2">Quantity: </span>
+                                <span>
+                                <input class="form-control qty_input text-center" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                </span>
+                            </div>
+                        </div>
+
                         <div class="border col-12 p-0">
                             <!-- Buttons -->
                             <div class="border d-flex-column align-items-center justify-content-around text-center row row-col-1 row-col-sm-2 row-col-lg-4 p-1 m-0">
