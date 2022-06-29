@@ -34,38 +34,40 @@
                         <div class="border col-12"><span>Description: </span>{{ product.description }}</div>
                         <div class="border col-12"><span>Price: </span>£{{ product.price }}</div>
 
-                        <!-- Quantity inut -->
-                        <div class="border col-12 d-flex justify-content-start">
-                            <div class="input-group">
-                                <span class="pl-0 pr-2">Quantity: </span>
-                                <span>
-                                <input class="form-control qty_input text-center" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
-                                </span>
-                            </div>
-                        </div>
-
-                        <div class="border col-12 p-0">
-                            <!-- Buttons -->
-                            <div class="border d-flex-column align-items-center justify-content-around text-center row row-col-1 row-col-sm-2 row-col-lg-4 p-1 m-0">
-                                <a href="#" class="py-2 py-sm-0 my-2 product-details-button col-12 col-sm-5 col-lg-2">
-                                    <i class="fa-solid fa-plus"></i>
-                                    <i class="fa-solid fa-heart header-icon rounded d-sm-none"></i>
-                                    <span class="d-none d-sm-block">Wishlist </span>
-                                </a>
-                                <a href="#" class="py-2 py-sm-0 my-2 product-details-button col-12 col-sm-5 col-lg-2">
-                                    <i class="fa-solid fa-plus"></i>
-                                    <i class="fa-solid fa-basket-shopping d-sm-none"></i>
-                                    <span class="d-none d-sm-block">Basket </span>
-                                </a>
-                                <a href="#" class="py-2 py-sm-0 my-2 product-details-button col-12 col-sm-5 col-lg-2">
-                                    <i class="fa-solid fa-credit-card d-xs-none"></i>
-                                    <span class="d-none d-sm-block">Pay Now</span>
-                                </a>
-                                <a href="{% url 'products' %}" class="py-2 py-sm-0 my-2 product-details-button col-12 col-sm-5 col-lg-2">
-                                    <i class="fa-solid fa-shop d-xs-none">
-                                    </i><span class="d-none d-sm-block">To Store</span>
-                                </a>
-                            </div>
+                        <!-- Quantity input -->
+                        <div class="border col-12 d-flex align-items-center justify-content-start p-0">
+                            <form class="form col-12 pl-0" action="" method="POST">
+                                {% csrf_token %}
+                                <div class="input-group">
+                                    <span class="pl-0 pr-2 pt-1">Quantity: </span>
+                                    <span>
+                                    <input class="form-control qty_input text-center" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                    </span>
+                                </div>
+                                <div class="border col-12 p-0 d-flex-column align-items-center">
+                                    <!-- Form buttons -->
+                                    <div class="border d-flex-column align-items-center justify-content-around text-center row row-col-1 row-col-sm-2 row-col-lg-4 px-0 py-1 m-0">
+                                        <a href="#" class="py-2 py-sm-0 my-1 product-details-button col-12 col-sm-5 col-lg-2">
+                                            <i class="fa-solid fa-plus"></i>
+                                            <i class="fa-solid fa-heart header-icon rounded d-sm-none"></i>
+                                            <span class="d-none d-sm-block">Wishlist </span>
+                                        </a>
+                                        <a href="#" class="py-2 py-sm-0 my-1 product-details-button col-12 col-sm-5 col-lg-2">
+                                            <i class="fa-solid fa-plus"></i>
+                                            <i class="fa-solid fa-basket-shopping d-sm-none"></i>
+                                            <span class="d-none d-sm-block">Basket </span>
+                                        </a>
+                                        <a href="#" class="py-2 py-sm-0 my-1 product-details-button col-12 col-sm-5 col-lg-2">
+                                            <i class="fa-solid fa-credit-card d-xs-none"></i>
+                                            <span class="d-none d-sm-block">Pay Now</span>
+                                        </a>
+                                        <a href="{% url 'products' %}" class="py-2 py-sm-0 my-1 product-details-button col-12 col-sm-5 col-lg-2">
+                                            <i class="fa-solid fa-shop d-xs-none">
+                                            </i><span class="d-none d-sm-block">To Store</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
