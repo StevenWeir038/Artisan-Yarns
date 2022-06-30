@@ -24,17 +24,18 @@
         </div>
     </div>
     <div class="row d-flex justify-content-around">
-        <a href="{% url 'products' %}?home_range=Scheepjes" alt="Shop by yarn brand" aria-label="Shop by yarn brand"
+        <a href="{% url 'products' %}?category=scheepjes" alt="Shop by yarn brand" aria-label="Shop by scheepjes brand"
             class="col-12 col-md-5 col-lg-3 p-0 mx-2 my-2 rounded home-img home-img-3">
             <h4><span>Schweepjes Range</span></h4>
         </a>
+        <!-- bug to fix - how to query by product weight in all_product view -->
         <a href="{% url 'products' %}?home_weight=Light (DK, Light, Worsted)" alt="Shop by yarn weight" aria-label="Shop by yarn weight"
             class="col-12 col-md-5 col-lg-3 p-0 mx-2 my-2 rounded home-img home-img-4">
             <h4><span>Lighter Weights</span></h4>
         </a>
-        <a href="{% url 'products' %}?category=kit" alt="Shop for kit" aria-label="Shop for needles, hooks and other accessories"
+        <a href="{% url 'products' %}?category=accessories" alt="Shop for kit" aria-label="Shop for needles, hooks and other accessories"
             class="col-12 col-md-6 col-lg-3 p-0 mx-2 my-2 rounded home-img home-img-5">
-            <h4><span>Kit & Accessories</span></h4>
+            <h4><span>Accessories</span></h4>
         </a>
     </div>
 </div>
