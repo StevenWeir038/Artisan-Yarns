@@ -7,8 +7,13 @@
 
         <div class="col collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'products' %}">Products</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
+                    <div class="dropdown-menu p-0 border-0" aria-labelledby="all-products-link">
+                        <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+                        <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                        <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'products' %}?category=yarn">Yarn</a>
