@@ -45,7 +45,7 @@ def all_products(request):
                 direction = request.GET['direction']
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
-            products = products_list.order_by(sortkey)
+                products = products_list.order_by(sortkey) # Fix bug in sortkey lowername not recognised
 
         if 'q' in request.GET:
             query = request.GET['q']
