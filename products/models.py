@@ -23,7 +23,7 @@ class Product(models.Model):
         """ subclass choices for brands """
         YUMMY = 'Yummy'
         ADRIAFIL = 'Adriafil'
-        SCHEPPJES = 'Scheppjes'
+        SCHEEPJES = 'Scheepjes'
         NEWFASHION = 'New Fashion'
         OTHER = 'Other'
 
