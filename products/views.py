@@ -11,17 +11,14 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 def all_products(request):
     """ Show all products including sort by and search queries """
     query = None
-    products = None
     categories = None
     sort = None
     direction = None
-    home_range = None
-    home_weight = None
 
     # Set up pagination
     products_list = Product.objects.all()
     page = request.GET.get('page', 1)
-    paginator = Paginator(products_list, 10)
+    paginator = Paginator(products_list, 8)
 
     try:
         products = paginator.page(page)
@@ -41,26 +38,14 @@ def all_products(request):
             sort = sortkey
             if sortkey == 'name':
                 sortkey = 'lower_name'
-                products = products.annotate(lower_name=Lower('name'))
+                products = products_list.annotate(lower_name=Lower('name'))
             if sortkey == 'category':
                 sortkey = 'category__name'
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
-            products = products.order_by(sortkey)
-
-
-        # BUGstill displaying all products...
-        if 'home_range' in request.GET:
-            home_range = products_list.filter(brand__icontains='Scheppjes')
-
-        if 'home_weight' in request.GET:
-            home_weight = products_list.filter(weight__icontains='Light')
-
-        # Create search by brand and weight here.  Will need to add to dropdown menu.
-        # Shortcuts from homepage now redundant as individual options needed for
-        # each brand option.
+            products = products_list.order_by(sortkey)
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -77,8 +62,6 @@ def all_products(request):
         'products': products,
         'search_term': query,
         'current_categories': categories,
-        'home_range': home_range,
-        'home_weight': home_weight,
         'current_sorting': current_sorting,
     }
 
