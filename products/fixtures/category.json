@@ -1,0 +1,24 @@
+{
+    "model": "products.category",
+    "pk": 3,
+    "fields": {
+      "name": "kit",
+      "friendly_name": "Kit"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 4,
+    "fields": {
+      "name": "clearance",
+      "friendly_name": "Clearance"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 5,
+    "fields": {
+      "name": "yarn",
+      "friendly_name": "Yarn"
+    }
+  }

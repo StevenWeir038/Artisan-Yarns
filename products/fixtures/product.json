@@ -1,0 +1,260 @@
+{
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+      "category": 5,
+      "name": "Adriafil Knitcol Chagall Fancy",
+      "brand": "Adriafil",
+      "weight": "Meduim (Afgan, Aran, Worsted)",
+      "description": "This yarn knits up beautifully to give a lovely jacquard effect.  The dyeing has been worked out on a multicoloured thread just to achieve this.  So, by simply working with plain and purl stitches, you will get a coloured, striped pattern with a beautiful jacquard effect.  It really is as simple as that!",
+      "price": "4.50",
+      "image": "adriafil-knitcol-chagall-fancy_BlsyPN2.png"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+      "category": 5,
+      "name": "Adriafil Knitcol Gericault Fancy",
+      "brand": "Adriafil",
+      "weight": "Meduim (Afgan, Aran, Worsted)",
+      "description": "This yarn knits up beautifully to give a lovely jacquard effect.  The dyeing has been worked out on a multicoloured thread just to achieve this.  So, by simply working with plain and purl stitches, you will get a coloured, striped pattern with a beautiful jacquard effect.  It really is as simple as that!",
+      "price": "4.50",
+      "image": "adriafil-knitcol-gericault-fancy_WWiDPYw.png"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+      "category": 4,
+      "name": "Adriafil Knitcol Kandinsky Phantasy",
+      "brand": "Adriafil",
+      "weight": "Meduim (Afgan, Aran, Worsted)",
+      "description": "This yarn knits up beautifully to give a lovely jacquard effect.  The dyeing has been worked out on a multicoloured thread just to achieve this.  So, by simply working with plain and purl stitches, you will get a coloured, striped pattern with a beautiful jacquard effect.  It really is as simple as that!",
+      "price": "4.50",
+      "image": "adriafil-knitcol-kandinsky-phantasy_X7GTlrk.png"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+      "category": 5,
+      "name": "Adriafil Knitcol Verdi Fancy",
+      "brand": "Adriafil",
+      "weight": "Meduim (Afgan, Aran, Worsted)",
+      "description": "This yarn knits up beautifully to give a lovely jacquard effect.  The dyeing has been worked out on a multicoloured thread just to achieve this.  So, by simply working with plain and purl stitches, you will get a coloured, striped pattern with a beautiful jacquard effect.  It really is as simple as that!",
+      "price": "4.50",
+      "image": "adriafil-knitcol-verdi-fancy_6QLJ6mE.png"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+      "category": 5,
+      "name": "New Fashion DK Cornflower",
+      "brand": "New Fashion",
+      "weight": "Meduim (Afgan, Aran, Worsted)",
+      "description": "New Fashion DK is ideal for almost any project. 100% acrylic yarn spun to a high quality, this double knitting yarn is fantastic value and the colour palette available will surely suit to all tastes.",
+      "price": "2.00",
+      "image": "newfashion-cornflower_ZsUgsm4.png"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+      "category": 5,
+      "name": "New Fashion DK Inca",
+      "brand": "New Fashion",
+      "weight": "Meduim (Afgan, Aran, Worsted)",
+      "description": "New Fashion DK is ideal for almost any project. 100% acrylic yarn spun to a high quality, this double knitting yarn is fantastic value and the colour palette available will surely suit to all tastes.",
+      "price": "2.00",
+      "image": "newfashion-inca_pfuB6iw.png"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 7,
+    "fields": {
+      "category": 5,
+      "name": "New Fashion DK Mustard",
+      "brand": "New Fashion",
+      "weight": "Meduim (Afgan, Aran, Worsted)",
+      "description": "New Fashion DK is ideal for almost any project. 100% acrylic yarn spun to a high quality, this double knitting yarn is fantastic value and the colour palette available will surely suit to all tastes.",
+      "price": "2.00",
+      "image": "newfashion-mustard_ioyLnRN.png"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 8,
+    "fields": {
+      "category": 4,
+      "name": "Scheepjes Soft Brush Lilac",
+      "brand": "Scheppjes",
+      "weight": "Meduim (Afgan, Aran, Worsted)",
+      "description": "Made from 50% Superwash Extra Fine Merino Wool, 25% Microfibre and 25% Acrylic, this yarn has the same composition and soft touch as Scheepjes Merino Soft. The extra fine structure of the Merino fibres gives Merino Soft Brush its silky soft look and feel. The softness of this yarn makes it very suitable for garments and accessories such as wraps and shawls.",
+      "price": "3.00",
+      "image": "scheepjes-softbrush-lilac_97oj2nM.png"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 9,
+    "fields": {
+      "category": 5,
+      "name": "Scheepjes Soft Brush White",
+      "brand": "Scheppjes",
+      "weight": "Meduim (Afgan, Aran, Worsted)",
+      "description": "Made from 50% Superwash Extra Fine Merino Wool, 25% Microfibre and 25% Acrylic, this yarn has the same composition and soft touch as Scheepjes Merino Soft. The extra fine structure of the Merino fibres gives Merino Soft Brush its silky soft look and feel. The softness of this yarn makes it very suitable for garments and accessories such as wraps and shawls.",
+      "price": "3.00",
+      "image": "scheepjes-softbrush-white_SXQPgWP.png"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 10,
+    "fields": {
+      "category": 5,
+      "name": "Scheepjes Whirlette Bitter Coffee",
+      "brand": "Scheppjes",
+      "weight": "Light (DK, Light, Worsted)",
+      "description": "Scheepjes Whirlette is made of a mix of 60% cotton and 40% acrylic, which makes the result light and comfortable to wear.\r\nThe single-coloured yarn can be combined with our popular Scheepjes Whirl yarn, to create your own unique colour combination.\r\nEach cake ball contains 455-meter soft yarn - Perfect for shawls, accessories, clothes and interior projects.",
+      "price": "6.00",
+      "image": "scheepjes-whislette-bittercoffee_5YAxsRf.png"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 11,
+    "fields": {
+      "category": 5,
+      "name": "Scheepjes Whirlette Crushed Candy",
+      "brand": "Scheppjes",
+      "weight": "Light (DK, Light, Worsted)",
+      "description": "Scheepjes Whirlette is made of a mix of 60% cotton and 40% acrylic, which makes the result light and comfortable to wear.\r\nThe single-coloured yarn can be combined with our popular Scheepjes Whirl yarn, to create your own unique colour combination.\r\nEach cake ball contains 455-meter soft yarn - Perfect for shawls, accessories, clothes and interior projects.",
+      "price": "6.00",
+      "image": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 12,
+    "fields": {
+      "category": 5,
+      "name": "Scheepjes Whirlette Chewy",
+      "brand": "Scheppjes",
+      "weight": "Light (DK, Light, Worsted)",
+      "description": "Scheepjes Whirlette is made of a mix of 60% cotton and 40% acrylic, which makes the result light and comfortable to wear.\r\nThe single-coloured yarn can be combined with our popular Scheepjes Whirl yarn, to create your own unique colour combination.\r\nEach cake ball contains 455-meter soft yarn - Perfect for shawls, accessories, clothes and interior projects.",
+      "price": "6.00",
+      "image": "scheepjes-whislette-chewy_DbSuovF.png"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 14,
+    "fields": {
+      "category": 5,
+      "name": "Scheepjes Whirlette Tangy Olive",
+      "brand": "Scheppjes",
+      "weight": "Light (DK, Light, Worsted)",
+      "description": "Scheepjes Whirlette is made of a mix of 60% cotton and 40% acrylic, which makes the result light and comfortable to wear.\r\nThe single-coloured yarn can be combined with our popular Scheepjes Whirl yarn, to create your own unique colour combination.\r\nEach cake ball contains 455-meter soft yarn - Perfect for shawls, accessories, clothes and interior projects.",
+      "price": "6.00",
+      "image": "scheepjes-whislette-tangyolive_oH43Nev.png"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 15,
+    "fields": {
+      "category": 5,
+      "name": "King Cole Yummy Champagne",
+      "brand": "Yummy",
+      "weight": "Bulky (Chunky, Craft, Rug)",
+      "description": "The delicious Yummy from King Cole is a chenille effect yarn that's ideal for baby makes. Made from 100% polyester, it's machine washable for easy care and comes in a range of tasty striped colour combinations plus solid white. It knits on 6mm needles to chunky weight patterns.",
+      "price": "4.25",
+      "image": "yummy-champagne_qBJvJSV.png"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 16,
+    "fields": {
+      "category": 5,
+      "name": "King Cole Yummy Mint",
+      "brand": "Yummy",
+      "weight": "Bulky (Chunky, Craft, Rug)",
+      "description": "The delicious Yummy from King Cole is a chenille effect yarn that's ideal for baby makes. Made from 100% polyester, it's machine washable for easy care and comes in a range of tasty striped colour combinations plus solid white. It knits on 6mm needles to chunky weight patterns.",
+      "price": "4.25",
+      "image": "yummy-mint_iAjmho7.png"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 17,
+    "fields": {
+      "category": 5,
+      "name": "King Cole Yummy Silver",
+      "brand": "Yummy",
+      "weight": "Bulky (Chunky, Craft, Rug)",
+      "description": "The delicious Yummy from King Cole is a chenille effect yarn that's ideal for baby makes. Made from 100% polyester, it's machine washable for easy care and comes in a range of tasty striped colour combinations plus solid white. It knits on 6mm needles to chunky weight patterns.",
+      "price": "4.25",
+      "image": "yummy-silver_xctpniL.png"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 18,
+    "fields": {
+      "category": 5,
+      "name": "King Cole Yummy Teddy",
+      "brand": "Yummy",
+      "weight": "Bulky (Chunky, Craft, Rug)",
+      "description": "The delicious Yummy from King Cole is a chenille effect yarn that's ideal for baby makes. Made from 100% polyester, it's machine washable for easy care and comes in a range of tasty striped colour combinations plus solid white. It knits on 6mm needles to chunky weight patterns.",
+      "price": "4.25",
+      "image": "yummy-teddy_69cBRLj.png"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 19,
+    "fields": {
+      "category": 5,
+      "name": "King Cole Yummy Turqouise",
+      "brand": "Yummy",
+      "weight": "Bulky (Chunky, Craft, Rug)",
+      "description": "The delicious Yummy from King Cole is a chenille effect yarn that's ideal for baby makes. Made from 100% polyester, it's machine washable for easy care and comes in a range of tasty striped colour combinations plus solid white. It knits on 6mm needles to chunky weight patterns.",
+      "price": "4.25",
+      "image": "yummy-torqouise_TNcVcw2.png"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 20,
+    "fields": {
+      "category": 3,
+      "name": "Wooden Crochet Hooks and Bowl",
+      "brand": "Other",
+      "weight": "Other",
+      "description": "These stylish crochet hooks come with a wide grip and should help ease any discomfort during those large projects!\r\nThe ornamental wooden bowl will keep your yarn from getting tangled.",
+      "price": "30.00",
+      "image": "crochethooksandbowl_vEHkfyl.png"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 21,
+    "fields": {
+      "category": 3,
+      "name": "Wooden Knitting Needle Set",
+      "brand": "Other",
+      "weight": "Other",
+      "description": "This set of wooden needles is suitable for most projects.\r\nEach needle has been crafted to the highest standard.",
+      "price": "15.00",
+      "image": "woodenknittingneedlesset_ERWkGVV.png"
+    }
+  }
