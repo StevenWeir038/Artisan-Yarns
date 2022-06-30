@@ -15,11 +15,18 @@
                         <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'products' %}?category=yarn">Yarn</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" id="all-yarns-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Yarns</a>
+                    <div class="dropdown-menu p-0 border-0" aria-labelledby="all-yarns-link">
+                        <a href="{% url 'products' %}?category=adriafil,king_cole,new_fashion,scheepjes" class="dropdown-item ">All Yarns</a>
+                        <a href="{% url 'products' %}?category=adriafil" class="dropdown-item">Adriafil</a>
+                        <a href="{% url 'products' %}?category=king_cole" class="dropdown-item ">King Cole</a>
+                        <a href="{% url 'products' %}?category=new_fashion" class="dropdown-item ">New Fashion</a>
+                        <a href="{% url 'products' %}?category=scheepjes" class="dropdown-item ">Scheepjes</a>
+                    </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'products' %}?category=kit">Kit</a>
+                    <a class="nav-link" href="{% url 'products' %}?category=accessories">Accessories</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'products' %}?category=clearance">Clearance</a>
