@@ -109,9 +109,11 @@ li .nav-item {
 }
 
 .dropdown-menu button:hover,
-.dropdown-menu button:focus {
+.dropdown-menu button:focus,
+.dropdown-item {
     background: rgba(var(--theme-pantone), 1);
     color: white;
+    border: 2px solid rgba(var(--theme-pantone), 1);
 }
 
 .gold-icon-border {
