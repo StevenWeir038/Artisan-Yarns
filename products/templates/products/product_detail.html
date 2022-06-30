@@ -39,12 +39,36 @@
                             <form class="form col-12 pl-0" action="{% url 'add_to_basket' product.id %}" method="POST">
                                 {% csrf_token %}
                                 <div class="input-group">
-                                    <span class="pl-2 pr-2 pt-1">Quantity: </span>
-                                    <span>
-                                    <input class="form-control qty_input text-center" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
-                                    </span>
-                                    <input type="submit" value="Add to basket" class="product-details-button ml-2">
-                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                    
+                                        <span class="pl-2 pr-2 pt-1">Qty: </span>
+
+                                        <div class="input-group-prepend">
+                                            <button class="decrement-qty btn btn-black rounded-0" 
+                                                data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
+                                                <span class="icon">
+                                                    <i class="fas fa-minus"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+
+                                        <div>
+                                        <input class="form-control qty_input text-center" type="number" name="quantity"
+                                            value="1" min="1" max="99" data-item_id="{{ product.id }}"
+                                            id="id_qty_{{ product.id }}">
+                                        </div>
+                                        
+                                        <div class="input-group-append">
+                                            <button class="increment-qty btn btn-black rounded-0"
+                                                data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                                <span class="icon">
+                                                    <i class="fas fa-plus"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+
+                                        <input type="submit" value="Add to basket" class="product-details-button ml-2">
+                                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+
                                 </div>
                             </form>
                         </div>
@@ -83,4 +107,9 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}
