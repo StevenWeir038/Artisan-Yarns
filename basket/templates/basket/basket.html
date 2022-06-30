@@ -11,13 +11,54 @@
             <div class="border row">
                 <!-- Basket contents -->
                 {% if basket_items %}
-                    <div class="border p-0 col-12">{{ basket_items }}</div>
+                    <div class="border p-0 col-12">
+                        <table>
+                            <thead class="border">
+                                <tr>
+                                    <th class="text-left">Product Information</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th>Price</th>
+                                    <th>Qty</th>
+                                    <th class="text-right">Subtotal</th>
+                                </tr>
+                            </thead>
+                            
+                            {% for item in basket_items %}
+                                <tr class="border">
+                                    <td class="p-3 w-25">
+                                        <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="product image">
+                                    </td>
+                                    <td class="py-3 w-50 text-left">
+                                        <div>
+                                            <p class="my-0 col-12"><strong>{{ item.product.name }}</strong></p>
+                                        </div>
+                                        <div>
+                                            <p class="my-0 col-12">{{ item.product.description }}</p>
+                                        </div>
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0">{{ item.product.descritpion }}</p>
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0">£{{ item.product.price }}</p>
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0">{{ item.quantity }}</p>
+                                    </td>
+                                    <td class="py-3 text-right">
+                                        <p class="my-0">£{{ item.product.price }}</p>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
                     {% else %}
                     <p class="col-12">Your basket is empty.</p>
                 {% endif %}
                     
                 <!-- Totals -->
-                <div class="border p-0 m-0 col-12 text-right">Totals</div>
+                <div class="border p-0 col-12 text-right">Totals</div>
                 <!-- Buttons -->
                 <div class="border p-0 m-0 col-12 text-right">
                     <div class="border d-flex-column align-items-center justify-content-end text-center row p-0 m-0">
