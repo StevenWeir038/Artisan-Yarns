@@ -7,15 +7,15 @@
 {% endblock %}
 
 {% block content %}
+<div class="border row">
     <div class="container-fluid">
         <div class="border container-inner text-center">
-            <div class="border row">
                 <!-- Basket contents -->
                 {% if basket_items %}
                     <div class="border p-0 col-12">
                         <table>
                             <thead class="border">
-                                <tr>
+                                <tr class="">
                                     <th></th>
                                     <th></th>
                                     <th>Price</th>
@@ -83,12 +83,14 @@
                             {% endfor %}
                         </table>
                     </div>
-                    {% else %}
+                {% else %}
                     <p class="col-12">Your basket is empty.</p>
                 {% endif %}
                     
-                <!-- Totals -->
-                <div class="border p-0 col-12 text-right">Totals</div>
+                    <!-- Totals -->
+                    <div class="border p-0 col-12 text-right">
+                        <h4><strong>Basket Total: ${{ total|floatformat:2 }}</strong></h4>
+                    </div>
                 <!-- Buttons -->
                 <div class="border p-0 m-0 col-12 text-right">
                     <div class="border d-flex-column align-items-center justify-content-end text-center row p-0 m-0">
