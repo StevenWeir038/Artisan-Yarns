@@ -52,7 +52,7 @@ body {
 
 /* spacer to keep header unobstructed < md screen */
 .spacer-mobile {
-    height: 240px;
+    height: 215px;
 }
 
 /* allauth forms */
@@ -250,7 +250,7 @@ li .nav-item {
 .message-container {
     position: fixed;
     top: 72px;
-    right: 15px;
+    right: 22px;
     z-index: 99999;
 }
 
@@ -261,23 +261,99 @@ li .nav-item {
 .toast-capper {
     height: 2px;
 }
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent; 
+    border-bottom: 10px solid black;
+    position: absolute;
+    top: -10px;
+    right: 1px;
+}
 
+/* Convenience classes - colors copied from Bootstrap */
+.arrow-primary {
+    border-bottom-color: #007bff !important;
+}
+
+.arrow-secondary {
+    border-bottom-color: #6c757d !important;
+}
+
+.arrow-success {
+    border-bottom-color: #28a745 !important;
+}
+
+.arrow-danger {
+    border-bottom-color: #dc3545 !important;
+}
+
+.arrow-warning {
+    border-bottom-color: #ffc107 !important;
+}
+
+.arrow-info {
+    border-bottom-color: #17a2b8 !important;
+}
+
+.arrow-light {
+    border-bottom-color: #f8f9fa !important;
+}
+
+.arrow-dark {
+    border-bottom-color: #343a40 !important;
+}
+
+.basket-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 
 /* media query md / 768px */
 @media only screen and (min-width: 768px) {
     /* spacer to keep header unobstructed > md screen*/
     .spacer-tablet {
-        height: 290px;
-}
+        height: 283px;
+    }
     .product-nav {
         background: rgba(var(--theme-pantone), 1);
         position: relative;
         top: 3px;
         left: -0px;
+        width: 100vw;
     }
 
     .product-nav a{
         color: white;
         text-decoration: none;
+    }
+}
+
+
+/* media query lg / 992px */
+@media only screen and (min-width: 992px) {
+    .spacer-large {
+        height: 221px;
+    }
+
+    .site-menu {
+        position: fixed;
+        top: 67px;
+        background-color: white;
+    }
+
+    .site-logo {
+        position: fixed;
+        left: 0px;
+        background-color: white;
+    }
+
+    #search-form {
+        position: fixed;
+        top: 13px;
+        right: 19px;
     }
 }
