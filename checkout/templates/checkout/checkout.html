@@ -13,7 +13,7 @@
 {% block content %}
     <div class="container p-0 text-center">
 
-        <div class="row border">
+        <div class="row">
             <div class="col-12">
                 <hr>
                 <h3>Your basket items...</h3>
@@ -23,9 +23,10 @@
 
         <div class="row">
             <div class="col-12 col-lg-6 order-lg-last mb-5">
+                <p class="text-muted text-left">Order Summary ({{ product_count }} items)</p>
                 <div class="row">
                     <div class="col-7 offset-2">
-                        <p class="mb-1 mt-0 small text-muted">Item</p>
+                        <p class="mb-1 mt-0 small text-muted text-left">Item</p>
                     </div>
                     <div class="col-3 text-right">
                         <p class="mb-1 mt-0 small text-muted">Subtotal</p>
@@ -42,16 +43,29 @@
                                 {% endif %}
                             </a>
                         </div>
-                        <div class="col-7">
+                        <div class="col-7 text-left">
                             <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                             <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                         </div>
                         <div class="col-3 text-right">
-                            <p class="my-0 small text-muted">${{ item.product.price | calc_subtotal:item.quantity }}</p>
+                            <p class="my-0 small text-muted">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
                         </div>
                     </div>
                     <hr>
                 {% endfor %}
+                <hr class="my-0">
+                <div class="row text-right">
+                    <div class="col-7 offset-2">
+                        <p class="my-0">Order Total:</p>
+                        <p class="my-0">Standard p&p:</p>
+                        <p class="my-0">Grand Total:</p>
+                    </div>
+                    <div class="col-3">
+                        <p class="my-0">£{{ total | floatformat:2 }}</p>
+                        <p class="my-0">£{{ delivery | floatformat:2 }}</p>
+                        <p class="my-0"><strong>£{{ grand_total | floatformat:2 }}</strong></p>
+                    </div>
+                </div>
             </div>
 
             <div class="col-12 col-lg-6">
