@@ -21,10 +21,15 @@ def basket_contents(request):
             'product': product,
         })
 
+    delivery = Decimal(5.50)
+    grand_total = delivery + total
+
     context = {
         'basket_items': basket_items,
         'product_count': product_count,
         'total': total,
+        'delivery': delivery,
+        'grand_total': grand_total,
     }
 
     return context
