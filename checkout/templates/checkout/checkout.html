@@ -11,7 +11,7 @@
 
 {% block content %}
     <div class="container p-0 text-center">
-        
+
         <div class="row border">
             <div class="col-12">
                 <hr>
@@ -23,6 +23,24 @@
         <div class="row">
             <div class="col-12 col-lg-6">
                 <p>Please fill out the form below to complete your order</p>
+                <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+                    {% csrf_token %}
+                    <fieldset class="rounded px-3 mb-5">
+                        <legend class="fieldset-label small px-2 w-auto">Details</legend>
+                        {{ order_form.full_name | as_crispy_field }}
+                        {{ order_form.email | as_crispy_field }}
+                    </fieldset>
+                    <fieldset class="rounded px-3 mb-5">
+                        <legend class="fieldset-label small px-2 w-auto">Delivery</legend>
+                        {{ order_form.street_address1 | as_crispy_field }}
+                        {{ order_form.street_address2 | as_crispy_field }}
+                        {{ order_form.town_or_city | as_crispy_field }}
+                        {{ order_form.county | as_crispy_field }}
+                        {{ order_form.postcode | as_crispy_field }}
+                        {{ order_form.country | as_crispy_field }}
+                    </fieldset>
+                    <fieldset class="px-3"></fieldset>
+                </form>
             </div>
         </div>
 
