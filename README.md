@@ -197,6 +197,30 @@ Separate document [TESTING.md](TESTING.md).
 The final Deployed site can be found [here])
 Separate document [DEPLOYMENT.md](DEPLOYMENT.md).
 
+# **Social Media Marketing & Search Engine Optimization (SEO)**
+Creating a strong social base (with participation) and linking that to the business site can help drive sales.  Using more popular providers with a wider user base such as Facebook typically maximises site views.
+
+As this is a student led project there is a possibility that the [Artisan Yarns](https://www.facebook.com/Artisan-Yarns-101716042612963) page may be deleted.  This is acceptable as each platform has its own agenda.  It's in their interest to host only were it supports their business model.
+
+Regardless, the below screen capture should hopefully demonstrate the developers intent. Social media has the ability to complement a business with an e-commerce component by boosting visitor numbers.
+
+![Facebook Marketing](media/social-media-marketing.png)
+
+Online Marketing is based on a site's ability to stand out from it's competitors.  Again the major market competitor drives this in the form of [Google] (https://www.google.com/).  A carefully choosen selection of long-tail/short-tail keywords can help promote a site.
+
+Representative long-tail and short-tail phrases/words for this site may include:
+
+- 
+- 
+- 
+-  
+-  
+-  
+- 
+- 
+- 
+- 
+
 # **Technologies used**
 - Github for repository storage
 - Gitpod IDE/ CI template to develop site
@@ -209,13 +233,14 @@ Separate document [DEPLOYMENT.md](DEPLOYMENT.md).
 
 # **Credits**
 ## Mentions
-- My mentor [Tim Nelson](https://tim.2bn.dev/) always goes top of the list.  My thanks to him for a year of encouragement and insight.  He truely is committed to his students coding knowledge and personal growth.
+- My mentor [Tim Nelson](https://tim.2bn.dev/).  He's very good. My thanks to him for a seemingly short year and leaving an indelible mark on my approach.  He truely is committed to his students' knowledge and personal growth.
 
 - David Bowers and Helena Johansson for their personal support and input.  Just being there means alot.
 
+- The CI Slack community
+
 - [John Elder](https://www.youtube.com/watch?v=N-PB-HMFmdo) and [Vitor Freitas](https://simpleisbetterthancomplex.com/tutorial/2016/08/03/how-to-paginate-with-django.html) for their useful tutorials on Django pagination.
 
-- The CI Slack community
 - [The Spruce](https://www.google.com/search?q=yarn+weights&rlz=1C1CHBF_enGB798GB798&tbm=isch&source=iu&ictx=1&vet=1&fir=BQ2vxWKzXIGV-M%252C2DziQcFqDw_1GM%252C_%253B-q9lbQ790NJA7M%252Cd0r7KMH96MKkXM%252C_%253BghAgYuU1Mkd0AM%252C5XxAZ9DCXUEpmM%252C_%253BoMKhkyb6LVgL8M%252C8DJRGcSzIT5FpM%252C_%253BoFmAvPyPDhLTeM%252CPOPUPMZDOIwXEM%252C_%253Bsio_5yPcSpblhM%252Cuw4hoiDQCPSziM%252C_%253BOtnXG_I689btLM%252Cn28eU-0aen0XWM%252C_%253Bb_G1ozWA-n8UrM%252CQ8f1TjrDlrkb8M%252C_%253BjKGTpBPrkFaduM%252COd35IuVvdS1RvM%252C_%253BnVH89PCPv7cvnM%252C94fp5E7wlZzEDM%252C_%253B__wvHj1OWU-14M%252Cg_I5WqW1b8Bx3M%252C_%253BB894wUvPOHINsM%252CAUX-s_h3V8VRRM%252C_%253BSLcEsJITgL1fqM%252CLss4mpiOTdrCBM%252C_%253BT6d04DPlKm4jzM%252CpL9IJwO0zlQgeM%252C_%253B555JRiZbSgTDhM%252CTtBoyL8JvpUmhM%252C_%253BqHYCDc1q9guQGM%252CTIhdpGfsdkoBiM%252C_&usg=AI4_-kQvtyzGRv7ffgq_pMRkGnpxrlOPkA&sa=X&ved=2ahUKEwjzi8zG08P4AhXTSUEAHUU6CNoQ9QF6BAgIEAE#imgrc=BQ2vxWKzXIGV-M) for their useful information on yarn weights.
 
 ## Images
