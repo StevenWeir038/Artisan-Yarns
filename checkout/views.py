@@ -2,13 +2,12 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.conf import settings
 
-from .forms import Order, OrderForm
+import stripe
+
 from .models import OrderLineItem
 from products.models import Product
-
 from basket.contexts import basket_contents
-
-import stripe
+from .forms import Order, OrderForm
 
 
 def checkout(request):
@@ -16,13 +15,13 @@ def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
-    if request.method == "POST":
+    if request.method == 'POST':
         basket = request.session.get('basket', {})
 
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
-            # 'phone_number': request.POST['phone_number'],
+            'phone_number': request.POST['phone_number'],
             'street_address1': request.POST['street_address1'],
             'street_address2': request.POST['street_address2'],
             'town_or_city': request.POST['town_or_city'],
@@ -33,7 +32,6 @@ def checkout(request):
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save()
-
             for item_id, item_data in basket.items():
                 try:
                     product = Product.objects.get(id=item_id)
@@ -44,6 +42,15 @@ def checkout(request):
                             quantity=item_data,
                         )
                         order_line_item.save()
+                    else:
+                        for size, quantity in item_data['items_by_size'].items():
+                            order_line_item = OrderLineItem(
+                                order=order,
+                                product=product,
+                                quantity=quantity,
+                                product_size=size,
+                            )
+                            order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
                         "One of the products in your basket wasn't found in our database. "
@@ -57,11 +64,10 @@ def checkout(request):
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
-
     else:
         basket = request.session.get('basket', {})
         if not basket:
-            messages.error(request, "Your basket is empty!")
+            messages.error(request, "There's nothing in your basket at the moment")
             return redirect(reverse('products'))
 
         current_basket = basket_contents(request)
@@ -72,8 +78,6 @@ def checkout(request):
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
         )
-
-        print(intent)
 
         order_form = OrderForm()
 
