@@ -113,16 +113,21 @@
                 </p>
                 <!-- Buttons -->
                 <div class="d-flex-column align-items-center justify-content-around text-center row row-col-1 row-col-sm-2 row-col-lg-4 px-0 py-1 m-0">
-                    <a href="#" class="submit-button py-2 py-sm-0 my-1 product-details-button col-12 col-sm-5 col-lg-2">
+                    <a href="{% url 'products' %}" class="py-2 py-sm-0 my-1 product-details-button col-12 col-sm-5 col-lg-2">
+                        <i class="fa-solid fa-shop d-xs-none">
+                        </i><span class="d-none d-sm-block">To Store</span>
+                    </a>
+                    <a href="{% url 'view_basket' %}" class="py-2 py-sm-0 my-1 product-details-button col-12 col-sm-5 col-lg-2">
                         <i class="fa-solid fa-eye"></i>
                         <i class="fa-solid fa-basket-shopping d-sm-none"></i>
                         <span class="d-none d-sm-block">Basket</span>
                     </a>
-                    <a href="#" class="submit-button py-2 py-sm-0 my-1 product-details-button col-12 col-sm-5 col-lg-2">
-                        <i class="fa-solid fa-lock"></i>
-                        <i class="fa-solid fas fa-credit-card d-sm-none"></i>
-                        <span class="d-none d-sm-block">Charge</span>
-                    </a>
+                    <button id="submit-button" class="btn btn-black rounded-0">
+                        <span class="font-weight-bold">Complete Order</span>
+                        <span class="icon">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </button>
                 </div>
             </form>
         </div>
