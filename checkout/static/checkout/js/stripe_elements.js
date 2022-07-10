@@ -52,6 +52,10 @@ form.addEventListener('submit', function(ev) {
     $('#submit-button').attr('disabled', true);
     $('#payment-form').fadeToggle(100);
     $('#loading-overlay').fadeToggle(100);
+
+    var saveInfo = Boolean($('#id-save-info').attr('checked'));
+    var csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
+
     stripe.confirmCardPayment(clientSecret, {
         payment_method: {
             card: card,
