@@ -37,6 +37,18 @@
                             <i class="fa-solid fa-heart"></i> Wishlist
                         </a>
                     </div>
+                    <div class="col-11 offset-1">
+                        {% if user.is_authenticated %}
+                            <a href="{% url 'profile' %}">
+                                <i class="fa-solid fa-user"></i> My Account
+                            </a>
+                        {% endif %}
+                    </div>
+                    <div class="col-11 offset-1">
+                        <a href="{% url 'view_basket' %}">
+                            <i class="fa-solid fa-basket-shopping"></i> Basket
+                        </a>
+                    </div>
                 </div>
             </div>
         
