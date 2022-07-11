@@ -37,6 +37,21 @@
     border-radius: 5px;
 }
 
+select,
+select option {
+  color:#000;
+}
+
+select:invalid,
+select option[Value=""] {
+  color: #aab7c4 !important;
+}
+
+.stripe-style-input {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
 #loading-overlay {
 	display: none;
 	position: fixed;
