@@ -173,6 +173,7 @@ li .nav-item {
     border-radius: 6px;
     padding: 2px 6px;
     border: 2px solid rgba(var(--theme-gold), 1);
+    color: black;
 }
 
 .form-input:focus,
@@ -180,6 +181,7 @@ li .nav-item {
     border-radius: 6px;
     padding: 2px 6px;
     background: rgba(var(--theme-platinum), 1);
+    color: black;
 }
 
 .product-details-button,

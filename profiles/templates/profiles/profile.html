@@ -11,6 +11,7 @@
             <div class="col-12 text-center">
                 <hr>
                 <h3>Hello</h3>
+                <p>Edit your delivery address and view your past orders from here</p>
                 <hr>
             </div>
         </div>
@@ -29,7 +30,13 @@
             </div>
             <div class="col-12 col-lg-6">
                 <p class="small text-muted">Order History</p>
+                {{ orders }}
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
 {% endblock %}
