@@ -145,14 +145,6 @@ li .nav-item {
 }
 
 /* footer */
-#main-footer {
-    background: orangered;
-}
-
-#mobile-footer {
-    background: lightblue;
-}
-
 .btt-btn {
     background: white;
 }
@@ -176,12 +168,14 @@ li .nav-item {
     color: rgba(var(--theme-gold), 1);
 }
 
+.form-input,
 .footer-newsletter input[type="email"] {
     border-radius: 6px;
     padding: 2px 6px;
     border: 2px solid rgba(var(--theme-gold), 1);
 }
 
+.form-input:focus,
 .footer-newsletter input[type="email"]:focus {
     border-radius: 6px;
     padding: 2px 6px;
