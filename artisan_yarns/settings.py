@@ -118,13 +118,13 @@ SITE_ID = 1
 # temporarily log emails to console for confirmation links
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-ACCOUNT_AUTHENTICATION_METHOD = 'username_email'  # allow username and email to autherticate account
-ACCOUNT_EMAIL_REQUIRED = True  # email required to register for the site
-ACCOUNT_EMAIL_VERIFICATION = 'mandatory'  # email verification mandatory to register account so we know user are using real email
-ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True # must enter email twice on registration page to ensure no typos
-ACCOUNT_USERNAME_MIN_LENGTH = 6  # minimum user name length
-LOGIN_URL = '/accounts/login/'  # the login url
-LOGIN_REDIRECT_URL = '/'  # url to redirect back to after logging in
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
+ACCOUNT_USERNAME_MIN_LENGTH = 6
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'artisan_yarns.wsgi.application'
 
@@ -221,3 +221,4 @@ STRIPE_CURRENCY = 'gbp'
 STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET', '')
+DEFAULT_FROM_EMAIL = 'artisanyarns@email.com'
