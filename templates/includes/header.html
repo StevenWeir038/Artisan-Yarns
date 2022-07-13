@@ -61,6 +61,9 @@
                     <!-- dropdown menu for authentication options et al -->
                     <div class="py-0 dropdown-menu dropdown-menu-right" aria-labelledby="account-menu">
                         {% if user.is_authenticated %}
+                            {% if request.user.is_superuser %}
+                                <a href="{% url 'add_product' %}"><button class="dropdown-item" type="button">Product Management</button></a>
+                            {% endif %}
                             <a href="{% url 'profile' %}"><button class="dropdown-item" type="button">My Account</button></a>
                             <a href="{% url 'account_logout' %}"><button class="dropdown-item" type="button">Sign Out</button></a>
                         {% else %}
