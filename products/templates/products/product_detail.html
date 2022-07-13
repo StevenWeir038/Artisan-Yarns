@@ -26,7 +26,14 @@
                 <div class="border d-flex align-items-stretch text-left col-12 col-md-10 offset-md-1 col-lg-7 offset-lg-0">
                     <div class="product-details border row">
                         <div class="product-details-title border col-12">{{ product.name }}</div>
-                        <div class="border col-12">Add Review / [Edit | Delete Product (store owner only)]</div>
+                        <div class="border col-12">
+                            {% if request.user.is_superuser %}
+                                <small class="ml-3">
+                                    <a href="{% url 'edit_product' product.id %}">Edit</a>
+                                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                </small>
+                            {% endif %}
+                        </div>
                         <div class="border col-12">Product Review Rating / Number of Reviews</div>
                         <div class="border col-12"><span>Category: </span>{{ product.category.friendly_name }}</div>
                         <div class="border col-12"><span>Brand: </span>{{ product.brand }}</div>
