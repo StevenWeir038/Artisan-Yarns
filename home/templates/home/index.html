@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block page_header %}
-<h2>Homepage</h2>
+<h2>Welcome to our store</h2>
 {% endblock %}
 
 {% block content %}
@@ -12,7 +12,6 @@
             class="d-none d-sm-block col-sm-5 p-0 my-2 rounded home-img home-img-1">
             <h4 class="home-img-enter-store">Enter Store</h4>
         </a>
-
         <a href="{% url 'products' %}?category=clearance" alt="Shop clearance items" aria-label="Shop clearance items"
             class="col-12 col-sm-5 p-0 my-2 mx-2 rounded home-img home-img-clearance home-img-2">
             <h4>Clearance</h4>
@@ -29,15 +28,15 @@
             <h4><span>Schweepjes Range</span></h4>
         </a>
         <!-- bug to fix - how to query by product weight in all_product view -->
-        <a href="{% url 'products' %}?home_weight=Light (DK, Light, Worsted)" alt="Shop by yarn weight" aria-label="Shop by yarn weight"
-            class="col-12 col-md-5 col-lg-3 p-0 mx-2 my-2 rounded home-img home-img-4">
+        <a href="{% url 'products' %}?home_weight=Light (DK, Light, Worsted)" alt="Shop by yarn weight"
+            aria-label="Shop by yarn weight" class="col-12 col-md-5 col-lg-3 p-0 mx-2 my-2 rounded home-img home-img-4">
             <h4><span>Lighter Weights</span></h4>
         </a>
-        <a href="{% url 'products' %}?category=accessories" alt="Shop for kit" aria-label="Shop for needles, hooks and other accessories"
+        <a href="{% url 'products' %}?category=accessories" alt="Shop for kit"
+            aria-label="Shop for needles, hooks and other accessories"
             class="col-12 col-md-6 col-lg-3 p-0 mx-2 my-2 rounded home-img home-img-5">
             <h4><span>Accessories</span></h4>
         </a>
     </div>
 </div>
-
 {% endblock %}

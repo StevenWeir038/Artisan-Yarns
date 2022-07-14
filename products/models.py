@@ -38,10 +38,24 @@ class Product(models.Model):
         JUMBO = 'Jumbo (Jumbo, Roving)'
         OTHER = 'Other'
 
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey(
+        'Category', null=True,
+        blank=True,
+        on_delete=models.SET_NULL
+        )
     name = models.CharField(max_length=254)
-    brand = models.CharField(max_length=20, choices=ProductBrand.choices, null=True, blank=True,)
-    weight = models.CharField(max_length=50, choices=ProductWeight.choices, null=True, blank=True,)
+    brand = models.CharField(
+        max_length=20,
+        choices=ProductBrand.choices,
+        null=True,
+        blank=True,
+        )
+    weight = models.CharField(
+        max_length=50,
+        choices=ProductWeight.choices,
+        null=True,
+        blank=True,
+        )
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image = models.ImageField(null=True, blank=True)

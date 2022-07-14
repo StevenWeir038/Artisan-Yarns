@@ -4,6 +4,7 @@ from .models import Category, Product
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
+    """ CategoryAdmin model """
     list_display = (
         'friendly_name',
         'name',
@@ -14,6 +15,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
+    """ ProductAdmin model """
     search_fields = ['name', 'brand', 'description']
     list_display = (
         'name',
@@ -26,4 +28,4 @@ class ProductAdmin(admin.ModelAdmin):
     )
     list_filter = ('category', 'weight', 'brand')
 
-    ordering = ('brand','name','price',)
+    ordering = ('brand', 'name', 'price',)
