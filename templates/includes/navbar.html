@@ -1,24 +1,28 @@
 <div class="product-nav d-flex justify-content-start d-flex justify-content-md-center align-items-end">
     <nav class="navbar navbar-expand-md navbar">
-        <button class="navbar-toggler order-first" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler order-first" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon nav-hamburger gold-icon-border"><i class="fa-solid fa-bars"></i></span>
         </button>
-
         <div class="col collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
+                    <a class="nav-link" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">Products</a>
                     <div class="dropdown-menu p-0 border-0" aria-labelledby="all-products-link">
                         <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
                         <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                        <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
+                        <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By
+                            Category</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="#" id="all-yarns-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Yarns</a>
+                    <a class="nav-link" href="#" id="all-yarns-link" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">Yarns</a>
                     <div class="dropdown-menu p-0 border-0" aria-labelledby="all-yarns-link">
-                        <a href="{% url 'products' %}?category=adriafil,king_cole,new_fashion,scheepjes" class="dropdown-item ">All Yarns</a>
+                        <a href="{% url 'products' %}?category=adriafil,king_cole,new_fashion,scheepjes"
+                            class="dropdown-item ">All Yarns</a>
                         <a href="{% url 'products' %}?category=adriafil" class="dropdown-item">Adriafil</a>
                         <a href="{% url 'products' %}?category=king_cole" class="dropdown-item ">King Cole</a>
                         <a href="{% url 'products' %}?category=new_fashion" class="dropdown-item ">New Fashion</a>

@@ -3,21 +3,24 @@
 {% load i18n %}
 
 {% block page_header %}
-    <h2>Sign Up</h2>
+<h2>Sign Up</h2>
 {% endblock %}
 
 {% block inner_content %}
 
-<p class="text-center">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a> instead.{% endblocktrans %}</p>
+<p class="text-center">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>
+  instead.{% endblocktrans %}</p>
 
-<form class="signup d-flex-column col-10 offset-1 col-lg-6 offset-lg-3 align-items-center justify-content-center text-left" id="signup_form" method="post" action="{% url 'account_signup' %}">
+<form
+  class="signup d-flex-column col-10 offset-1 col-lg-6 offset-lg-3 align-items-center justify-content-center text-left"
+  id="signup_form" method="post" action="{% url 'account_signup' %}">
   {% csrf_token %}
   {{ form | crispy }}
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
   <div class="d-flex justify-content-center mb-3">
-    <button type="submit" >{% trans "Sign Up" %} &raquo;</button>
+    <button type="submit">{% trans "Sign Up" %} &raquo;</button>
   </div>
 </form>
 {% endblock %}

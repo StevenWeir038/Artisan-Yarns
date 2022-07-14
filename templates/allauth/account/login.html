@@ -4,7 +4,7 @@
 {% load account socialaccount %}
 
 {% block page_header %}
-    <h2>Sign In</h2>
+<h2>Sign In</h2>
 {% endblock %}
 
 {% block inner_content %}
@@ -13,8 +13,8 @@
 
 {% if socialaccount_providers %}
 <p>{% blocktrans with site.name as site_name %}Please sign in with one
-of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
-for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
+  of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
+  for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 
 <div class="socialaccount_ballot">
 
@@ -30,10 +30,12 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 
 {% else %}
 <p class="text-center">{% blocktrans %}If you have not created an account yet, then please
-<a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+  <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
 {% endif %}
 
-<form class="login d-flex-column col-10 offset-1 col-lg-6 offset-lg-3 align-items-center justify-content-center text-left" method="POST" action="{% url 'account_login' %}">
+<form
+  class="login d-flex-column col-10 offset-1 col-lg-6 offset-lg-3 align-items-center justify-content-center text-left"
+  method="POST" action="{% url 'account_login' %}">
   {% csrf_token %}
   {{ form | crispy }}
   {% if redirect_field_value %}
