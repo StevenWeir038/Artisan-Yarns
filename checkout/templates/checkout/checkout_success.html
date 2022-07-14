@@ -7,7 +7,6 @@
 
 {% block content %}
 <div class="container px-2 px-lg-0 text-center">
-    <!-- Success message -->
     <div class="row">
         <div class="col">
             <hr>
@@ -17,10 +16,8 @@
             <hr>
         </div>
     </div>
-    <!-- Order summary -->
     <div class="row">
         <div class="col-12 col-lg-6 offset-lg-3 text-left">
-            <!-- Order information -->
             <div class="order-confirmation-wrapper p2 border">
                 <div class="row">
                     <div class="col">
@@ -43,7 +40,6 @@
                         <p class="small mb-0">{{ order.date }}</p>
                     </div>
                 </div>
-                <!-- Order details -->
                 <div class="row">
                     <div class="col">
                         <small class="text-muted">Order Details</small>
@@ -137,7 +133,6 @@
                         <p class="small mb-0">{{ order.country }}</p>
                     </div>
                 </div>
-                <!-- Billing information -->
                 <div class="row">
                     <div class="col">
                         <small class="text-muted">Billing Information</small>
@@ -171,7 +166,6 @@
         </div>
     </div>
 </div>
-<!-- Back to store -->
 <div class="d-flex-column align-items-center justify-content-around text-center row row-col-1 row-col-sm-2 row-col-lg-4 px-0 py-1 m-0">
     {% if from_profile %}
         <a href="{% url 'profile' %}" class="py-2 py-sm-0 my-1 product-details-button col-12 col-sm-5 col-lg-2">
@@ -187,5 +181,3 @@
     {% endif %}
 </div>
 {% endblock %}
-
-
