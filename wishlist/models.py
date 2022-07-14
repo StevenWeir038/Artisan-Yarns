@@ -4,7 +4,7 @@ from profiles.models import UserProfile
 from products.models import Product
 
 
-class WishList(models.Model):
+class Wishlist(models.Model):
     """ Wishlist model (feature for authenticated users only) """
     user_profile = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE, default=1)

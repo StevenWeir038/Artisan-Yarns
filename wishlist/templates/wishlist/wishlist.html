@@ -3,7 +3,7 @@
 {% load basket_tools %}
 
 {% block page_header %}
-<h2>Basket</h2>
+<h2> {{ user.username }}'s Wishlist</h2>
 {% endblock %}
 
 {% block content %}
@@ -86,7 +86,7 @@
                 </table>
             </div>
             {% else %}
-            <p class="col-12">Your basket is empty.</p>
+            <p class="col-12">There are no items in your wishlist.</p>
             {% endif %}
 
             <!-- Totals -->
