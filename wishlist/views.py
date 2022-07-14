@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 
 from profiles.models import UserProfile
 from wishlist.models import Wishlist
+from products.models import Product
 
 
 @login_required
@@ -20,3 +21,20 @@ def wishlist(request):
         }
 
     return render(request, template, context)
+
+
+@login_required
+def add_wishlist_item(request, product_id):
+    """
+    Add a wishlist item from a product
+    Think - get the product id from product details and pass to wishlist
+    """
+    user = get_object_or_404(UserProfile, user=request.user)
+    product = get_object_or_404(Product, pk=product_id)
+
+    # Only need to create a wishlist object
+    # No need to render anything to a template
+    # Redirect back to same page as button
+    # This only exists in the product details template at the moment
+
+    return
