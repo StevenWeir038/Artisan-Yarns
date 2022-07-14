@@ -1,15 +1,22 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
+
+from profiles.models import UserProfile
+from wishlist.models import WishList
 
 
 @login_required
 def wishlist(request):
-    """ 
-    Display a specific user's wishlst 
+    """
+    Display a specific user's wishlst
     Need to to pass a dictionary similar to the basket to template
     """
+    user = get_object_or_404(UserProfile, user=request.user)
+    wishlist = WishList.objects.filter(user_profile=user)
 
-    template = ''
-    context = {}
+    template = 'wishlist/wishlist.html'
+    context = {
+        'wishlist': wishlist,
+        }
 
-    return render(request, 'wishlist/wishlist.html', context)
+    return render(request, template, context)
