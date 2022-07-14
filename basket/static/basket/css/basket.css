@@ -1,0 +1,10 @@
+/* basket.css */
+
+.basket-image {
+    height: auto;
+    min-width: 200px;
+}
+
+.table-qty {
+    min-width: 115px;
+}
