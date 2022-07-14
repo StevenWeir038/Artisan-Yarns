@@ -229,7 +229,6 @@ li .nav-item {
 
 .footer-dev-info {
     background: rgba(var(--theme-gold), 1);
-    border-radius: 6px;
     padding: 2px 6px;
     text-decoration: none;
 }
