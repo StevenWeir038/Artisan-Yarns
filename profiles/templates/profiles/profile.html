@@ -30,9 +30,9 @@
         <div class="col-12 col-lg-6">
             <p class="small text-muted">Order History</p>
             <div class="order-history table-responsive">
-                <table class="table table-sm table-borderless">
+                <table class="small table table-sm table-borderless">
                     <thead>
-                        <tr>
+                        <tr class="border-bottom">
                             <th>Order Number</th>
                             <th>Date</th>
                             <th>Items</th>
@@ -41,7 +41,7 @@
                     </thead>
                     <tbody>
                         {% for order in orders %}
-                            <tr>
+                            <tr class="border-bottom">
                                 <td>
                                     <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}">
                                         {{ order.order_number|truncatechars:6 }}
@@ -51,7 +51,7 @@
                                 <td>
                                     <ul class="list-unstyled">
                                         {% for item in order.lineitems.all %}
-                                        <li class="small">
+                                        <li class="font-italic">
                                             {{ item.product.name }} x{{ item.quantity }}
                                         </li>
                                         {% endfor %}
