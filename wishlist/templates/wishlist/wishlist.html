@@ -6,9 +6,9 @@
 {% endblock %}
 
 {% block content %}
-<div class="border row">
+<div class="row">
     <div class="container-fluid">
-        <div class="border container-inner text-center">
+        <div class="container-inner text-center">
                 <!-- Basket contents -->
                 {% if basket_items %}
                     <div class="border p-0 col-12">
@@ -82,8 +82,8 @@
                 {% endif %}
                 
                 <!-- Buttons -->
-                <div class="border p-0 m-0 col-12">
-                    <div class="border d-flex-column align-items-center justify-content-end text-center row p-0 m-0">
+                <div class="p-0 m-0 col-12">
+                    <div class="d-flex-column align-items-center justify-content-end text-center row p-0 m-0">
                         <a href="{% url 'products' %}" class="py-2 py-sm-0 my-2 product-details-button col-12 col-sm-2">
                             <i class="fa-solid fa-shop d-xs-none"></i>
                             <span class="d-none d-sm-block">To Store </span>
