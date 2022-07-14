@@ -36,14 +36,15 @@
             </div>
         </div>
         <div class="row row-cols-md-3">
-            <div class="content-title-filter border col-12 col-md-3 col-lg-2">
-                <div class="border row">
+            <!-- extra for project if time - checkboxes and trigger with Q objects/filters + jquery -->
+            <!-- <div class="content-title-filter col-12 col-md-3 col-lg-2">
+                <div class="row">
                     <div class="category-title d-none d-md-block col-12">Category Title</div>
-                    <div class="category-filter border text-left d-none d-md-block col-12">Category Filter (show on md
+                    <div class="category-filter text-left d-none d-md-block col-12">Category Filter (show on md
                         screens +)</div>
                 </div>
-            </div>
-            <div class="products-container col-12 col-md-9 col-lg-10 border">
+            </div> -->
+            <div class="products-container col-12 col-md-12 col-lg-12">
                 <div class="row py-3 d-flex-column align-items-center justify-content-start">
                     {% for product in products %}
                     <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
@@ -76,7 +77,7 @@
         <!-- Pagination (credit to Vitor Freitas) -->
         <div class="row">
             {% if products.has_other_pages %}
-            <ul class="border p-0 m-0 pagination d-flex align-items-center justify-content-center col-12">
+            <ul class="p-0 m-0 pagination d-flex align-items-center justify-content-center col-12">
                 {% if products.has_previous %}
                 <li><a href="?page={{ products.previous_page_number }}">&laquo;</a></li>
                 {% else %}
