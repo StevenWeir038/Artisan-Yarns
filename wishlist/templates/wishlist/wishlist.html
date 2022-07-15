@@ -7,11 +7,32 @@
 {% endblock %}
     
 {% block content %}
-{{ my_wishlist }}
-<hr>
+    <div class="container-fluid text-center">
     {% if my_wishlist %}
         {% for product in my_wishlist %}
-            <span>{{ product.product.name }} <a href="{% url 'delete_wishlist_item' product.product.id %}"><button class="btn btn-danger"></button></a> | </span>
+        <div class="row small py-2">
+            <div class="col-3  px-0">
+                {% if product.product.image %}
+                    <img class="image-fluid rounded w-75" src="{{ product.product.image.url }}" alt="{{ product.product.name }}">
+                {% else %}
+                    <img class="image-fluid rounded w-75" src="{{ MEDIA_URL }}no-image.png"  alt="{{ product.product.name }}">
+                {% endif %}
+            </div>
+            <div class="col-6 px-0 text-left">
+                <p><strong>{{ product.product.name }}</strong></p>
+                <p>{{ product.product.description }}</p>
+            </div>
+            <div class="col-1 px-0">
+                <strong>£{{ product.product.price }}</strong>
+            </div>
+            <div class="col-2 px-0 d-flex flex-column justify-content-around">
+                <!-- STILL TO WORK OUT - add to basket - need to work in with basket context processor -->
+                <a href="#"><i class="fa-solid fa-lg fa-basket-shopping wishlist-to-basket"></i></a>
+                <a href="{% url 'delete_wishlist_item' product.product.id %}"><i class="fa-solid fa-lg fa-trash-can wishlist-bin"></i></a>
+            </div>
+        </div>
+        <hr>
         {% endfor %}
     {% endif %}
+    </div>
 {% endblock %}
