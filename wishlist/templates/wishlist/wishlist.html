@@ -11,7 +11,7 @@
 <hr>
     {% if my_wishlist %}
         {% for product in my_wishlist %}
-            <span>{{ product.product.name }} | </span>
+            <span>{{ product.product.name }} <a href="{% url 'delete_wishlist_item' product.product.id %}"><button class="btn btn-danger"></button></a> | </span>
         {% endfor %}
     {% endif %}
 {% endblock %}

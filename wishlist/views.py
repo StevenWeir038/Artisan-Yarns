@@ -39,18 +39,19 @@ def add_wishlist_item(request, product_id):
 @login_required
 def delete_wishlist_item(request, product_id):
     """
-    Add a wishlist item from the current product on product_detail
-    Same approach as add_wishlist_item - get user, get product_id
-    Link this view/function to a button/icon in wishlist.html template
-    Similar to Kennel project - find a single entry with a filter and delete
-    Feedback the action to the user
-    
+    Delete a wishlist item from a button/icon in wishlist.html template
     """
     user = get_object_or_404(UserProfile, user=request.user)
     product = get_object_or_404(Product, pk=product_id)
 
+    Wishlist.objects.filter(product=product, user_profile=user).delete()
 
     messages.info(request, f"You've removed {product.name} from your Wishlist!")
     template = 'wishlist/wishlist.html'
-
-    return render(request, template)
+    # Need to recreate wishlist and provide through context if redisplaying wishlist template
+    my_wishlist = Wishlist.objects.filter(user_profile=user)
+    context = {
+            'my_wishlist': my_wishlist,
+            }
+    return render(request, template, context)
+    # return redirect(reverse('product_detail', args=[product.id]))
