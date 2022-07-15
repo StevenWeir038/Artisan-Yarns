@@ -25,6 +25,7 @@ def wishlist(request):
 def add_wishlist_item(request, product_id):
     """
     Add a wishlist item from the current product on product_detail
+    Protect against duplicate entries to reduce clutter
     """
     user = get_object_or_404(UserProfile, user=request.user)
     product = get_object_or_404(Product, pk=product_id)
@@ -34,7 +35,8 @@ def add_wishlist_item(request, product_id):
         messages.info(request, f"{product.name} is already on your Wishlist!")
     else:
         Wishlist.objects.create(product=product, user_profile=user)
-        messages.info(request, f"You've added {product.name} to your Wishlist!")
+        messages.info(
+            request, f"You've added {product.name} to your Wishlist!")
 
     return redirect(reverse('product_detail', args=[product.id]))
 
