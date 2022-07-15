@@ -29,9 +29,12 @@ def add_wishlist_item(request, product_id):
     user = get_object_or_404(UserProfile, user=request.user)
     product = get_object_or_404(Product, pk=product_id)
 
-    Wishlist.objects.create(user_profile=user, product=product)
-
-    messages.info(request, f"You've added {product.name} to your Wishlist!")
+    my_wishlist = Wishlist.objects.filter(user_profile=user, product=product)
+    if my_wishlist.count() >= 1:
+        messages.info(request, f"{product.name} is already on your Wishlist!")
+    else:
+        Wishlist.objects.create(product=product, user_profile=user)
+        messages.info(request, f"You've added {product.name} to your Wishlist!")
 
     return redirect(reverse('product_detail', args=[product.id]))
 
