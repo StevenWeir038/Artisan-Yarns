@@ -7,3 +7,16 @@ class ContactForm(forms.Form):
     email = forms.EmailField(widget=forms.EmailInput(), label='Your Email')
     subject = forms.CharField(min_length=3, max_length=40, label='Subject')
     message = forms.CharField(min_length=5, max_length=300, widget=forms.Textarea(), label='Message')
+
+    def __init__(self, *args, **kwargs):
+            """
+            Add placeholders and classes, remove auto-generated
+            labels and set autofocus on first field
+            """
+            super().__init__(*args, **kwargs)
+            placeholders = {
+                'name': 'Name',
+                'email': 'Email Address',
+                'subject': 'Subject',
+                'message': 'Your Message',
+            }
