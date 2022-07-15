@@ -1,9 +1,9 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.decorators import login_required
 
 from profiles.models import UserProfile
-from wishlist.models import Wishlist
 from products.models import Product
+from wishlist.models import Wishlist
 
 
 @login_required
@@ -36,5 +36,6 @@ def add_wishlist_item(request, product_id):
     # No need to render anything to a template
     # Redirect back to same page as button
     # This only exists in the product details template at the moment
+    Wishlist.objects.create(user_profile=user, product=product)
 
-    return
+    return redirect(reverse('product_detail', args=[product.id]))
