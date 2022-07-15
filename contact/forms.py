@@ -9,14 +9,16 @@ class ContactForm(forms.Form):
     message = forms.CharField(min_length=5, max_length=300, widget=forms.Textarea(), label='Message')
 
     def __init__(self, *args, **kwargs):
-            """
-            Add placeholders and classes, remove auto-generated
-            labels and set autofocus on first field
-            """
-            super().__init__(*args, **kwargs)
-            placeholders = {
-                'name': 'Name',
-                'email': 'Email Address',
-                'subject': 'Subject',
-                'message': 'Your Message',
-            }
+        """
+        Add placeholders and classes, remove auto-generated
+        labels and set autofocus on first field
+        """
+        super().__init__(*args, **kwargs)
+        placeholders = {
+            'name': 'Name',
+            'email': 'Email Address',
+            'subject': 'Subject',
+            'message': 'Your Message',
+        }
+
+        self.fields['name'].widget.attrs['autofocus'] = True
