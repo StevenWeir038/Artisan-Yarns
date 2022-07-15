@@ -39,19 +39,20 @@ def add_wishlist_item(request, product_id):
 @login_required
 def delete_wishlist_item(request, product_id):
     """
-    Delete a wishlist item from a button/icon in wishlist.html template
+    Delete a wishlist item from a button/icon in the wishlist.html template
     """
     user = get_object_or_404(UserProfile, user=request.user)
     product = get_object_or_404(Product, pk=product_id)
 
     Wishlist.objects.filter(product=product, user_profile=user).delete()
 
-    messages.info(request, f"You've removed {product.name} from your Wishlist!")
+    messages.info(request, f"You've removed {product.name} \
+                            from your Wishlist!")
     template = 'wishlist/wishlist.html'
-    # Need to recreate wishlist and provide through context if redisplaying wishlist template
+
     my_wishlist = Wishlist.objects.filter(user_profile=user)
+
     context = {
             'my_wishlist': my_wishlist,
             }
     return render(request, template, context)
-    # return redirect(reverse('product_detail', args=[product.id]))
