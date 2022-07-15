@@ -31,6 +31,8 @@ def add_wishlist_item(request, product_id):
 
     Wishlist.objects.create(user_profile=user, product=product)
 
+    messages.info(request, f"You've added {product.name} to your Wishlist!")
+
     return redirect(reverse('product_detail', args=[product.id]))
 
 
@@ -42,7 +44,13 @@ def delete_wishlist_item(request, product_id):
     Link this view/function to a button/icon in wishlist.html template
     Similar to Kennel project - find a single entry with a filter and delete
     Feedback the action to the user
-    In this case just want to go back yo wishlist page to review remaining list
+    
     """
     user = get_object_or_404(UserProfile, user=request.user)
     product = get_object_or_404(Product, pk=product_id)
+
+
+    messages.info(request, f"You've removed {product.name} from your Wishlist!")
+    template = 'wishlist/wishlist.html'
+
+    return render(request, template)
