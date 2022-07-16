@@ -15,20 +15,20 @@ def contact(request):
             subject = form.cleaned_data['subject']
             message = form.cleaned_data['message']
 
-        # if form is valid send the email
-        
-        # relay a success message to the user and redirect to contact page again
-        messages.success(request, 'Your message has been sent!')
-        # redirect to contact page
-        return redirect(reverse('contact'))
+            # if form is valid send the email
 
-    # if for is not valid create relay a failure message to the user
+            # relay a success message to the user and redirect to contact page again
+            messages.success(request, 'Your message has been sent!')
+            # redirect to contact page
+            return redirect(reverse('contact'))
 
+        # if form is not valid create relay a failure message to the user. Stay on the same page.
+        else:
+            messages.error(request, 'There was a problem sending your message. Please try again.')
     # create a blank instance and allow user to repopulate
     else:
         form = ContactForm(request.POST)
     # pass the form to the template via the context dictionary
-
     template = 'contact/contact.html'
     context = {
         'form': form,
