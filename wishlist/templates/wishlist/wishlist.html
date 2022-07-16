@@ -26,8 +26,8 @@
                 <strong>£{{ product.product.price }}</strong>
             </div>
             <div class="col-2 px-0 d-flex flex-column justify-content-around">
-                <!-- STILL TO WORK OUT - add to basket - need to work in with basket context processor -->
-                <a href="#"><i class="fa-solid fa-lg fa-basket-shopping wishlist-to-basket"></i></a>
+                
+                <a href="{% url 'product_detail' product.product.id %}"><i class="fa-solid fa-lg fa-basket-shopping wishlist-to-basket"></i></a>
                 <a href="{% url 'delete_wishlist_item' product.product.id %}"><i class="fa-solid fa-lg fa-trash-can wishlist-bin"></i></a>
             </div>
         </div>
