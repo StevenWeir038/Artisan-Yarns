@@ -16,7 +16,7 @@
         </div>
     </div>
     <div class="row pb-5">
-        <div class="col-12 col-lg-6">
+        <div class="col-12 col-lg-6 offset-lg-3">
             <form action="{% url 'contact' %}" class="my-2" method="POST" id="contact-form">
                 {% csrf_token %}
                 {{ form | crispy }}
