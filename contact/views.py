@@ -1,15 +1,12 @@
 from django.shortcuts import render
-
+from django.conf import settings
+from .forms import ContactForm
 
 def contact(request):
     """ Contact page view """
-
-    # PLAN OF ATTACK
-
-    # 1st check the request method
-
-    # create a form instance
-
+    if request.method == 'POST':
+        # create a form instance
+        form = ContactForm(request.POST)
     # clean the data
 
     # if form is valid send the email
@@ -19,7 +16,13 @@ def contact(request):
     # if for is not valid create relay a failure message to the user
 
     # create a blank instance and allow user to repopulate
+    else:
+        form = ContactForm(request.POST)
+    # pass the form to the template via the context dictionary
 
-    # apass the form to the template via the context dictionary
+    template = 'contact/contact.html'
+    context = {
+        'form': form,
+        }
 
-    return render(request, 'contact/contact.html')
+    return render(request, template, context)
