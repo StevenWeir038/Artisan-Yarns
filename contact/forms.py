@@ -6,7 +6,8 @@ class ContactForm(forms.Form):
     name = forms.CharField(min_length=2, max_length=100, label='Your name')
     email = forms.EmailField(widget=forms.EmailInput(), label='Your Email')
     subject = forms.CharField(min_length=3, max_length=40, label='Subject')
-    message = forms.CharField(min_length=5, max_length=300, widget=forms.Textarea(), label='Message')
+    message = forms.CharField(
+        min_length=5, max_length=300, widget=forms.Textarea(), label='Message')
 
     def __init__(self, *args, **kwargs):
         """
@@ -24,7 +25,7 @@ class ContactForm(forms.Form):
         self.fields['name'].widget.attrs['autofocus'] = True
         for field in self.fields:
             if self.fields[field].required:
-                placeholder = f'{placeholders[field]} *'
+                placeholder = f'{placeholders[field]}*'
             else:
                 placeholder = placeholders[field]
             self.fields[field].widget.attrs['placeholder'] = placeholder
