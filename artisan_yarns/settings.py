@@ -53,11 +53,12 @@ INSTALLED_APPS = [
     # custom apps
     'home',
     'products',
-    'profiles',
-    'contact',
-    'wishlist',
     'basket',
     'checkout',
+    'profiles',
+    'wishlist',
+    'contact',
+    'newsletter',
 
     # other
     'crispy_forms',
