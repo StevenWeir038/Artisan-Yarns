@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
 from django.conf import settings
+from django.contrib import messages
 from .forms import ContactForm
 
 def contact(request):
@@ -7,11 +8,19 @@ def contact(request):
     if request.method == 'POST':
         # create a form instance
         form = ContactForm(request.POST)
-    # clean the data
+        # clean the data
+        if form.is_valid():
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            subject = form.cleaned_data['subject']
+            message = form.cleaned_data['message']
 
-    # if form is valid send the email
-    
-    # relay a success message to the user
+        # if form is valid send the email
+        
+        # relay a success message to the user and redirect to contact page again
+        messages.success(request, 'Your message has been sent!')
+        # redirect to contact page
+        return redirect(reverse('contact'))
 
     # if for is not valid create relay a failure message to the user
 
