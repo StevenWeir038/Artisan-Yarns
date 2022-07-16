@@ -189,6 +189,7 @@ li .nav-item {
     color: black;
 }
 
+.contact-form-button,
 .product-details-button,
 .newsletter-button,
 .allauth-inner-content button {
@@ -200,7 +201,10 @@ li .nav-item {
     border: 2px solid rgba(var(--theme-gold), 1);
 }
 
+.contact-form-button:hover,
+.contact-form-send-button:focus,
 .product-details-button:hover,
+.product-details-button:focus,
 .newsletter-button:hover,
 .newsletter-button:focus,
 .allauth-inner-content button:hover,

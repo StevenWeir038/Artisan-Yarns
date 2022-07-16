@@ -2,9 +2,27 @@
 {% load static %}
 
 #{% block page_header %}
-<h2>Contact Page</h2>
+<h2>ContactPage</h2>
 {% endblock %}
 
-{% block maincontent %}
-
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 text-center">
+            <hr>
+            <h2>Have a Question?</h2>
+            <p>If you have any general questions or feedback about our business we'd love to here from you!</p>
+            <hr>
+        </div>
+    </div>
+    <div class="row pb-5">
+        <div class="col-12 col-lg-6">
+            <form action="{% url 'contact' %}" class="my-2" method="POST" id="contact-form">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <input type="submit" value="Send Message" class="contact-form-button ml-2 float-right">
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}
