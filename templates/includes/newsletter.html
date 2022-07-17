@@ -6,7 +6,7 @@
             <form class="py-2 text-center" action="{% url 'newsletter' %}" method="POST" id="newsletter-form">
                 {% csrf_token %}
                 {{ subscription_form | crispy }}
-                <a href="#" class="newsletter-button">Subscribe</a>
+                <button class="newsletter-button" type="submit">Subscribe</button>
             </form>
         </div>    
     </div>

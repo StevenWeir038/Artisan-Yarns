@@ -164,9 +164,15 @@ li .nav-item {
     color: white;
 }
 
-.wishlist-to-basket,
+.wishlist-to-basket {
+    color: rgba(var(--theme-gold), 1);
+}
+
 .footer-envelope {
     color: rgba(var(--theme-gold), 1);
+    position: relative;
+    top: 48px;
+    right: 50px; 
 }
 
 .wishlist-bin {
