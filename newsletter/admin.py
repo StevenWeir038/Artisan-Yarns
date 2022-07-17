@@ -9,13 +9,13 @@ class NewsletterSubAdmin(admin.ModelAdmin):
         'email', 'subscribe_date'
         ]
     list_display = (
-        'email',
         'subscribe_date',
+        'email',
     )
     list_filter = (
         'email', 'subscribe_date',
         )
 
     ordering = (
-        'email', 'subscribe_date'
+        'subscribe_date', 'email',
         )
