@@ -4,10 +4,18 @@
     </div>
     <div class="col-12 text-center footer-envelope">
         <i class="fa-solid fa-envelope fa-lg theme-gold"></i>
-        <input id="email-field" type="email" name="user-email" placeholder="Enter your email address..."
-            aria-label="Enter your email address" required>
-    </div>
-    <div class="col-12 text-center py-2">
-        <a href="#" class="newsletter-button">Submit</a>
-    </div>
+        <!-- <input id="email-field" type="email" name="user-email" placeholder="Enter your email address..."
+            aria-label="Enter your email address" required> -->
+        <form class="" action="{% url 'newsletter' %}" method="POST" id="newsletter-form">
+            {% csrf_token %}
+            {{ subscription_form | crispy }}
+            <div class="col-12 text-center py-2">
+                <a href="#" class="newsletter-button">Subscribe</a>
+            </div>
+        </form>
+    </div> 
 </div>
+
+
+
+<!-- subscription_form.as_p }} -->
