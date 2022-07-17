@@ -4,6 +4,7 @@ from.models import NewsletterSub
 
 class NewsletterSubForm(forms.ModelForm):
     """ Site newsletter form """
+
     class Meta:
         model = NewsletterSub
         exclude = ('subscribe_date',)
@@ -14,11 +15,9 @@ class NewsletterSubForm(forms.ModelForm):
             labels and set autofocus on first field
         """
         super().__init__(*args, **kwargs)
-        placeholders = {
-            'email': 'Email Address',
-        }
+
         for field in self.fields:
             self.fields[field].widget.attrs[
-                'placeholder'] = "Enter your email address..."
+                'placeholder'] = "Enter your email..."
             self.fields[field].widget.attrs['class'] = 'form-input'
             self.fields[field].label = False

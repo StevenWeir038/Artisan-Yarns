@@ -1,21 +1,13 @@
 <div class="col-12 footer-newsletter">
-    <div class="col text-center">
-        <p>Stay hooked! Sign up to our newsletter</p>
-    </div>
-    <div class="col-12 text-center footer-envelope">
-        <i class="fa-solid fa-envelope fa-lg theme-gold"></i>
-        <!-- <input id="email-field" type="email" name="user-email" placeholder="Enter your email address..."
-            aria-label="Enter your email address" required> -->
-        <form class="" action="{% url 'newsletter' %}" method="POST" id="newsletter-form">
-            {% csrf_token %}
-            {{ subscription_form | crispy }}
-            <div class="col-12 text-center py-2">
+        <p class="mb-0 text-center">Stay hooked! Sign up to our newsletter</p>
+    <div class="row theme-gold">
+        <div class="col-8 offset-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+            <i class="fa-solid fa-envelope fa-2xl footer-envelope"></i>
+            <form class="py-2 text-center" action="{% url 'newsletter' %}" method="POST" id="newsletter-form">
+                {% csrf_token %}
+                {{ subscription_form | crispy }}
                 <a href="#" class="newsletter-button">Subscribe</a>
-            </div>
-        </form>
-    </div> 
+            </form>
+        </div>    
+    </div>
 </div>
-
-
-
-<!-- subscription_form.as_p }} -->
