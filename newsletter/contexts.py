@@ -8,7 +8,19 @@ def subscription_form_contents(request):
     by default.  Essentially this is a view available at site
     level rather than just for app level.
     """
-    subscription_form = NewsletterSubForm()
+    # POST handler
+    if request.method == 'POST':
+        # if POST save form to variable
+        subscription_form = NewsletterSubForm(request.POST)
+        # if data has no issues
+        if subscription_form.is_valid():
+            # save the form to the variable
+            subscription_form.save()
+            # set the variable as the form instance
+            subscription_form = NewsletterSubForm()
+    else:
+        # otherwise just pass an empty form to the context
+        subscription_form = NewsletterSubForm()
 
     context = {
         'subscription_form': subscription_form,
