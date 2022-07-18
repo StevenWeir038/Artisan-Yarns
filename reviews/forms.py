@@ -8,7 +8,14 @@ class ReviewForm(forms.ModelForm):
         fields = [
             'rating', 'review_title', 'review_description',
             ]
-        
+
         review_description = forms.CharField(
-            widget=forms.Textarea()
+            widget=forms.Textarea(attrs={'rows': '4', 'placeholder': 'Add a review',})
         )
+
+    def __init__(self, *args, **kwargs):
+        """ Add classes """
+        super().__init__(*args, **kwargs)
+
+        for field in self.fields:
+            self.fields[field].widget.attrs['class'] = 'text-input'
