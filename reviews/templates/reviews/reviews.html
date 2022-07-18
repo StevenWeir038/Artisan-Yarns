@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<h2>Reviews</h2>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row text-center">
+        <div class="col-12">
+            <hr>
+            <h3>About the Reviews App</h3>
+            <hr>
+        </div>
+        <div class="col">
+            <p>
+                The reviews app presents a similar problem to the newsletter app. The newsletter form object needed to
+                be
+                available to the whole site via the base.html footer (beyond the app). Therefore it was placed in a
+                context processor to act like a project level view.
+            </p>
+            <p>
+                Models and forms associated with the reviews app are actually to be used within the products app, more
+                specifically the product_detail template.
+            <p>
+                Rather than pass through a contect processor, just import the app object.  Template tags can do the rest...
+            </p>
+            <p>
+                I opted to keep reviews as its own app due to separation of concern.
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
