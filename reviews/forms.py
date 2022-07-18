@@ -10,7 +10,9 @@ class ReviewForm(forms.ModelForm):
             ]
 
         review_description = forms.CharField(
-            widget=forms.Textarea(attrs={'rows': '4', 'placeholder': 'Add a review',})
+            widget=forms.Textarea(attrs={
+                'rows': '6', 'placeholder': 'Add a review',
+                })
         )
 
     def __init__(self, *args, **kwargs):

@@ -5,11 +5,16 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 
-# Pagination
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-
 from .models import Product, Category
 from .forms import ProductForm
+
+from .models import Product, Category
+from reviews.models import ProductReview
+from reviews.forms import ReviewForm
+
+
+# Pagination
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
 def all_products(request):
@@ -76,15 +81,25 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-    """ Show individual product details """
+    """
+    Show individual product details
+    Display reviews associated with product
+    """
 
     product = get_object_or_404(Product, pk=product_id)
+    reviews = ProductReview.objects.all().filter(product=product)
+
+    form = ReviewForm()
+
+    template = 'products/product_detail.html'
 
     context = {
+        'form': form,
         'product': product,
+        'reviews': reviews,
     }
 
-    return render(request, 'products/product_detail.html', context)
+    return render(request, template, context)
 
 
 @login_required
