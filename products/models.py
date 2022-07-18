@@ -62,28 +62,3 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
-
-
-class ProductReview(models.Model):
-    """ Product reviews """
-
-    RATING = [
-        (1, '1'),
-        (2, '2'),
-        (3, '3'),
-        (4, '4'),
-        (5, '5'),
-    ]
-
-    product = models.ForeignKey(Product, default=None, on_delete=models.CASCADE, related_name="reviews")
-    review_author = models.ForeignKey(User, on_delete=models.PROTECT, null=True, blank=True)
-    added_on = models.DateTimeField(auto_now_add=True)
-    review_title = models.TextField(max_length=254)
-    review_description = models.TextField(max_length=1000)
-    rating = models.IntegerField(choices=RATING)
-
-    class Meta:
-        ordering = ['-added_on']
-
-    def __str__(self):
-        return f'User: {self.user_profile} | Product: {self.product} | Rating: {self.rating}'
