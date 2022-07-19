@@ -9,15 +9,24 @@ class ReviewForm(forms.ModelForm):
             'rating', 'review_title', 'review_description',
             ]
 
-        review_description = forms.CharField(
-            widget=forms.Textarea(attrs={
-                'rows': '6', 'placeholder': 'Add a review',
-                })
-        )
-
     def __init__(self, *args, **kwargs):
-        """ Add classes """
+        """
+        Add placeholders and classes, remove auto-generated
+        labels and set autofocus on first field
+        """
         super().__init__(*args, **kwargs)
-
+        
         for field in self.fields:
-            self.fields[field].widget.attrs['class'] = 'text-input'
+            if field != 'rating':
+                self.fields[field].label = False
+
+            placeholders = {
+                'rating': 'Rating from 1 to 5 stars...',
+                'review_title': 'Give your review a name...',
+                'review_description': 'Tell us what you think of this product...',
+            }
+
+            placeholder = placeholders[field]
+            self.fields['review_description'].widget = forms.Textarea(attrs={'rows': 4,})
+            self.fields[field].widget.attrs['placeholder'] = placeholder
+            self.fields[field].widget.attrs['class'] = 'form-input'
