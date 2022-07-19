@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid">
+<section class="container-fluid">
     <div class="container-inner d-flex align-items-center justify-content-center text-center">
         <div class="row row-col-md-2">
             <div class="p-0 col-12 col-lg-5 offset-lg-0">
@@ -100,18 +100,44 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 <!-- product review section -->
-<div class="container-inner">
-    <div class="row">
-        <div class="col-12">
-            Product Review Section.
+<section class="container-inner">
+    <div class="row ">
+        <div class="col-12 text-center">
+            <hr>
+            <h3>What you think about this product?</h3>
+            <hr>
+        </div>
+        <div class="col-12 col-lg-6">
+            {% csrf_token %}
+            {{ review_form | crispy }}
         </div>
         <div class="col-12">
-            {{ product_detail }}
+            <hr>
+            <h4>Previous reviews...</h4>
+            <hr>
+            {% for review in reviews.all %}
+
+            <div class="card mt-4 review-card">
+                <div class="card-header">
+                    <span>{{ review.user_profile }}</span><cite class="small"> on {{ review.added_on }}</cite>
+                </div>
+                <div class="card-body py-0">
+                    <p class="my-2">
+                        {{ review.review_description }}
+                    </p>
+                    <p class="blockquote-footer mb-1 ">
+                        Star Rating <cite>{{ review.rating }}</cite>
+                    </p>
+                  
+                </div>
+              </div>
+
+            {% endfor %}
         </div>
     </div>
-</div>
+</section>
 </div>
 {% endblock %}
 
