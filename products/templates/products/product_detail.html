@@ -109,7 +109,7 @@
             <h3>What you think about this product?</h3>
             <hr>
         </div>
-        <div class="col-12 col-lg-6 offset-lg-3">
+        <div class="col-12 col-lg-6 offset-lg-3 text-left">
             {% csrf_token %}
             {{ review_form | crispy }}
         </div>
