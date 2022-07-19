@@ -19,7 +19,7 @@ class ProductReview(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     added_on = models.DateTimeField(auto_now_add=True)
     rating = models.IntegerField(choices=RATING)
-    review_title = models.TextField(max_length=254)
+    review_title = models.CharField(max_length=254)
     review_description = models.TextField(max_length=500)
 
     class Meta:
