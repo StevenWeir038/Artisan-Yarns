@@ -103,17 +103,17 @@
 </section>
 <!-- product review section -->
 <section class="container-inner">
-    <div class="row ">
-        <div class="col-12 text-center">
+    <div class="row text-center">
+        <div class="col-12">
             <hr>
             <h3>What you think about this product?</h3>
             <hr>
         </div>
-        <div class="col-12 col-lg-6">
+        <div class="col-12 col-lg-6 offset-lg-3">
             {% csrf_token %}
             {{ review_form | crispy }}
         </div>
-        <div class="col-12">
+        <div class="col-12 text-left">
             <hr>
             <h4>Previous reviews...</h4>
             <hr>
