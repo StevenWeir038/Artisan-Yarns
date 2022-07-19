@@ -170,9 +170,6 @@ li .nav-item {
 
 .footer-envelope {
     color: rgba(var(--theme-gold), 1);
-    position: relative;
-    top: 48px;
-    right: 50px; 
 }
 
 .wishlist-bin {

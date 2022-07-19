@@ -1,8 +1,10 @@
 <div class="col-12 footer-newsletter">
-        <p class="mb-0 text-center">Stay hooked! Sign up to our newsletter</p>
+        <p class="mb-0 text-center">
+            <i class="fa-solid fa-envelope fa-lg footer-envelope"></i>
+            Stay hooked! Sign up to our newsletter
+        </p>
     <div class="row theme-gold">
         <div class="col-8 offset-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
-            <i class="fa-solid fa-envelope fa-2xl footer-envelope"></i>
             <form class="py-2 text-center" action="{% url 'newsletter' %}" method="POST" id="newsletter-form">
                 {% csrf_token %}
                 {{ subscription_form | crispy }}
