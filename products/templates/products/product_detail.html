@@ -122,21 +122,17 @@
             {% endif %}
             <div class="col-12 text-left" id="product-reviews">
                 <hr>
-                <h4>Previous reviews...</h4>
+                <h4>{{ reviews.count }} Previous reviews...</h4>
                 <hr>
                 {% if reviews %}
                     {% for review in reviews.all %}
-                        <div class="card mt-4 review-card">
-                            <div class="card-header">
-                                <span>{{ review.user_profile }} - </span><cite class="small"> posted {{ review.added_on | timesince }} ago</cite>
+                        <div class="mt-4 review-card">
+                            <div>
+                                <span><u>{{ review.user_profile }}</u></span><cite class="small"> - posted {{ review.added_on | timesince }} ago</cite>
                             </div>
-                            <div class="card-body py-0">
-                                <p class="my-2">
+                            <div class="px-4 pt-0 pb-2">
+                                    {% include 'products/includes/product_card_rating.html' %}
                                     {{ review.review_description }}
-                                </p>
-                                <p class="blockquote-footer mb-1 ">
-                                    Star Rating <cite>{{ review.rating }}</cite>
-                                </p> 
                             </div>
                         </div>
                     {% endfor %}
