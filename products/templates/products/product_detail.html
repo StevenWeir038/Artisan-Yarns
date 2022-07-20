@@ -110,8 +110,11 @@
             <hr>
         </div>
         <div class="col-12 col-lg-6 offset-lg-3 text-left">
-            {% csrf_token %}
-            {{ review_form | crispy }}
+            <form action="{% url 'post_review' product.id %}" class="my-2" method="POST" id="contact-form">
+                {% csrf_token %}
+                {{ review_form | crispy }}
+                <input type="submit" value="Post Review" class="contact-form-button ml-2 float-right">
+            </form>
         </div>
         <div class="col-12 text-left">
             <hr>

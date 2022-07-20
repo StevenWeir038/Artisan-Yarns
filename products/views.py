@@ -4,11 +4,12 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
+from profiles.models import UserProfile
+from .models import Product, Category
 
 from .models import Product, Category
 from .forms import ProductForm
 
-from .models import Product, Category
 from reviews.models import ProductReview
 from reviews.forms import ReviewForm
 
@@ -89,14 +90,25 @@ def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     reviews = ProductReview.objects.all().filter(product=product)
 
-    form = ReviewForm()
+    review_form = ReviewForm()
+    new_review = None
+
+    if request.method == 'POST':
+        review_form = ReviewForm(request.POST)
+        if review_form.is_valid:
+            new_review = review_form.save(commit=True)
+            new_review.product = product
+            new_review.save()
+        else:
+            review_form = ReviewForm()
 
     template = 'products/product_detail.html'
 
     context = {
-        'form': form,
         'product': product,
         'reviews': reviews,
+        'review_form': review_form,
+        'new_review': new_review,
     }
 
     return render(request, template, context)
@@ -172,3 +184,34 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
+@login_required
+def post_review(request, product_id):
+    """
+    Create a product review
+    Post to product detail template
+    User must be authenticated to leave a review
+    Give feedback to user if posted or not 
+    """
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        review_form = ReviewForm(request.POST)
+        if review_form.is_valid():
+            review = review_form.save(commit=False)
+            review.product = product
+            review.user_profile = get_object_or_404(
+                UserProfile, user=request.user)
+            review.save()
+            messages.success(
+                request, 'Your review has been posted!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(
+                request, 'Failed to add review. Please ensure the form \
+                    is valid')
+    context = {
+        'review_form': review_form,
+    }
+
+    return render(request, context)
