@@ -127,6 +127,7 @@ def product_detail(request, product_id):
         'reviews': reviews,
         'review_form': review_form,
         'new_review': new_review,
+        'mode_rating': mode_rating,
     }
 
     return render(request, template, context)
