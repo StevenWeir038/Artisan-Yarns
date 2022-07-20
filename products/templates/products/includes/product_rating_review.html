@@ -1,6 +1,6 @@
 <!-- mode rating (1-5 stars) -->
 {% if mode_rating >= 5 %}
-<p>
+<p class="mb-0 pb-1">
     <small class="gold-icon-text">
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
@@ -8,11 +8,14 @@
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
     </small>
-    <span class="pantone-icon-text" >({{ reviews.count }} reviews) | </span><a href="{% if user.is_authenticated %}#product-reviews{% else %}{% url 'account_login' %}{% endif %}">Add Your Review</a>
+    <a href="#product-reviews"><span class="pantone-icon-text">({{ reviews.count }} reviews)</span></a>
+    {% if user.is_authenticated %}
+        <a class="small" href="{% if user.is_authenticated %}#contact-form{% else %}{% url 'account_login' %}{% endif %}"> | Add Your Review</a>
+    {% endif %}
 </p>
 
 {% elif mode_rating >= 4 %}
-<p>
+<p class="mb-0 pb-1">
     <small class="gold-icon-text">
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
@@ -20,11 +23,14 @@
         <i class="fas fa-star"></i>
         <i class="far fa-star"></i>
     </small>
-    <span class="pantone-icon-text" >({{ reviews.count }} reviews) | </span><a href="{% if user.is_authenticated %}#product-reviews{% else %}{% url 'account_login' %}{% endif %}">Add Your Review</a>
+    <a href="#product-reviews"><span class="pantone-icon-text">({{ reviews.count }} reviews)</span></a>
+    {% if user.is_authenticated %}
+        <a class="small" href="{% if user.is_authenticated %}#contact-form{% else %}{% url 'account_login' %}{% endif %}"> | Add Your Review</a>
+    {% endif %}
 </p>
 
 {% elif mode_rating >= 3 %}
-<p>
+<p class="mb-0 pb-1">
     <small class="gold-icon-text">
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
@@ -32,11 +38,14 @@
         <i class="far fa-star"></i>
         <i class="far fa-star"></i>
     </small>
-    <span class="pantone-icon-text" >({{ reviews.count }} reviews) | </span><a href="{% if user.is_authenticated %}#product-reviews{% else %}{% url 'account_login' %}{% endif %}">Add Your Review</a>
+    <a href="#product-reviews"><span class="pantone-icon-text">({{ reviews.count }} reviews)</span></a>
+    {% if user.is_authenticated %}
+        <a class="small" href="{% if user.is_authenticated %}#contact-form{% else %}{% url 'account_login' %}{% endif %}"> | Add Your Review</a>
+    {% endif %}
 </p>
 
 {% elif mode_rating >= 2 %}
-<p>
+<p class="mb-0 pb-1">
     <small class="gold-icon-text">
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
@@ -44,11 +53,14 @@
         <i class="far fa-star"></i>
         <i class="far fa-star"></i>
     </small>
-    <span class="pantone-icon-text" >({{ reviews.count }} reviews) | </span><a href="{% if user.is_authenticated %}#product-reviews{% else %}{% url 'account_login' %}{% endif %}">Add Your Review</a>
+    <a href="#product-reviews"><span class="pantone-icon-text">({{ reviews.count }} reviews)</span></a>
+    {% if user.is_authenticated %}
+        <a class="small" href="{% if user.is_authenticated %}#contact-form{% else %}{% url 'account_login' %}{% endif %}"> | Add Your Review</a>
+    {% endif %}
 </p>
 
 {% elif mode_rating >= 1 %}
-<p>
+<p class="mb-0 pb-1">
     <small class="gold-icon-text">
         <i class="fas fa-star"></i>
         <i class="far fa-star"></i>
@@ -56,15 +68,15 @@
         <i class="far fa-star"></i>
         <i class="far fa-star"></i>
     </small>
-    <span class="pantone-icon-text" >({{ reviews.count }} reviews) | </span><a href="{% if user.is_authenticated %}#product-reviews{% else %}{% url 'account_login' %}{% endif %}">Add Your Review</a>
+    <a href="#product-reviews"><span class="pantone-icon-text">({{ reviews.count }} reviews)</span></a>
+    {% if user.is_authenticated %}
+        <a class="small" href="{% if user.is_authenticated %}#contact-form{% else %}{% url 'account_login' %}{% endif %}"> | Add Your Review</a>
+    {% endif %}
 </p>
 {% else %}
-<p>
+<p class="mb-0 pb-1">
     <small class="pantone-icon-text">
         No Reviews
     </small>
 </p>
 {% endif %}
-
-<!-- do not change below -->
-<div><span>Rating: {{ mode_rating }}</span><a href="#product-reviews"><span class="small text-muted"> ({{ reviews.count }} reviews)</span></a></div>

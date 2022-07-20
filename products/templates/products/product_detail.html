@@ -155,12 +155,5 @@
 
 {% block postloadjs %}
 {{ block.super }}
-{% include 'products/includes/quantity_input_script.html' %}
-
-<!-- <script>
-    // after moving to # link, scroll down xy pixels as header overlaying other body content
-    window.addEventListener("hashchange", function () {
-        window.scrollTo(window.scrollX, window.scrollY - 1);
-    });
-</script> -->
+    {% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}
