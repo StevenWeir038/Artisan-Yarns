@@ -92,6 +92,8 @@ def product_detail(request, product_id):
 
     if mean_rating is not None:
         mode_rating = round(mean_rating)
+    else:
+        mode_rating = 0
 
     if not request.user.is_authenticated:
         template = 'products/product_detail.html'

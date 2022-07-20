@@ -122,7 +122,7 @@
             {% endif %}
             <div class="col-12 text-left" id="product-reviews">
                 <hr>
-                <h4>{{ reviews.count }} Previous reviews...</h4>
+                <h4>{{ reviews.count }} reviews so far...</h4>
                 <hr>
                 {% if reviews %}
                     {% for review in reviews.all %}
@@ -131,8 +131,8 @@
                                 <span><u>{{ review.user_profile }}</u></span><cite class="small"> - posted {{ review.added_on | timesince }} ago</cite>
                             </div>
                             <div class="px-4 pt-0 pb-2">
-                                    {% include 'products/includes/product_card_rating.html' %}
-                                    {{ review.review_description }}
+                                {% include 'products/includes/product_card_rating.html' %}
+                                {{ review.review_description }}
                             </div>
                         </div>
                         <hr>
