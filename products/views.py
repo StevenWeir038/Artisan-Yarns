@@ -85,6 +85,7 @@ def product_detail(request, product_id):
     """
     Show individual product details
     Display reviews associated with product
+    Don't provide a review form is user not authenticated
     """
 
     product = get_object_or_404(Product, pk=product_id)
@@ -92,6 +93,16 @@ def product_detail(request, product_id):
 
     review_form = ReviewForm()
     new_review = None
+
+
+    if not request.user.is_authenticated:
+        template = 'products/product_detail.html'
+        context = {
+            'product': product,
+            'reviews': reviews,
+        }
+        return render(request, template, context)
+
 
     if request.method == 'POST':
         review_form = ReviewForm(request.POST)
