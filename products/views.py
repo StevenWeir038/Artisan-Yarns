@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
+from django.db.models import Avg
 from django.db.models.functions import Lower
 
 from profiles.models import UserProfile
@@ -90,19 +91,25 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     reviews = ProductReview.objects.all().filter(product=product)
+    mean_rating = reviews.aggregate(Avg('rating'))['rating__avg']
 
-    review_form = ReviewForm()
-    new_review = None
-
+    if mean_rating is not None:
+        # round to the nearest value
+        mode_rating = round(mean_rating)
+        print(f'Mean Rating | {mean_rating}')
+        print(f'Mode Rating | {mode_rating}')
 
     if not request.user.is_authenticated:
         template = 'products/product_detail.html'
         context = {
             'product': product,
             'reviews': reviews,
+            'mode_rating': mode_rating,
         }
         return render(request, template, context)
 
+    review_form = ReviewForm()
+    new_review = None
 
     if request.method == 'POST':
         review_form = ReviewForm(request.POST)
