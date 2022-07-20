@@ -34,8 +34,7 @@
                         {% endif %}
                     </div>
                     <div class="border-top col-12">
-                        <span>Reviews</span>
-                        {{ reviews.count }} reviews
+                        {% include 'products/includes/product_rating_review.html' %}
                     </div>
                     <div class="border-top col-12"><span>Category: </span>{{ product.category.friendly_name }}</div>
                     <div class="border-top col-12"><span>Brand: </span>{{ product.brand }}</div>
@@ -118,7 +117,7 @@
                     <input type="submit" value="Post Review" class="contact-form-button ml-2 float-right">
                 </form>
             </div>
-            <div class="col-12 text-left">
+            <div class="col-12 text-left" id="product-reviews">
                 <hr>
                 <h4>Previous reviews...</h4>
                 <hr>
@@ -126,7 +125,7 @@
                     {% for review in reviews.all %}
                         <div class="card mt-4 review-card">
                             <div class="card-header">
-                                <span>{{ review.user_profile }}</span><cite class="small"> on {{ review.added_on }}</cite>
+                                <span>{{ review.user_profile }}</span><cite class="small"> on {{ review.added_on | timesince }} ago }}</cite>
                             </div>
                             <div class="card-body py-0">
                                 <p class="my-2">
@@ -141,7 +140,7 @@
                 {% else %}
                 <div class="col-12 pl-0">
                     <p>
-                        There are currenntly no reviews for this item.
+                        There are currently no reviews for this item.
                     </p>
                 </div>
                 {% endif %}
