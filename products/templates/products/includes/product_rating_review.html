@@ -1,5 +1,70 @@
 <!-- mode rating (1-5 stars) -->
+{% if mode_rating >= 5 %}
+<p>
+    <small class="gold-icon-text">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    </small>
+    <span class="pantone-icon-text" >({{ reviews.count }} reviews) | </span><a href="{% if user.is_authenticated %}#product-reviews{% else %}{% url 'account_login' %}{% endif %}">Add Your Review</a>
+</p>
 
+{% elif mode_rating >= 4 %}
+<p>
+    <small class="gold-icon-text">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
+    </small>
+    <span class="pantone-icon-text" >({{ reviews.count }} reviews) | </span><a href="{% if user.is_authenticated %}#product-reviews{% else %}{% url 'account_login' %}{% endif %}">Add Your Review</a>
+</p>
+
+{% elif mode_rating >= 3 %}
+<p>
+    <small class="gold-icon-text">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
+        <i class="far fa-star"></i>
+    </small>
+    <span class="pantone-icon-text" >({{ reviews.count }} reviews) | </span><a href="{% if user.is_authenticated %}#product-reviews{% else %}{% url 'account_login' %}{% endif %}">Add Your Review</a>
+</p>
+
+{% elif mode_rating >= 2 %}
+<p>
+    <small class="gold-icon-text">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
+        <i class="far fa-star"></i>
+        <i class="far fa-star"></i>
+    </small>
+    <span class="pantone-icon-text" >({{ reviews.count }} reviews) | </span><a href="{% if user.is_authenticated %}#product-reviews{% else %}{% url 'account_login' %}{% endif %}">Add Your Review</a>
+</p>
+
+{% elif mode_rating >= 1 %}
+<p>
+    <small class="gold-icon-text">
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
+        <i class="far fa-star"></i>
+        <i class="far fa-star"></i>
+        <i class="far fa-star"></i>
+    </small>
+    <span class="pantone-icon-text" >({{ reviews.count }} reviews) | </span><a href="{% if user.is_authenticated %}#product-reviews{% else %}{% url 'account_login' %}{% endif %}">Add Your Review</a>
+</p>
+{% else %}
+<p>
+    <small class="pantone-icon-text">
+        No Reviews
+    </small>
+</p>
+{% endif %}
 
 <!-- do not change below -->
 <div><span>Rating: {{ mode_rating }}</span><a href="#product-reviews"><span class="small text-muted"> ({{ reviews.count }} reviews)</span></a></div>

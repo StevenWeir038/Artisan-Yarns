@@ -116,6 +116,11 @@ li .nav-item {
     font-size: 0.75em;
 }
 
+.gold-icon-text {
+    color: rgba(var(--theme-gold), 1);
+    font-size: 0.75em;
+}
+
 .header-icon {
     color: rgba(var(--theme-pantone), 1);
 }

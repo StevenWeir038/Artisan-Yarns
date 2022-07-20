@@ -5,14 +5,11 @@ from django.db.models import Q
 from django.db.models import Avg
 from django.db.models.functions import Lower
 
+from .models import Product, Category
 from profiles.models import UserProfile
-from .models import Product, Category
-
-from .models import Product, Category
-from .forms import ProductForm
-
 from reviews.models import ProductReview
 from reviews.forms import ReviewForm
+from .forms import ProductForm
 
 
 # Pagination
@@ -94,10 +91,7 @@ def product_detail(request, product_id):
     mean_rating = reviews.aggregate(Avg('rating'))['rating__avg']
 
     if mean_rating is not None:
-        # round to the nearest value
         mode_rating = round(mean_rating)
-        print(f'Mean Rating | {mean_rating}')
-        print(f'Mode Rating | {mode_rating}')
 
     if not request.user.is_authenticated:
         template = 'products/product_detail.html'
