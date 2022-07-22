@@ -40,7 +40,7 @@ body {
 
 /* spacer to keep header unobstructed < md screen */
 .spacer-mobile {
-    height: 240px;
+    height: 257px;
 }
 
 /* heading elements */
@@ -73,6 +73,10 @@ header {
     font-size: large;
     margin: auto;
     padding: 0 1em;
+}
+
+.sm-border-bottom {
+    border-bottom: 3px solid rgba(var(--theme-pantone), 1);
 }
 
 /* menus */
