@@ -1,11 +1,13 @@
 <header class="container-fluid fixed-top">
     <!-- logo -->
-    <div class="row d-flex justify-content-center">
+    <div class=" my-3 row d-flex justify-content-center">
         <a href="{% url 'home' %}">
             <div class="col-12 site-logo">
                 <img src="{{ MEDIA_URL }}artisan-logo.png" alt="site logo and home link">
             </div>
         </a>
+    <!-- searchbar -->
+    {% include 'includes/searchbar.html' %}
     </div>
     <div class="site-menu row d-flex justify-content-center">
         <!-- show collapsible navbar for small viewports -->
@@ -98,8 +100,6 @@
         <div class="col-12 p-0 d-none d-md-block">
             {% include 'includes/navbar.html' %}
         </div>
-        <!-- searchbar -->
-        {% include 'includes/searchbar.html' %}
     </div>
 </header>
 <!-- help modal -->
