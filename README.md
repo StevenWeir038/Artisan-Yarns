@@ -1,13 +1,14 @@
 # **Artisan Yarns**
-Arts and crafts have always been a part of our lives and have enjoyed a resurgence in recent years, not least for their well documented health benefits.
+Arts and crafts have been a part of our lives since the dawn of civilisation.
+They have enjoyed a resurgence in recent years, not least for their well documented mental health benefits.
 
-There is a great satisfaction to be gained from embarking on and completing a new project that reflects ones own personal style. (Not unlike coding).
+There is a great satisfaction to be gained from embarking on and completing a project that reflects ones own personal style.
 
-*Artisan* Yarns is is a small e-commerce store for a hypothetical wool supply shop.  Whilst not a unique offering, it is my hope to further develop it after this course.
+This project is a personal indulgence and reflects my love of both crafts and coding.  Both are a never ending journey which forms part of their appeal!
 
-The demographic of those who knit and crochet goes well beyond the stereotypical grandparent!
+The project's overall aim is to deliver a small e-commerce site for a hypothetical yarn supply store called *Artisan Yarns*.  Whilst not a unique offering, it is my hope to further develop it after this course as more expertise is required to make it truely shine.
 
-Whilst most prefer the experience of going to a store and getting a feel for the goods, sometimes we just want the convenience of an online order delivered straight to our homes.
+As for its justification, many crafters prefer the experience of going to a store and getting a feel for a product.  However, there is a niche for those know what they want and desire the convenience of an online order delivered straight to their home.
 
 ![Responsive screenshot showing site on different screen sizes]()
 link to [deployed site]())
@@ -23,7 +24,7 @@ As an *e-commerce* store, a few minimal requirements ought to be included. A use
 
 To customise the user experience, could they save their details for future visits or see their own order history?
 
-How could the store administer their inventory and update their product list and prices?
+How could the store administer their inventory and maintain their product list and prices?
 
 A *thought shower* with the above questions in mind can help identify desired store features and separate them into epics. 
 
@@ -56,7 +57,11 @@ Totals | 105 | 105
 
 User stories will closely follow the above opportunities.  Full disclosure, they have been identified in the *Boutique Ado* walkthrough project.
 
-*Artisan Yarns* will draw quite extensively from the *Boutique Ado* codebase given current developer experience, a 7 week completion deadline and the common themes found on many e-commerce sites.
+*Artisan Yarns* will draw quite extensively from the *Boutique Ado* codebase given the developer's current experience and a 7 week completion deadline.
+Getting something just right does seem to take a bit longer than intended.
+
+In hindsight, given my current skillset, I would consider the above delivery a little too optimistic as I've only been using the Django Framework for the past 4 months on a part time basis.  It's important to acknowledge such limitations whilst striving to learn more.
+
 
 ## **Scope**
 The above oppurtunities should be prioritised by balancing completion effort and the importance/value of each desired feature.
@@ -90,10 +95,7 @@ User Design (UX) efforts can be categorized into *must*, *should* and *could hav
 **Could Have**
 - n/a
 
-Exploring the scope shows the above features to be critical even for a basic e-commerce site.
-
-## **Structure**
-flowcharts
+Exploring the scope shows the above features to be critical even for a basic e-commerce site.  Nearing the end of the project, achieving them all feels a little too neat.  There are always more useful features to develop/include. 
   
 ### **User Stories**
 
@@ -138,6 +140,8 @@ flowcharts
 ### **Wireframes**
 Main areas as seen in varying viewport sizes.  Created using [Balsamiq Cloud](https://balsamiq.cloud/).
 
+Note, due to the nature of a student lead development and lack of consumer feedback, there may be a few alterations as to how individual elements are displayed.
+
 - [Home](documents/readme/wireframes/home.png "home")
 - [Contact Us](documents/readme/wireframes/contact-us.png "contact us")
 - [Products](documents/readme/wireframes/products.png "products")
@@ -171,26 +175,165 @@ Best solution at this point was to add a brand and category field to the Product
 The submission of this project falls close to Her Majestys Platinum Jubilee.  In celebration of this milestone I have adopted the [official](https://www.royal.uk/sites/default/files/queens_platinum_jubilee_guidelines_2022.pdf) colour scheme of Platinum *#E5E4E2*, Pantone *#61007D* and Gold *#BF9D5E*.
 
 ### **Typography**:
-Crafting embues a homemade quality.  *Happy Monkey* cursive font supports this as it appears handwritten.  This has been limited to titles and subheadings for readability.
+Crafting embues a homemade quality.  *Happy Monkey* cursive font supports this as it appears handwritten.  This has been limited to titles and subheadings for readability. [Google Fonts](https://fonts.google.com/) is an excellent tool to import various fonts into any project.
 
 
 # **Agile Development Process**
-[Github Projects](https://github.com/StevenWeir038/Artisan-Yarns/projects) serves as an Agile tool for this project.
-Through it, user stories, issues and tasks are planned and tracked on a weely basis using a basic Kanban.
+[Github Projects](https://github.com/StevenWeir038/Artisan-Yarns/projects) served as an Agile tool for this project.
 
+Through it, user stories, issues and taskswere planned and tracked on a weekly basis using a basic Kanban.
+
+On reflection, in the beginning it was a pain to use a Kanban approach.  In the end, I was praising it's merits.
+
+It was a window on the issues encountered and solutions employed at different stages of the project.
+
+If this approach was useful at an individual level, then I can see it is an imperative when collaborating with others.
 
 # **Features**
-For example, logo, landing page, site nav, headeer, footer, allauth authentication, pagination, error pages etc
-After frontend development pass images into README.
-
 ## **Logo**
-![Logo](static/images/artisan-logo.png "logo")
+As with most businesses and sites have a unique livery.  For this site the following will act as a signiture.
+Credit to [Tailor Brands](https://studio.tailorbrands.com/login) in creating a bespooke brand label.
+
+![Logo](media/artisan-logo.png "logo")
+
+Authentication - Sign In / Sign Out / Sign Up
+
+![authentication](documents/readme/features/authentication.png "authentication")
+
+
+Profile  STIIL TO DO CREATE A FEW ORDERS FIRST
+
+
+### Error Pages
+404
+
+![404_error](documents/readme/features/error404.png "404_error")
+
+500
+![500_error](documents/readme/features/error500.png "500_error") - STILL TO DO
+
+### Header
+Includes:
+- artisan yarn icon as as a home link
+- searchbar to find and display products in the store
+- collapsible menu for smaller scree sizes
+- wishlist only available to authenticated users
+- bespooke dropdown menu for user accounts to sign up, sign in, sign out, view/edit own profile (authenticated users only) and manage product (authenticated superusers only)
+
+![header](documents/readme/features/header.png "header")
+
+### Footer
+Includes:
+- responsive layout for small, medium and large screen sizes
+- newsletter section.  It was place here specifically so the user can sign up from any site page
+- back to top button
+- social links
+- general business information
+- menu shortcuts. Note *My Account* only available when authenticated and *Product Management* only available to authenticated superusers. 
+
+![footer](documents/readme/features/footer.png "footer")
+    
+### Homepage
+Includes:
+- responsive layout for very small, small and medium+ screen sizes
+- as with major retailer sites, larger images are set up as links to direct to specific store areas
+
+![homepage](documents/readme/features/homepage.png "homepage")
+
+### Products
+Includes:
+- pagination
+- default no image placeholder if no image is in the database
+- dropdown menu to sort by price, name and category in standard or reverse order
+- number of product cards displayed per row is responsive to screen size
+    - small - 1 card
+    - medium - 2 cards
+    - large - 3 cards
+    - extra large - 4 cards
+
+![all_products](documents/readme/features/all_products.png "all_products")
+
+### Product Detail
+Includes:
+- responsive layout for different screen sizes 
+- buttons use fontawesome icons on small screens to save space
+- buttons like to convenient pages in the store
+- user can adjust the quantity of items before adding to basket
+- store owners (set up as superusers) can edit or delete the product
+- count and average (mode) star rating calcuated by existing reviews is visible
+- useful info about the product is displayed
+
+![product_detail](documents/readme/features/product_detail.png "product_detail")
+
+### Reviews
+Includes:
+- displayed on the same page of a specific product as that is the relevant context
+- only authenticated users can see the review form.  This intentionally limits review postings to registered users
+- rather than leave a specific date/time of posting, django template displays how long ago the post was made
+- counter for the number of review on the product
+- most recent postings are displayed at the top
+- displays rating with start pictograms rather than a number
+
+![reviews](documents/readme/features/reviews.png "reviews")
+
+### Wishlist
+Includes:
+- header and footer links only available to authorized users
+- itemised list of items added to wishlist
+- items cannot be duplicated in the wishlist (to reduce clutter)
+- alerts when an items is added, removed or if already listed
+- small image, product name, cost and description
+- bin icon to delete listed item
+- basket icon to take user to product detail page where they can then add the item to the basket
+- bin and basket buttons intentionally placed apart for ease of use on mobile screens
+
+![wishlist](documents/readme/features/wishlist.png "wishlist")
+
+### Basket
+Includes:
+- abc
+- abc
+
+![add_basket](documents/readme/features/add_basket.png "add_basket")
+![edit_basket](documents/readme/features/edit_basket.png "edit_basket")
+![delete_basket](documents/readme/features/delete_basket.png "delete_basket")
+
+
+Checkout
+
+### Newsletter
+Includes:
+- one field only (email) to encourage easier signup to the service
+- embedded in the footer for accessibility across the whole site
+
+![newsletter](documents/readme/features/newsletter.png "newsletter")
+
+### Contact
+Includes:
+- header and footer links
+- simple 4 field form including name, email, subject and message
+- post button for the form content to be emailed to the site owner
+
+![contact](documents/readme/features/contact.png "contact")
+
+### Product Management
+The store owner has been given frontend CRUD functionality for ease of access/manage their product database.
+They still have the option of using Django Admin if they prefer.
+
+Includes:
+- header, footer and edit/delete links in product detail only accessibile by site owner/superuser
+- form to add fields
+- form to edit fields
+- alerts for a successsful item addition, edit, update and deletion
+
+![add_product](documents/readme/features/add_product.png "add_product")
+![edit_product](documents/readme/features/edit_product.png "edit_product")
+![delete_product](documents/readme/features/delete_product.png "delete_product")
 
 # **Future development**
 Why not introduce a colour field into the product model to enhance product searches?  Matching colour is an integral part when selecting yarn for projects.
 
 # **Testing Phase**
-
 Separate document [TESTING.md](TESTING.md).
 
 # **Deployment**
