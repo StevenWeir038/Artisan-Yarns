@@ -29,11 +29,13 @@
                             <i class="fa-solid fa-circle-question"></i> Help
                         </span>
                     </div>
+                    {% if user.is_authenticated %}
                     <div class="col-11 offset-1">
                         <a href="{% url 'wishlist' %}">
                             <i class="fa-solid fa-heart"></i> Wishlist
                         </a>
                     </div>
+                    {% endif %}
                     <div class="col-11 offset-1">
                         {% if user.is_authenticated %}
                             {% if request.user.is_superuser %}
@@ -69,7 +71,7 @@
                     </div>
                     <div class="col-11 offset-1 text-left">
                         <p class="font-weight-bold mb-0">Email:</p>
-                        <p class="mb-2">artisan-yarns@example.com</p>
+                        <p class="mb-2">artisanyarns039@gmail.com</p>
                     </div>
                 </div>
             </div>
