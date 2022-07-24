@@ -291,6 +291,54 @@ Includes:
 
 ![product_detail](documents/readme/features/product_detail.png "product_detail")
 
+### Product Management
+The store owner has been given frontend CRUD functionality for ease of access/manage their product database.
+They still have the option of using Django Admin if they prefer.
+
+Includes:
+- header, footer and edit/delete links in product detail only accessibile by site owner/superuser
+- form to add fields
+- form to edit fields
+- alerts for a successsful item addition, edit, update and deletion
+
+![add_product](documents/readme/features/add_product.png "add_product")
+![edit_product](documents/readme/features/edit_product.png "edit_product")
+![delete_product](documents/readme/features/delete_product.png "delete_product")
+
+### Basket
+Includes:
+- header and footer links available to users as users don't have to be signed in to make a purchase
+- add item to basket must be done in product detail page
+- upon adding an item a customised toast provides:
+    - message telling user what item they added
+    - a count of total basket items
+    - a scrollable list of items including their image, name, quantity and price
+    - subtotal of all basket items
+    - useful shortcut buttons to return to store (to continue shopping) or got to checkout to enter payment details
+- the basket page is essentially the same thing with 4 other pieces of functionality
+    - user can increment/decrement the number of items they order from a validated element (1-99)
+    - view the item subtotal after each update
+    - remove the item from the their basket
+    - view a basket total after each update/deletion
+
+![add_basket](documents/readme/features/add_basket.png "add_basket")
+![edit_basket](documents/readme/features/edit_basket.png "edit_basket")
+![delete_basket](documents/readme/features/delete_basket.png "delete_basket")
+
+### Checkout
+Includes:
+- responsive page layout for different viewport sizes
+- an itemised list of basket items
+- prepoulated delivery details taken from user profile (if authenticated)
+- standardized buttons to return to store, return to basket or securely pay using stripe
+- spinner to show user payment is being processed.  Reduces the chance of them refreshing page and being double charged etc
+- toast showing user successful/unsuccessful payment
+- users should receive an email with their order detail. (The below example is of a different order) 
+
+![checkout](documents/readme/features/checkout.png "checkout")
+![checkout_email](documents/readme/features/checkout_email.png "checkout_email")
+
+## Bespoke Applcations
 ### Reviews
 Includes:
 - displayed on the same page of a specific product as that is the relevant context
@@ -315,40 +363,6 @@ Includes:
 
 ![wishlist](documents/readme/features/wishlist.png "wishlist")
 
-### Basket
-Includes:
-- header and footer links available to users as users don't have to be signed in to make a purchase
-- add item to basket must be done in product detail page
-- upon adding an item a customised toast provides:
-    - message telling user what item they added
-    - a count of total basket items
-    - a scrollable list of items including their image, name, quantity and price
-    - subtotal of all basket items
-    - useful shortcut buttons to return to store (to continue shopping) or got to checkout to enter payment details
-- the basket page is essentially the same thing with 4 other pieces of functionality
-    - user can increment/decrement the number of items they order from a validated element (1-99)
-    - view the item subtotal after each update
-    - remove the item from the their basket
-    - view a basket total after each update/deletion
-
-![add_basket](documents/readme/features/add_basket.png "add_basket")
-![edit_basket](documents/readme/features/edit_basket.png "edit_basket")
-![delete_basket](documents/readme/features/delete_basket.png "delete_basket")
-
-
-### Checkout
-Includes:
-- responsive page layout for different viewport sizes
-- an itemised list of basket items
-- prepoulated delivery details taken from user profile (if authenticated)
-- standardized buttons to return to store, return to basket or securely pay using stripe
-- spinner to show user payment is being processed.  Reduces the chance of them refreshing page and being double charged etc
-- toast showing user successful/unsuccessful payment
-- users should receive an email with their order detail. (The below example is of a different order) 
-
-![checkout](documents/readme/features/checkout.png "checkout")
-![checkout_email](documents/readme/features/checkout_email.png "checkout_email")
-
 ### Newsletter
 Includes:
 - one field only (email) to encourage easier signup to the service
@@ -364,36 +378,27 @@ Includes:
 
 ![contact](documents/readme/features/contact.png "contact")
 
-### Product Management
-The store owner has been given frontend CRUD functionality for ease of access/manage their product database.
-They still have the option of using Django Admin if they prefer.
-
-Includes:
-- header, footer and edit/delete links in product detail only accessibile by site owner/superuser
-- form to add fields
-- form to edit fields
-- alerts for a successsful item addition, edit, update and deletion
-
-![add_product](documents/readme/features/add_product.png "add_product")
-![edit_product](documents/readme/features/edit_product.png "edit_product")
-![delete_product](documents/readme/features/delete_product.png "delete_product")
-
-# **Future development**
-Why not introduce a colour field into the product model to enhance product searches?  Matching colour is an integral part when selecting yarn for projects.
+# **Future development opportunities**
+There is always room for improvement.  Some that are strikingly obvious include but require more time to implement:
+- introducing a colour field into the product model to enhance product searches?  Matching colour is an integral part when selecting yarn for projects. Ideally use a div with border-radius of 50% filled with the palette colour instead of a name.
+- stock availability. A store has a finite amount of product items by line.  Why not check if there are enough items in stock when a user is making an order?  Running low on an item?  Maybe tell the user.  Put subtle pressure on them to buy the item while they can.
+- currently the user is directed from the wishlist to manually add a product to their basket.  Automate this.  Link the wishlist into the basket contexct processor.
+- improve defensive programming.  When deleting items from the basket or wishlist, it's better to ask the user if they are sure to avoid accidental deletion.
+- buttons.  I went down the rabbit hole of responsive button sizes.  Keep it simple.  Button sizes can be reatively static without affective user experience.  Also less cumbersome to maintain in terms of `css` and `bootstrap` classes therefore improving code maintainability. 
 
 # **Testing Phase**
 Separate document [TESTING.md](TESTING.md).
 
 # **Deployment**
-The final Deployed site can be found [here])
+The final Deployed site can be found [here](https://artisan-yarns.herokuapp.com/))
 Separate document [DEPLOYMENT.md](DEPLOYMENT.md).
 
 # **Social Media Marketing & Search Engine Optimization (SEO)**
 Creating a strong social base (with participation) and linking that to the business site can help drive sales.  Using more popular providers with a wider user base such as Facebook typically maximises site views.
 
-As this is a student led project there is a possibility that the [Artisan Yarns](https://www.facebook.com/Artisan-Yarns-101716042612963) page may be deleted.  This is acceptable as each platform has its own agenda.  It's in their interest to host only were it supports their business model.
+As this is a student led project there is a possibility that the [Artisan Yarns](https://www.facebook.com/Artisan-Yarns-101716042612963) page may be deleted.  That's ok.  They wouldn't want their platform cluttered with fake businesses.
 
-Regardless, the below screen capture should hopefully demonstrate the developers intent. Social media has the ability to complement a business with an e-commerce component by boosting visitor numbers.
+The below screen capture should hopefully demonstrate the developers intent.
 
 ![Facebook Marketing](media/social-media-marketing.png)
 
@@ -421,14 +426,27 @@ Representative long-tail and short-tail phrases/words for this site may include:
 - [Lucidchart](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning) to build/contectualize database tables/fields and their relationships.
 - [Adobe Express](https://express.adobe.com/sp) to crop/resize images
 - [Pillow](https://pillow.readthedocs.io/en/stable/index.html) to display product image fields.
+- Linter tools
+    - [HTML](https://validator.w3.org/)
+    - [CSS](https://jigsaw.w3.org/css-validator/)
+    - [Javascript/Jquery](https://jshint.com/)
+    - [Python](http://pep8online.com/)
 
 # **Credits**
 ## Mentions
-- My mentor [Tim Nelson](https://tim.2bn.dev/).  He's very good. My thanks to him for a seemingly short year and leaving an indelible mark on my approach.  He truely is committed to his students' knowledge and personal growth.
+Support
+- My mentor [Tim Nelson](https://tim.2bn.dev/). A true gent. My thanks to him for a seemingly short year and leaving an indelible mark on my approach.  His commitment to his students' knowledge and personal growth is second to none.
 
-- David Bowers and Helena Johansson for their personal support and input.  Just being there means alot.
+- [Chris Quinn](https://github.com/10xOXR) for stepping in short notice to assist mid-project. Knowledgeable, approachable, professional.
 
-- The CI Slack community
+- [David Bowers](https://github.com/dnlbowers) and Helena Johansson for their personal support and input.  Just being there means alot.
+
+Read and understand the documentation made life easier.  You wouldn't build furniture without the instructions would you?
+- [Django documentation](https://www.djangoproject.com/).
+- [Bootstrap documentation](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+- [Stripe](https://stripe.com/docs/payments?payments=popular)
+
+- The CI Slack community for its encouragement and threads that helped me figure out most issues without tutor support.
 
 - [John Elder](https://www.youtube.com/watch?v=N-PB-HMFmdo) and [Vitor Freitas](https://simpleisbetterthancomplex.com/tutorial/2016/08/03/how-to-paginate-with-django.html) for their useful tutorials on Django pagination.
 
