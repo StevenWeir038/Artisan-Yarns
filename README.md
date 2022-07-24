@@ -108,30 +108,47 @@ Exploring the scope shows the above features to be critical even for a basic e-c
 *EPIC - Viewing and Searching Products*
 
 3 - **As a** site user, **I can** view all products, **so that** I can decide what to purchase.
+
 4 - **As a** site user, **I can** view products by category, **so that** I can narrow my search range.
+
 5 - **As a** site user, **I can** view products by cost, **so that** I can shop within my budget.
+
 6 - **As a** site user, **I can** view individual product details, **so that** I can view each product in greater detail.
+
 7 - **As a** site user, **I can** search for a product by name / description using the searchbar, **so that** I can see if the store has a product I want.
 
 *EPIC - Reviewing Products*
+
 8 - **As a** site user, **I can** add products to a wishlist, **so that** I can view each product in greater detail before commiting to a purchase.
+
 9 - **As a** site user, **I can** leave a review / rating for each product **so that** others can decide if they want to buy the product based upon my experience.
 
 *EPIC - Authentication and User Profiles*
+
 10 - **As a** site user, **I can** register for an account, **so that** I can create my own personal account.
+
 11 - **As a** site user, **I can** login/logout, **so that** I can access my personal account.
-12 - **As a** site user, **I can** recover my password, **so that** I can recover access to my personal account. 
+
+12 - **As a** site user, **I can** recover my password, **so that** I can recover access to my personal account.
+
 13 - **As a** site user, **I can** edit my own unique profile, **so that** I can update my personal details, payment and delivery address information.
 
 *EPIC - Payments & Checkout*
+
 14 - **As a** site user, **I can** view items in their shopping basket, **so that** I can see what I am purchasing.
+
 15 - **As a** site user, **I can** adjust the number of items by product line in their shopping basket, **so that** I can purchase multiples of the same item.
+
 16 - **As a** site user, **I can** enter payment details to make a purchase, **so that** I can make a payment.
+
 17 - **As a** site user, **I can** receive a confirmation email following their purchase, **so that** I can confirm I made a purchase.
 
 *EPIC - Inventory Administration and Store Management*
+
 18 - **As a** site administrator, **I can** add a product, **so that** I can add new items to the store.
+
 19 - **As a** site administrator, **I can** edit a product, **so that** I can change product prices, images and descriptions in the store.
+
 20 - **As a** site administrator, **I can** delete a product, **so that** I can remove items from the store.
 
 ## **Skeleton**
@@ -172,11 +189,14 @@ Best solution at this point was to add a brand and category field to the Product
 
 ## **Surface**
 ### **Color scheme**
-The submission of this project falls close to Her Majestys Platinum Jubilee.  In celebration of this milestone I have adopted the [official](https://www.royal.uk/sites/default/files/queens_platinum_jubilee_guidelines_2022.pdf) colour scheme of Platinum *#E5E4E2*, Pantone *#61007D* and Gold *#BF9D5E*.
+The development of this project fell close to the Queen's [Platinum Jubilee](https://www.royal.uk/sites/default/files/queens_platinum_jubilee_guidelines_2022.pdf).
+
+I have adopted the colour scheme of Platinum *#E5E4E2*, Pantone *#61007D* and Gold *#BF9D5E* as they have a connotation of luxury.
+
+![color_schema](documents/readme/color_schema/color_schema.png "color_schema")
 
 ### **Typography**:
 Crafting embues a homemade quality.  *Happy Monkey* cursive font supports this as it appears handwritten.  This has been limited to titles and subheadings for readability. [Google Fonts](https://fonts.google.com/) is an excellent tool to import various fonts into any project.
-
 
 # **Agile Development Process**
 [Github Projects](https://github.com/StevenWeir038/Artisan-Yarns/projects) served as an Agile tool for this project.
@@ -191,7 +211,7 @@ If this approach was useful at an individual level, then I can see it is an impe
 
 # **Features**
 ## **Logo**
-As with most businesses and sites have a unique livery.  For this site the following will act as a signiture.
+Businesses often adopt a unique livery.  For this site the following will act as a signiture.
 Credit to [Tailor Brands](https://studio.tailorbrands.com/login) in creating a bespooke brand label.
 
 ![Logo](media/artisan-logo.png "logo")
@@ -201,16 +221,22 @@ Authentication - Sign In / Sign Out / Sign Up
 ![authentication](documents/readme/features/authentication.png "authentication")
 
 
-Profile  STIIL TO DO CREATE A FEW ORDERS FIRST
+### Profile
+Includes:
+- header and footer likns available to authenticated users only
+- responsive layout for small, medium and large screen sizes
+- personalised sub header with account users name
+- form to display/update delivery details
+- scrollable order history with links to drill down into individual order
+- alert message to tell user they are viewing a historic order, now a live order
+- redirect to profile button instead of back to store button if order viewed from profile
 
+![profile](documents/readme/features/profile.png "profile")
 
 ### Error Pages
-404
+404 & 500
 
 ![404_error](documents/readme/features/error404.png "404_error")
-
-500
-![500_error](documents/readme/features/error500.png "500_error") - STILL TO DO
 
 ### Header
 Includes:
@@ -291,15 +317,37 @@ Includes:
 
 ### Basket
 Includes:
-- abc
-- abc
+- header and footer links available to users as users don't have to be signed in to make a purchase
+- add item to basket must be done in product detail page
+- upon adding an item a customised toast provides:
+    - message telling user what item they added
+    - a count of total basket items
+    - a scrollable list of items including their image, name, quantity and price
+    - subtotal of all basket items
+    - useful shortcut buttons to return to store (to continue shopping) or got to checkout to enter payment details
+- the basket page is essentially the same thing with 4 other pieces of functionality
+    - user can increment/decrement the number of items they order from a validated element (1-99)
+    - view the item subtotal after each update
+    - remove the item from the their basket
+    - view a basket total after each update/deletion
 
 ![add_basket](documents/readme/features/add_basket.png "add_basket")
 ![edit_basket](documents/readme/features/edit_basket.png "edit_basket")
 ![delete_basket](documents/readme/features/delete_basket.png "delete_basket")
 
 
-Checkout
+### Checkout
+Includes:
+- responsive page layout for different viewport sizes
+- an itemised list of basket items
+- prepoulated delivery details taken from user profile (if authenticated)
+- standardized buttons to return to store, return to basket or securely pay using stripe
+- spinner to show user payment is being processed.  Reduces the chance of them refreshing page and being double charged etc
+- toast showing user successful/unsuccessful payment
+- users should receive an email with their order detail. (The below example is of a different order) 
+
+![checkout](documents/readme/features/checkout.png "checkout")
+![checkout_email](documents/readme/features/checkout_email.png "checkout_email")
 
 ### Newsletter
 Includes:
