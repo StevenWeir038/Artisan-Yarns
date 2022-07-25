@@ -199,9 +199,9 @@ I have adopted the colour scheme of Platinum *#E5E4E2*, Pantone *#61007D* and Go
 Crafting embues a homemade quality.  *Happy Monkey* cursive font supports this as it appears handwritten.  This has been limited to titles and subheadings for readability. [Google Fonts](https://fonts.google.com/) is an excellent tool to import various fonts into any project.
 
 # **Agile Development Process**
-[Github Projects](https://github.com/StevenWeir038/Artisan-Yarns/projects) served as an Agile tool for this project.
+[Github Projects](https://github.com/StevenWeir038/Artisan-Yarns/projects) served as an Agile tool for this project.  It isn't a specialise tool but with the right tags and project creation/issue assignments is can be made to work.
 
-Through it, user stories, issues and taskswere planned and tracked on a weekly basis using a basic Kanban.
+Through it, user stories, issues and tasks were planned and tracked on a weekly basis using a basic Kanban.
 
 On reflection, in the beginning it was a pain to use a Kanban approach.  In the end, I was praising it's merits.
 
@@ -210,16 +210,16 @@ It was a window on the issues encountered and solutions employed at different st
 If this approach was useful at an individual level, then I can see it is an imperative when collaborating with others.
 
 # **Features**
-## **Logo**
+### **Logo**
 Businesses often adopt a unique livery.  For this site the following will act as a signiture.
 Credit to [Tailor Brands](https://studio.tailorbrands.com/login) in creating a bespooke brand label.
 
 ![Logo](media/artisan-logo.png "logo")
 
+## Required Applcations
 Authentication - Sign In / Sign Out / Sign Up
 
 ![authentication](documents/readme/features/authentication.png "authentication")
-
 
 ### Profile
 Includes:
@@ -237,6 +237,7 @@ Includes:
 404 & 500
 
 ![404_error](documents/readme/features/error404.png "404_error")
+![500_error](documents/readme/features/error500.png "500_error")
 
 ### Header
 Includes:
@@ -384,13 +385,23 @@ There is always room for improvement.  Some that are strikingly obvious include 
 - stock availability. A store has a finite amount of product items by line.  Why not check if there are enough items in stock when a user is making an order?  Running low on an item?  Maybe tell the user.  Put subtle pressure on them to buy the item while they can.
 - currently the user is directed from the wishlist to manually add a product to their basket.  Automate this.  Link the wishlist into the basket contexct processor.
 - improve defensive programming.  When deleting items from the basket or wishlist, it's better to ask the user if they are sure to avoid accidental deletion.
-- buttons.  I went down the rabbit hole of responsive button sizes.  Keep it simple.  Button sizes can be reatively static without affective user experience.  Also less cumbersome to maintain in terms of `css` and `bootstrap` classes therefore improving code maintainability. 
+- buttons.  I went down the rabbit hole of responsive button sizes.  Keep it simple.  Button sizes can be reatively static without affective user experience.  Also less cumbersome to maintain in terms of `css` and `bootstrap` classes therefore improving code maintainability.
+- Javascript driven filter positioned left in the products page to filter categories/products by weight/cost etc
 
 # **Testing Phase**
 Separate document [TESTING.md](TESTING.md).
 
+## Known Issues
+- grey colour extending beyond gold border on searchbar on md+ resolutions
+- variable product card heights
+- page not filling full screen height for pages with limited content
+- card images appear skewed in product detail
+- on small screens in product detail, add to basket icon lacks margin and touches quantity element
+- on contact form, model fields left as `required=False` to preserve `form-input` format.  Otherwise bootstrap4 overriding with `is-vaild` and `is-invalid` classes therefore hiding gold borders.
+
+
 # **Deployment**
-The final Deployed site can be found [here](https://artisan-yarns.herokuapp.com/))
+The final Deployed site can be found [here](https://artisan-yarns.herokuapp.com/)
 Separate document [DEPLOYMENT.md](DEPLOYMENT.md).
 
 # **Social Media Marketing & Search Engine Optimization (SEO)**
@@ -431,20 +442,28 @@ Representative long-tail and short-tail phrases/words for this site may include:
     - [CSS](https://jigsaw.w3.org/css-validator/)
     - [Javascript/Jquery](https://jshint.com/)
     - [Python](http://pep8online.com/)
+- [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)
+
+# Resources
+Reading and understanding the documentation made life easier.  You wouldn't build furniture without the instructions would you?
+- [Django documentation](https://www.djangoproject.com/).
+- [Bootstrap documentation](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+- [Stripe](https://stripe.com/docs/payments?payments=popular)
+
+- [Code Institute Course Materials](https://codeinstitute.net/full-stack-software-development-diploma/?utm_term=code%20institute&utm_campaign=CI+-+UK+-+Search+-+Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=1578649861&hsa_grp=62188641240&hsa_ad=581730217381&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQjw2_OWBhDqARIsAAUNTTGuqjzZXJQaJfo7xNLguOc6Cu-9MDllgPV4dWDLkgOsNsrjeSacjc0aAjajEALw_wcB)
+- [Stack Overflow](https://stackoverflow.com/)
+- [MDN](https://developer.mozilla.org/en-US/)
+- [W3schools](https://www.w3schools.com/)
+- [Chrome DevTools](https://developer.chrome.com/docs/devtools/) for testing, style checking and debugging
 
 # **Credits**
 ## Mentions
 Support
 - My mentor [Tim Nelson](https://tim.2bn.dev/). A true gent. My thanks to him for a seemingly short year and leaving an indelible mark on my approach.  His commitment to his students' knowledge and personal growth is second to none.
 
-- [Chris Quinn](https://github.com/10xOXR) for stepping in short notice to assist mid-project. Knowledgeable, approachable, professional.
+- Special thanks to [Chris Quinn](https://github.com/10xOXR) for his assistance mid-project.  His explanations were of great help.
 
 - [David Bowers](https://github.com/dnlbowers) and Helena Johansson for their personal support and input.  Just being there means alot.
-
-Read and understand the documentation made life easier.  You wouldn't build furniture without the instructions would you?
-- [Django documentation](https://www.djangoproject.com/).
-- [Bootstrap documentation](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
-- [Stripe](https://stripe.com/docs/payments?payments=popular)
 
 - The CI Slack community for its encouragement and threads that helped me figure out most issues without tutor support.
 
@@ -459,6 +478,7 @@ Images taken from unsplash.
 - Landing page image 3 by [Kelly Sikkema](https://unsplash.com/photos/M6lApC0hEpg)
 - Landing page image 4 by [Cintia](https://mypoppet.com.au/makes/make-a-giant-magic-yarn-ball-from-yarn-scraps/)
 - Landing page image 5 by [Olliss](https://unsplash.com/photos/7mJj0Boa4jc)
+- Page tab [favicon](https://icons8.com/icons/set/yarn)
 
 Product Images
 
