@@ -3,6 +3,8 @@ from .models import ProductReview
 
 
 admin.site.register(ProductReview)
+
+
 class ProductReviewAdmin(admin.ModelAdmin):
     """
     Display list of Reviews

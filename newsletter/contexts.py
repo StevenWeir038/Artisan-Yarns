@@ -16,9 +16,11 @@ def subscription_form_contents(request):
         # if data has no issues
         if subscription_form.is_valid():
             # prevent a duplicate email being saved
-            instance = subscription_form.save(commit=False)  # don't save the instance (YET)
+            instance = subscription_form.save(
+                commit=False)  # don't save the instance (YET)
             if NewsletterSub.objects.filter(email=instance.email).exists():
-                # tell the user the email is already on the sub list so do nothing more before exiting loop
+                # tell the user the email is already on the sub list so do
+                # nothing more before exiting loop
                 messages.error(request, "You're already subscribed")
             else:
                 # save the POSTed form

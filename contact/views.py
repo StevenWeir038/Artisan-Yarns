@@ -4,6 +4,7 @@ from django.core.mail import send_mail
 from django.contrib import messages
 from .forms import ContactForm
 
+
 def contact(request):
     """ Contact page view """
     if request.method == 'POST':
@@ -22,14 +23,17 @@ def contact(request):
                 settings.EMAIL_HOST_USER,
                 [settings.EMAIL_HOST_USER]
             )
-            # relay a success message to the user and redirect to contact page again
+            # relay a success message to the user and redirect to contact page
+            # again
             messages.success(request, 'Your message has been sent!')
             # redirect to contact page
             return redirect(reverse('contact'))
 
-        # if form is not valid create relay a failure message to the user. Stay on the same page.
+        # if form is not valid inform user but remain on the same page.
         else:
-            messages.error(request, 'There was a problem sending your message. Please try again.')
+            messages.error(
+                request, 'There was a problem sending your message. \
+                Please try again.')
     # create a blank instance and allow user to repopulate
     else:
         form = ContactForm(request.POST)
