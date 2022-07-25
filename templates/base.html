@@ -3,17 +3,13 @@
 <!doctype html>
 <html lang="en">
 
-<!-- head -->
 {% include 'includes/head.html' %}
 
 <body>
-    <!-- header -->
     {% include 'includes/header.html' %}
-    <!-- spacer div to prevent header/body overlap -->
     <div class="spacer-mobile d-md-none"></div>
     <div class="spacer-tablet d-none d-md-block"></div>
 
-    <!-- messages -->
     {% if messages %}
     <div class="message-container">
         {% for message in messages %}
@@ -32,8 +28,6 @@
     </div>
     {% endif %}
 
-    <!-- to act as an additional header on pages that extend this base template in case we
-    want to put something at the top of those pages but underneath the main header -->
     <div class="header-container">
         <div class="row">
             <div class="col">
@@ -43,17 +37,14 @@
         </div>
     </div>
 
-    <!-- main content -->
     {% block content %}
     {% endblock %}
 
-    <!-- footer (place inside block to give option to use footer on individual pages)-->
     {% block footer %}
-    {% include 'includes/mobile-footer.html' %}
+    {% include 'includes/mobile-footer.html' %}2
     {% include 'includes/main-footer.html' %}
     {% endblock %}
 
-    <!-- js scripts to load at end of page -->
     {% block postloadjs %}
         <script type="text/javascript">
             $('.toast').toast('show');
