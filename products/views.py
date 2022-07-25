@@ -45,7 +45,6 @@ def all_products(request):
             sortkey = request.GET['sort']
             sort = sortkey
             if sortkey == 'name':
-                sortkey = 'lower_name'
                 products = products_list.annotate(lower_name=Lower('name'))
             if sortkey == 'category':
                 sortkey = 'category__name'
@@ -77,6 +76,19 @@ def all_products(request):
     }
 
     return render(request, 'products/products.html', context)
+
+# bug - lighter products with DK weight not displaying
+def lighter_yarn_weights(request):
+    """ View to return lighter yarns from homepage link """
+    products = Product.objects.filter(weight__icontains='Light')  # search for Light
+    
+    template = 'products/products.html'
+
+    context = {
+            'products': products,
+        }
+
+    return render(request, template, context)
 
 
 def product_detail(request, product_id):
