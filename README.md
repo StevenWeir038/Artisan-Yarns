@@ -443,6 +443,7 @@ Representative long-tail and short-tail phrases/words for this site may include:
     - [Javascript/Jquery](https://jshint.com/)
     - [Python](http://pep8online.com/)
 - [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)
+- [Chrome DevTools](https://developer.chrome.com/docs/devtools/) for testing, style checking and debugging
 
 # Resources
 Reading and understanding the documentation made life easier.  You wouldn't build furniture without the instructions would you?
@@ -454,7 +455,6 @@ Reading and understanding the documentation made life easier.  You wouldn't buil
 - [Stack Overflow](https://stackoverflow.com/)
 - [MDN](https://developer.mozilla.org/en-US/)
 - [W3schools](https://www.w3schools.com/)
-- [Chrome DevTools](https://developer.chrome.com/docs/devtools/) for testing, style checking and debugging
 
 # **Credits**
 ## Mentions
