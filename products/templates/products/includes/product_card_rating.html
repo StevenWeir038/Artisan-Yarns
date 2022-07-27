@@ -2,55 +2,65 @@
 {% if review.rating >= 5 %}
 <p class="my-0">
     <small class="gold-icon-text">
+        {% spaceless %}
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
+        {% endspaceless %}
     </small>
 </p>
 
 {% elif review.rating >= 4 %}
 <p class="my-0">
     <small class="gold-icon-text">
+        {% spaceless %}
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
         <i class="far fa-star"></i>
+        {% endspaceless %}
     </small>
 </p>
 
 {% elif review.rating >= 3 %}
 <p class="my-0">
     <small class="gold-icon-text">
+        {% spaceless %}
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
         <i class="far fa-star"></i>
         <i class="far fa-star"></i>
+        {% endspaceless %}
     </small>
 </p>
 
 {% elif review.rating >= 2 %}
 <p class="my-0">
     <small class="gold-icon-text">
+        {% spaceless %}
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
         <i class="far fa-star"></i>
         <i class="far fa-star"></i>
         <i class="far fa-star"></i>
+        {% endspaceless %}
     </small>
 </p>
 
 {% elif review.rating >= 1 %}
 <p class="my-0">
     <small class="gold-icon-text">
+        {% spaceless %}
         <i class="fas fa-star"></i>
         <i class="far fa-star"></i>
         <i class="far fa-star"></i>
         <i class="far fa-star"></i>
         <i class="far fa-star"></i>
+        {% endspaceless %}
     </small>
 </p>
 {% else %}
