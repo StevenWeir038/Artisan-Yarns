@@ -26,4 +26,5 @@ class ProductReview(models.Model):
         ordering = ['-added_on']
 
     def __str__(self):
-        return f'User: {self.user_profile} | Product: {self.product} | Rating: {self.rating}'
+        return f'User: {self.user_profile} | Product: {self.product} \
+            | Rating: {self.rating}'

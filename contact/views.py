@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse
 from django.conf import settings
 from django.core.mail import send_mail
 from django.contrib import messages
+from .models import Contact
 from .forms import ContactForm
 
 
@@ -16,8 +17,9 @@ def contact(request):
             email = form.cleaned_data['email']
             subject = form.cleaned_data['subject']
             message = form.cleaned_data['message']
+            form.save()
 
-            # if form is valid send the email
+            # if form is valid send the email to site admin
             send_mail(
                 f'Message from {name}, {email} about {subject}', message,
                 settings.EMAIL_HOST_USER,
@@ -36,7 +38,8 @@ def contact(request):
                 Please try again.')
     # create a blank instance and allow user to repopulate
     else:
-        form = ContactForm(request.POST)
+        form = ContactForm()
+
     # pass the form to the template via the context dictionary
     template = 'contact/contact.html'
     context = {

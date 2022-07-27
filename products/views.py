@@ -11,8 +11,6 @@ from reviews.models import ProductReview
 from reviews.forms import ReviewForm
 from .forms import ProductForm
 
-
-# Pagination
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
@@ -23,7 +21,6 @@ def all_products(request):
     sort = None
     direction = None
 
-    # Set up pagination
     products_list = Product.objects.all()
     page = request.GET.get('page', 1)
     paginator = Paginator(products_list, 8)
@@ -53,7 +50,6 @@ def all_products(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
 
-                # Fix bug in sortkey lowername not recognised
                 products = products_list.order_by(sortkey)
 
         if 'q' in request.GET:
@@ -77,11 +73,11 @@ def all_products(request):
 
     return render(request, 'products/products.html', context)
 
-# bug - lighter products with DK weight not displaying
+
 def lighter_yarn_weights(request):
     """ View to return lighter yarns from homepage link """
-    products = Product.objects.filter(weight__icontains='Light')  # search for Light
-    
+    products = Product.objects.filter(weight__icontains='Light')
+
     template = 'products/products.html'
 
     context = {
@@ -219,7 +215,7 @@ def post_review(request, product_id):
     Create a product review
     Post to product detail template
     User must be authenticated to leave a review
-    Give feedback to user if posted or not 
+    Give feedback to user if posted or not
     """
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':

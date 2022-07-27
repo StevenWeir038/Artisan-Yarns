@@ -129,6 +129,10 @@ LOGIN_REDIRECT_URL = '/'
 WSGI_APPLICATION = 'artisan_yarns.wsgi.application'
 
 
+# Enable site to be previewed using below link
+X_FRAME_OPTIONS = "ALLOW-FROM http://ami.responsivedesign.is/"
+
+
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
@@ -176,6 +180,8 @@ USE_L10N = True
 
 USE_TZ = True
 
+
+# Force GB to top of Django Countries dropdown menu
 COUNTRIES_FIRST = ['GB']
 
 # Static files (CSS, JavaScript, Images)

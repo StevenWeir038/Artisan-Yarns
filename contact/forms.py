@@ -1,17 +1,12 @@
 from django import forms
+from .models import Contact
 
 
-class ContactForm(forms.Form):
+class ContactForm(forms.ModelForm):
     """ Form to allow site users to communicate with site owners """
-    name = forms.CharField(
-        min_length=2, max_length=100, label='Your name',required=False)
-    email = forms.EmailField(
-        widget=forms.EmailInput(), label='Your Email', required=False)
-    subject = forms.CharField(
-        min_length=3, max_length=40, label='Subject', required=False)
-    message = forms.CharField(
-        min_length=5, max_length=300, widget=forms.Textarea(),
-        label='Message', required=False)
+    class Meta:
+        model = Contact
+        fields = '__all__'
 
     def __init__(self, *args, **kwargs):
         """
@@ -28,10 +23,7 @@ class ContactForm(forms.Form):
 
         self.fields['name'].widget.attrs['autofocus'] = True
         for field in self.fields:
-            if self.fields[field].required:
-                placeholder = f'{placeholders[field]}*'
-            else:
-                placeholder = placeholders[field]
+            placeholder = placeholders[field]
             self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'form-input'
             self.fields[field].label = False
