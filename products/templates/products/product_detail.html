@@ -56,7 +56,7 @@
                                     </button>
                                 </div>
                                 <div>
-                                    <input class="form-control qty_input text-center" type="number" name="quantity"
+                                    <input class="form-control qty_input text-center mb-1" type="number" name="quantity"
                                         value="1" min="1" max="99" data-item_id="{{ product.id }}"
                                         id="id_qty_{{ product.id }}">
                                 </div>
@@ -68,7 +68,7 @@
                                         </span>
                                     </button>
                                 </div>
-                                <input type="submit" value="Add to basket" class="product-details-button ml-2">
+                                <input type="submit" value="Add to basket" class="product-details-button mt-1 mt-sm-0">
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             </div>
                         </form>
@@ -105,7 +105,6 @@
             </div>
         </div>
     </section>
-    <!-- product review section -->
     <section class="container-inner">
         <div class="row text-center">
             {% if user.is_authenticated %}
@@ -134,7 +133,8 @@
                             </div>
                             <div class="px-4 pt-0 pb-2">
                                 {% include 'products/includes/product_card_rating.html' %}
-                                {{ review.review_description }}
+                                <p class="font-weight-bold mb-0">{{ review.review_title }}</p>
+                                <p>{{ review.review_description }}</p>
                             </div>
                         </div>
                         <hr>
