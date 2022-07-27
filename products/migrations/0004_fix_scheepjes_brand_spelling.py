@@ -13,6 +13,11 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='product',
             name='brand',
-            field=models.CharField(blank=True, choices=[('Yummy', 'Yummy'), ('Adriafil', 'Adriafil'), ('Scheepjes', 'Scheepjes'), ('New Fashion', 'Newfashion'), ('Other', 'Other')], max_length=20, null=True),
+            field=models.CharField(blank=True, choices=[
+                ('Yummy', 'Yummy'), ('Adriafil', 'Adriafil'),
+                ('Scheepjes', 'Scheepjes'),
+                ('New Fashion', 'Newfashion'),
+                ('Other', 'Other')
+            ], max_length=20, null=True),
         ),
     ]

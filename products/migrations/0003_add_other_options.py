@@ -13,11 +13,26 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='product',
             name='brand',
-            field=models.CharField(blank=True, choices=[('Yummy', 'Yummy'), ('Adriafil', 'Adriafil'), ('Scheppjes', 'Scheppjes'), ('New Fashion', 'Newfashion'), ('Other', 'Other')], max_length=20, null=True),
+            field=models.CharField(blank=True, choices=[
+                ('Yummy', 'Yummy'),
+                ('Adriafil', 'Adriafil'),
+                ('Scheppjes', 'Scheppjes'),
+                ('New Fashion', 'Newfashion'),
+                ('Other', 'Other')
+            ], max_length=20, null=True),
         ),
         migrations.AlterField(
             model_name='product',
             name='weight',
-            field=models.CharField(blank=True, choices=[('SuperFine (Baby, Fingering, Sock)', 'Super Fine'), ('Fine (Baby, Sport)', 'Fine'), ('Light (DK, Light, Worsted)', 'Light'), ('Meduim (Afgan, Aran, Worsted)', 'Meduim'), ('Bulky (Chunky, Craft, Rug)', 'Bulky'), ('Super Bulky (Bulky, Roving)', 'Super Bulky'), ('Jumbo (Jumbo, Roving)', 'Jumbo'), ('Other', 'Other')], max_length=50, null=True),
+            field=models.CharField(blank=True, choices=[
+                ('SuperFine (Baby, Fingering, Sock)', 'Super Fine'),
+                ('Fine (Baby, Sport)', 'Fine'),
+                ('Light (DK, Light, Worsted)', 'Light'),
+                ('Meduim (Afgan, Aran, Worsted)', 'Meduim'),
+                ('Bulky (Chunky, Craft, Rug)', 'Bulky'),
+                ('Super Bulky (Bulky, Roving)', 'Super Bulky'),
+                ('Jumbo (Jumbo, Roving)', 'Jumbo'),
+                ('Other', 'Other')
+            ], max_length=50, null=True),
         ),
     ]
