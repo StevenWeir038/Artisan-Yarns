@@ -8,11 +8,11 @@
 {% block content %}
 <div class="container-fluid text-center">
     <div class="row d-flex justify-content-around">
-        <a href="{% url 'products' %}" alt="Enter store" aria-label="Enter store"
+        <a href="{% url 'products' %}" aria-label="Enter store"
             class="d-none d-sm-block col-sm-5 p-0 my-2 rounded home-img home-img-1">
             <h4 class="home-img-enter-store">Enter Store</h4>
         </a>
-        <a href="{% url 'products' %}?category=clearance" alt="Shop clearance items" aria-label="Shop clearance items"
+        <a href="{% url 'products' %}?category=clearance" aria-label="Shop clearance items"
             class="col-12 col-sm-5 p-0 my-2 mx-2 rounded home-img home-img-clearance home-img-2">
             <h4>Clearance</h4>
         </a>
@@ -23,17 +23,16 @@
         </div>
     </div>
     <div class="row d-flex justify-content-around">
-        <a href="{% url 'products' %}?category=scheepjes" alt="Shop by yarn brand" aria-label="Shop by scheepjes brand"
+        <a href="{% url 'products' %}?category=scheepjes" aria-label="Shop by scheepjes brand"
             class="col-12 col-md-5 col-lg-3 p-0 mx-2 my-2 rounded home-img home-img-3">
             <h4><span>Schweepjes Range</span></h4>
         </a>
         <!-- bug to fix - how to query by product weight in all_product view -->
-        <a href="{% url 'lighter_yarn_weights' %}" alt="View our lighter yarn weights"
-            aria-label="View our lighter yarn weights" class="col-12 col-md-5 col-lg-3 p-0 mx-2 my-2 rounded home-img home-img-4">
+        <a href="{% url 'lighter_yarn_weights' %}" aria-label="View our lighter yarn weights"
+            class="col-12 col-md-5 col-lg-3 p-0 mx-2 my-2 rounded home-img home-img-4">
             <h4><span>Lighter Weights</span></h4>
         </a>
-        <a href="{% url 'products' %}?category=accessories" alt="Shop for kit"
-            aria-label="Shop for needles, hooks and other accessories"
+        <a href="{% url 'products' %}?category=accessories" aria-label="Shop for needles, hooks and other accessories"
             class="col-12 col-md-6 col-lg-3 p-0 mx-2 my-2 rounded home-img home-img-5">
             <h4><span>Accessories</span></h4>
         </a>
