@@ -12,6 +12,7 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterModelOptions(
             name='newslettersub',
-            options={'ordering': ['subscribe_date'], 'verbose_name_plural': 'Newsletter Subscriptions'},
+            options={'ordering': ['subscribe_date'],
+                     'verbose_name_plural': 'Newsletter Subscriptions'},
         ),
     ]
