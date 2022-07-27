@@ -130,7 +130,7 @@ WSGI_APPLICATION = 'artisan_yarns.wsgi.application'
 
 
 # Enable site to be previewed using below link
-X_FRAME_OPTIONS = "ALLOW-FROM http://ami.responsivedesign.is/"
+X_FRAME_OPTIONS = "ALLOW-ALL"
 
 
 # Database
