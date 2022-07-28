@@ -43,9 +43,12 @@ _Create a Heroku app, connect to Postgres database and deploy the app without st
   * Create a requirements file: in the terminal type the following command:
     * `pip3 freeze --local > requirements.txt`
     * This file will hold a list of all dependencies required for this project.
-  * Create a procfile: in the terminal type the following command:
-    * `echo web: python run.py > Procfile` 
+  * Install gunicorn: in the terminal type the following command:
+    * `pip3 install gunicorn`
+  * Create a Procfile: in the terminal type the following command:
+    * `web: gunicorn artisan_yarns.wsgi:application`
     * Make sure there is no blank line after the contents of this file.
+  * Reference the Procfile file in `settings.py` using `WSGI_APPLICATION = 'artisan_yarns.wsgi.application` 
 * Commit and push these changes to GitHub.
 * Login or sign up to [Heroku](https://www.heroku.com).
 * Select '**Create New App**' in the top right of your dashboard.
@@ -168,7 +171,16 @@ _Create and connect an Amazon bucket for storing images and static files._
 * Then click '**Upload**'.
 * Finally, attempt to log in to the site using the superuser details, then access the '**admin**' panel on the live site, go to '**Email Addresses**', and select Primary and Verified on the superuser email address.
 
-### 2. Email Settings - STILL TO DO
+### Email Settings
+In `settings.py` change the `DEFAULT_FROM_EMAIL` to your own email address.
+1. Go to your Gmail account and navigate to the 'Settings' tab.
+2. Go to 'Accounts and Imports', 'Other Google Account Settings'.
+3. Go to the 'Security' tab, and scroll down to 'Signing in to Google'.
+4. If required, click to turn on '2-step Verification**', then 'Get Started', and enter your password.
+5. Verify using your preferred method, and turn on 2-step verification.
+6. Go back to 'Security', 'Signing in to Google', then go to 'App Passwords'.
+7. Enter your password again if prompted, then set 'App' to `Mail`, 'Device' to `Other`, and type in `Django`.
+8. Copy and paste the passcode that shows up, this is your '**EMAIL_HOST_PASS**' variable to add to your environment/config variables. '**EMAIL_HOST_USER**' is the Gmail email address.
 
 ### Forking the repository
 
