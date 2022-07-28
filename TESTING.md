@@ -437,4 +437,240 @@ views.py    |   0    | ![About wishlist_views.py file](/documents/readme/validat
 
 &nbsp;
 
-[Back to Readme](README.md)
+### **User Story Testing**
+
+*EPIC - Correspondance*
+
+1- **As a** site user, **I can** contact the site owners using a webform, **so that** I can correspond with the store.
+
+<details>
+<summary>Supporting Images</summary>
+
+![contact the site owners using a webform](/documents/readme/user_story_tests/user_story_1.png)
+
+</details>
+
+&nbsp;
+
+2- **As a** site user, **I can** enter an email address, **so that** I can receive a newsletter from the site.
+
+<details>
+<summary>Supporting Images</summary>
+
+![enter an email address to subscribe to a newsletter](/documents/readme/user_story_tests/user_story_2.png)
+
+</details>
+
+&nbsp;
+
+*EPIC - Viewing and Searching Products*
+
+3 - **As a** site user, **I can** view all products, **so that** I can decide what to purchase.
+
+<details>
+<summary>Supporting Images</summary>
+
+![view all products using homepage link and product menu nav](/documents/readme/user_story_tests/user_story_3.png)
+
+</details>
+
+&nbsp;
+
+4 - **As a** site user, **I can** view products by category, **so that** I can narrow my search range.
+
+<details>
+<summary>Supporting Images</summary>
+
+![view all products by category using homepage links and product menu nav](/documents/readme/user_story_tests/user_story_4.png)
+
+</details>
+
+&nbsp;
+
+5 - **As a** site user, **I can** view products by cost, **so that** I can shop within my budget.
+
+<details>
+<summary>Supporting Images</summary>
+
+![view all products by cost in ascending and descending order using product menu nav and sort selector](/documents/readme/user_story_tests/user_story_5.png)
+
+</details>
+
+&nbsp;
+
+6 - **As a** site user, **I can** view individual product details, **so that** I can view each product in greater detail.
+
+<details>
+<summary>Supporting Images</summary>
+
+![view each product in greater detail when selecting product card](/documents/readme/user_story_tests/user_story_6.png)
+
+</details>
+
+&nbsp;
+
+7 - **As a** site user, **I can** search for a product by name / description using the searchbar, **so that** I can see if the store has a product I want.
+
+<details>
+<summary>Supporting Images</summary>
+
+![find a product using the searchbar to query from name or description](/documents/readme/user_story_tests/user_story_7.png)
+
+</details>
+
+&nbsp;
+
+*EPIC - Reviewing Products*
+
+8 - **As a** site user, **I can** add products to a wishlist, **so that** I can view each product in greater detail before commiting to a purchase.
+
+<details>
+<summary>Supporting Images</summary>
+
+![add product to the wishlist is signed in, I can consider adding to basket later](/documents/readme/user_story_tests/user_story_8.png)
+
+</details>
+
+&nbsp;
+
+9 - **As a** site user, **I can** leave a review / rating for each product **so that** others can decide if they want to buy the product based upon my experience.
+
+<details>
+<summary>Supporting Images</summary>
+
+![when signed in, a user can leave a review to weigh up other site users opinions](/documents/readme/user_story_tests/user_story_9.png)
+
+</details>
+
+&nbsp;
+
+*EPIC - Authentication and User Profiles*
+
+10 - **As a** site user, **I can** register for an account, **so that** I can create my own personal account.
+
+<details>
+<summary>Supporting Images</summary>
+
+![register for a personal account](/documents/readme/user_story_tests/user_story_10.png)
+
+</details>
+
+&nbsp;
+
+11 - **As a** site user, **I can** login/logout, **so that** I can access my personal account.
+
+<details>
+<summary>Supporting Images</summary>
+
+![](/documents/readme/user_story_tests/FILENAME.png)
+
+</details>
+
+&nbsp;
+
+12 - **As a** site user, **I can** recover my password, **so that** I can recover access to my personal account.
+
+<details>
+<summary>Supporting Images</summary>
+
+![](/documents/readme/user_story_tests/FILENAME.png)
+
+</details>
+
+&nbsp;
+
+13 - **As a** site user, **I can** edit my own unique profile, **so that** I can update my personal details, payment and delivery address information.
+
+<details>
+<summary>Supporting Images</summary>
+
+![](/documents/readme/user_story_tests/FILENAME.png)
+
+</details>
+
+&nbsp;
+
+*EPIC - Payments & Checkout*
+
+14 - **As a** site user, **I can** view items in their shopping basket, **so that** I can see what I am purchasing.
+
+<details>
+<summary>Supporting Images</summary>
+
+![](/documents/readme/user_story_tests/FILENAME.png)
+
+</details>
+
+&nbsp;
+
+15 - **As a** site user, **I can** adjust the number of items by product line in their shopping basket, **so that** I can purchase multiples of the same item.
+
+<details>
+<summary>Supporting Images</summary>
+
+![](/documents/readme/user_story_tests/FILENAME.png)
+
+</details>
+
+&nbsp;
+
+16 - **As a** site user, **I can** enter payment details to make a purchase, **so that** I can make a payment.
+
+<details>
+<summary>Supporting Images</summary>
+
+![](/documents/readme/user_story_tests/FILENAME.png)
+
+</details>
+
+&nbsp;
+
+17 - **As a** site user, **I can** receive a confirmation email following their purchase, **so that** I can confirm I made a purchase.
+
+<details>
+<summary>Supporting Images</summary>
+
+![](/documents/readme/user_story_tests/FILENAME.png)
+
+</details>
+
+&nbsp;
+
+*EPIC - Inventory Administration and Store Management*
+
+18 - **As a** site administrator, **I can** add a product, **so that** I can add new items to the store.
+
+<details>
+<summary>Supporting Images</summary>
+
+![](/documents/readme/user_story_tests/FILENAME.png)
+
+</details>
+
+&nbsp;
+
+19 - **As a** site administrator, **I can** edit a product, **so that** I can change product prices, images and descriptions in the store.
+
+<details>
+<summary>Supporting Images</summary>
+
+![](/documents/readme/user_story_tests/FILENAME.png)
+
+</details>
+
+&nbsp;
+
+20 - **As a** site administrator, **I can** delete a product, **so that** I can remove items from the store.
+
+<details>
+<summary>Supporting Images</summary>
+
+![](/documents/readme/user_story_tests/FILENAME.png)
+
+</details>
+
+&nbsp;
+
+&nbsp;
+
+[Back to README](README.md)
