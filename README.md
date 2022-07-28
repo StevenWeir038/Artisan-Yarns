@@ -10,8 +10,9 @@ The project's overall aim is to deliver a small e-commerce site for a hypothetic
 
 As for its justification, many crafters prefer the experience of going to a store and getting a feel for a product.  However, there is a niche for those know what they want and desire the convenience of an online order delivered straight to their home.
 
-![Responsive screenshot showing site on different screen sizes]()
-link to [deployed site]())
+![Mockup](documents/readme/responsive.png "Website preview at different resolutions")
+
+[Link](https://artisan-yarns.herokuapp.com/) to deployed site
 
 
 # **Planning Phase**
@@ -375,7 +376,7 @@ Includes:
 Includes:
 - header and footer links
 - simple 4 field form including name, email, subject and message
-- post button for the form content to be emailed to the site owner
+- post button for the form content to be emailed to the site owner (currently just saves to view in Admin)
 
 ![contact](documents/readme/features/contact.png "contact")
 
@@ -383,7 +384,7 @@ Includes:
 There is always room for improvement.  Some that are strikingly obvious include but require more time to implement:
 - introducing a colour field into the product model to enhance product searches?  Matching colour is an integral part when selecting yarn for projects. Ideally use a div with border-radius of 50% filled with the palette colour instead of a name.
 - stock availability. A store has a finite amount of product items by line.  Why not check if there are enough items in stock when a user is making an order?  Running low on an item?  Maybe tell the user.  Put subtle pressure on them to buy the item while they can.
-- currently the user is directed from the wishlist to manually add a product to their basket.  Automate this.  Link the wishlist into the basket contexct processor.
+- currently the user is directed from the wishlist to manually add a product to their basket.  Automate this.  Link the wishlist into the basket context processor.
 - improve defensive programming.  When deleting items from the basket or wishlist, it's better to ask the user if they are sure to avoid accidental deletion.
 - buttons.  I went down the rabbit hole of responsive button sizes.  Keep it simple.  Button sizes can be reatively static without affective user experience.  Also less cumbersome to maintain in terms of `css` and `bootstrap` classes therefore improving code maintainability.
 - Javascript driven filter positioned left in the products page to filter categories/products by weight/cost etc
@@ -395,8 +396,14 @@ Separate document [TESTING.md](TESTING.md).
 The final Deployed site can be found [here](https://artisan-yarns.herokuapp.com/)
 Separate document [DEPLOYMENT.md](DEPLOYMENT.md).
 
-# **The requirements for an e-commerce business model:** STILL TO DO
-The necessity for the inclusion of an e-commerce business model, highlighting the purpose of the application as either B2B or B2C focused, and detailing the core business intents and marketing strategies for the application.
+# **E-Commerce Business Model:**
+This site sells goods to individual customers therefore follows a `Business to Customer` model.  It is of the simpliest B2C forms as it focuses on individual transactions and doesn't need to anything such as monthly/annual subscriptions.
+
+It is still in is early development stages though already it has a newsletter and links for social media marketing.
+
+Social media can potentially build a community of users around the business and boost site visitor numbers, expecially when using larger platforms such a Facebook.
+
+A newsletter list can be used by the business to send regular messages to site users.  For example, what items are on special offer, new items in stock, updates to business hours and notifications of events etc.
 
 # **Social Media Marketing & Search Engine Optimization (SEO)**
 Creating a strong social base (with participation) and linking that to the business site can help drive sales.  Using more popular providers with a wider user base such as Facebook typically maximises site views.
@@ -440,8 +447,7 @@ General reference and troubleshooting
 
 # **Credits**
 ## Mentions
-Support
-- My mentor [Tim Nelson](https://tim.2bn.dev/). A true gent. My thanks to him for a seemingly short year and leaving an indelible mark on my approach.  His commitment to his students' knowledge and personal growth is second to none.
+- My mentor [Tim Nelson](https://tim.2bn.dev/). A true gent. My thanks to him for a seemingly short year. His commitment to his students' knowledge and personal growth is second to none.
 
 - Special thanks to [Chris Quinn](https://github.com/10xOXR) for his assistance mid-project.  His explanations were of great help.
 
