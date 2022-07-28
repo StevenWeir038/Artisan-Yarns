@@ -221,6 +221,12 @@
 ## [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)
 - Lighthouse was used to test overall performance, accessibility, best practices and SEO.
 
+Mobile
+![Lighthouse Mobile](documents/readme/lighthouse-mobile.png "Site quality assessment")
+
+Desktop
+![Lighthouse Desktop](documents/readme/lighthouse-desktop.png "Site quality assessment")
+
 &nbsp;
 
 ### [HTML](https://validator.w3.org/)
@@ -338,7 +344,7 @@ signals.py         |   0    | ![About checkout_signals.py file](/documents/readm
 urls.py            |   0    | ![About checkout_urls.py file](/documents/readme/validation/pep8/checkout/checkout_urls_py.png)
 views.py           |   0    | ![About checkout_views.py file](/documents/readme/validation/pep8/checkout/checkout_views_py.png)
 webhook_handler.py |   0    | ![About checkout_webhook_handler.py file](/documents/readme/validation/pep8/checkout/checkout_webhook_handler_py.png)
-webhooks.py        |   0    | ![About checkout_webhooks.py file](/documents/readme/validation/pep8/checkout/checkout_webhooks_py.png)
+webhooks.py        |   0    | ![About checkout_webhooks.py file](/documents/readme/validation/pep8/checkout/checkout_urls_py.png)
 
 </details>
 
