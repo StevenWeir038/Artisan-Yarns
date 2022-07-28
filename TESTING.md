@@ -218,21 +218,12 @@
 
 &nbsp;
 
-## Lighthouse
-- [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) was used to test overall performance, accessibility, best practices and SEO.
+## [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)
+- Lighthouse was used to test overall performance, accessibility, best practices and SEO.
 
 &nbsp;
 
-## Validation Checks
-- Linter tools
-    - [HTML](https://validator.w3.org/)
-    - [CSS](https://jigsaw.w3.org/css-validator/)
-    - [Javascript/Jquery](https://jshint.com/)
-    - [Python](http://pep8online.com/)
-
-&nbsp;
-
-### Nu HTML
+### [HTML](https://validator.w3.org/)
 In the late stage of the project I ran code through the validator.
 Despite the site working as intended there were major validaion errors with insufficient time to correct due to deadline constraints.
 
@@ -254,17 +245,190 @@ As these were included in the `base.html` template which is extended to all page
 
 A `d-sm-none` bootstrap class was applied to mobile versions and `d-none d-sm-block` to the small breakpoint and above.
 This gave the site responsive versions of headers/footers but the weakness is that there is always two versions to loaded.
-To reduce maintainence I used template tags such as `{% include 'includes/navbar.html' %}` to import one version of the product navbar.  
+To reduce maintainence I used template tags such as `{% include 'includes/navbar.html' %}` to import one version of the product navbar into each header for example.  
 
 The same was done for `header apps menu`, `footer-social`, `newsletter`, `help-modal` *et al*.
 
-### Jigsaw
-No remaining errors
+&nbsp;
 
-### JSHint
-No remaining errors
+### [CSS](https://jigsaw.w3.org/css-validator/)
+<details>
+<summary>7 files - 6 Errors all related to fontawesome</summary>
 
-### PEP8
-No remaining errors
+CSS file                                                                              | Errors | Result |
+--------------------------------------------------------------------------------------|------- | ------ |
+base.css, home.css, products.css, basket.css, checkout.css, profile.css, wishlist.css | 6      | ![About all_files_css file](/documents/readme/validation/css/all_files_css.png)
+
+</details>
+
+&nbsp;
+
+### [Javascript/Jquery](https://jshint.com/)
+**script.js** - Errors n/a as empty file kept in place for future implementations
+
+<details>
+<summary>2 files - 0 Errors</summary>
+
+JS file           | Errors | Result |
+----------------- | ------ | ------ |
+countryfield.js   | 0      | ![About countryfield.js file](/documents/readme/validation/js/countryfield_js.png)
+stripe_elements.js| 0      | ![About stripe_elements.js file](/documents/readme/validation/js/stripe_elements_js.png)
+
+</details>
+
+&nbsp;
+
+### [Python](http://pep8online.com/)
+10 apps plus project folder validated.
+
+Python files checked - models, forms, urls, views, admin, settings.
+
+Excluded from checks - init, apps, migrations, env
+
+<details>
+<summary> PROJECT FOLDER -  3 files - 0 Errors </summary>
+
+Python file | Errors | Result |
+----------- | ------ | ------ | 
+settings.py |   0    | ![About project_settings.py file](/documents/readme/validation/pep8/project/project_settings_py.png)
+urls.py     |   0    | ![About project_urls.py file](/documents/readme/validation/pep8/project/project_urls_py.png)
+views.py    |   0    | ![About project_views.py file](/documents/readme/validation/pep8/project/project_views_py.png)
+
+</details>
+
+&nbsp;
+
+<details>
+<summary> BASKET APP - 3 files - 0 Errors </summary>
+
+Python file | Errors | Result |
+----------- | ------ | ------ | 
+contexts.py |   0    | ![About basket_contexts.py file](/documents/readme/validation/pep8/basket/basket_contexts_py.png)
+urls.py     |   0    | ![About basket_urls.py file](/documents/readme/validation/pep8/basket/basket_urls_py.png)
+views.py    |   0    | ![About basket_views.py file](/documents/readme/validation/pep8/basket/basket_views_py.png)
+
+</details>
+
+&nbsp;
+
+<details>
+<summary> CONTACT APP - 5 files - 0 Errors </summary>
+
+Python file | Errors | Result |
+----------- | ------ | ------ | 
+admin.py    |   0    | ![About contact_admin.py file](/documents/readme/validation/pep8/contact/contact_admin_py.png)
+forms.py    |   0    | ![About contact_forms.py file](/documents/readme/validation/pep8/contact/contact_forms_py.png)
+models.py   |   0    | ![About contact_models.py file](/documents/readme/validation/pep8/contact/contact_models_py.png)
+urls.py     |   0    | ![About contact_urls.py file](/documents/readme/validation/pep8/contact/contact_urls_py.png)
+views.py    |   0    | ![About contact_views.py file](/documents/readme/validation/pep8/contact/contact_views_py.png)
+
+</details>
+
+&nbsp;
+
+<details>
+<summary> CHECKOUT APP - 8 files - 0 Errors </summary>
+
+Python file        | Errors | Result |
+------------------ | ------ | ------ | 
+admin.py           |   0    | ![About checkout_admin.py file](/documents/readme/validation/pep8/checkout/checkout_admin_py.png)
+forms.py           |   0    | ![About checkout_forms.py file](/documents/readme/validation/pep8/checkout/checkout_forms_py.png)
+models.py          |   0    | ![About checkout_models.py file](/documents/readme/validation/pep8/checkout/checkout_models_py.png)
+signals.py         |   0    | ![About checkout_signals.py file](/documents/readme/validation/pep8/checkout/checkout_signals_py.png)
+urls.py            |   0    | ![About checkout_urls.py file](/documents/readme/validation/pep8/checkout/checkout_urls_py.png)
+views.py           |   0    | ![About checkout_views.py file](/documents/readme/validation/pep8/checkout/checkout_views_py.png)
+webhook_handler.py |   0    | ![About checkout_webhook_handler.py file](/documents/readme/validation/pep8/checkout/checkout_webhook_handler_py.png)
+webhooks.py        |   0    | ![About checkout_webhooks.py file](/documents/readme/validation/pep8/checkout/checkout_webhooks_py.png)
+
+</details>
+
+&nbsp;
+
+<details>
+<summary> HOME APP - 2 files - 0 Errors </summary>
+
+Python file | Errors | Result |
+----------- | ------ | ------ | 
+urls.py     |   0    | ![About home_urls.py file](/documents/readme/validation/pep8/home/home_urls_py.png)
+views.py    |   0    | ![About home_views.py file](/documents/readme/validation/pep8/home/home_views_py.png)
+
+</details>
+
+&nbsp;
+
+<details>
+<summary> NEWSLETTER - 6 files - 0 Errors </summary>
+
+Python file | Errors | Result |
+----------- | ------ | ------ | 
+admin.py    |   0    | ![About newsletter_admin.py file](/documents/readme/validation/pep8/newsletter/newsletter_admin_py.png)
+contexts.py |   0    | ![About newsletter_contexts.py file](/documents/readme/validation/pep8/newsletter/newsletter_contexts_py.png)
+forms.py    |   0    | ![About newsletter_forms.py file](/documents/readme/validation/pep8/newsletter/newsletter_forms_py.png)
+models.py   |   0    | ![About newsletter_models.py file](/documents/readme/validation/pep8/newsletter/newsletter_models_py.png)
+urls.py     |   0    | ![About newsletter_urls.py file](/documents/readme/validation/pep8/newsletter/newsletter_urls_py.png)
+views.py    |   0    | ![About newsletter_views.py file](/documents/readme/validation/pep8/newsletter/newsletter_views_py.png)
+
+</details>
+
+&nbsp;
+
+<details>
+<summary> PRODUCTS APP - 6 files - 0 Errors </summary>
+
+Python file | Errors | Result |
+----------- | ------ | ------ | 
+admin.py    |   0    | ![About products_admin.py file](/documents/readme/validation/pep8/products/products_admin_py.png)
+forms.py    |   0    | ![About products_forms.py file](/documents/readme/validation/pep8/products/products_forms_py.png)
+models.py   |   0    | ![About products_models.py file](/documents/readme/validation/pep8/products/products_models_py.png)
+urls.py     |   0    | ![About products_urls.py file](/documents/readme/validation/pep8/products/products_urls_py.png)
+views.py    |   0    | ![About products_views.py file](/documents/readme/validation/pep8/products/products_views_py.png)
+widget.py   |   0    | ![About products_widgets.py file](/documents/readme/validation/pep8/products/products_widgets_py.png)
+
+</details>
+
+&nbsp;
+
+<details>
+<summary> PROFILES APP - 4 files - 0 Errors </summary>
+
+Python file | Errors | Result |
+----------- | ------ | ------ | 
+forms.py    |   0    | ![About profiles_forms.py file](/documents/readme/validation/pep8/profiles/profiles_forms_py.png)
+models.py   |   0    | ![About profiles_models.py file](/documents/readme/validation/pep8/profiles/profiles_models_py.png)
+urls.py     |   0    | ![About profiles_urls.py file](/documents/readme/validation/pep8/profiles/profiles_urls_py.png)
+views.py    |   0    | ![About profiles_views.py file](/documents/readme/validation/pep8/profiles/profiles_views_py.png)
+
+</details>
+
+&nbsp;
+
+<details>
+<summary> REVIEWS APP - 4 files - 0 Errors </summary>
+
+Python file | Errors | Result |
+----------- | ------ | ------ | 
+forms.py    |   0    | ![About reviews_forms.py file](/documents/readme/validation/pep8/reviews/reviews_forms_py.png)
+models.py   |   0    | ![About reviews_models.py file](/documents/readme/validation/pep8/reviews/reviews_models_py.png)
+urls.py     |   0    | ![About reviews_urls.py file](/documents/readme/validation/pep8/reviews/reviews_urls_py.png)
+views.py    |   0    | ![About reviews_views.py file](/documents/readme/validation/pep8/reviews/reviews_views_py.png)
+
+</details>
+
+&nbsp;
+
+<details>
+<summary> WISHLIST APP - 4 files - 0 Errors </summary>
+
+Python file | Errors | Result |
+----------- | ------ | ------ | 
+admin.py    |   0    | ![About wishlist_admin.py file](/documents/readme/validation/pep8/wishlist/wishlist_admin_py.png)
+models.py   |   0    | ![About wishlist_models.py file](/documents/readme/validation/pep8/wishlist/wishlist_models_py.png)
+urls.py     |   0    | ![About wishlist_urls.py file](/documents/readme/validation/pep8/wishlist/wishlist_urls_py.png)
+views.py    |   0    | ![About wishlist_views.py file](/documents/readme/validation/pep8/wishlist/wishlist_views_py.png)
+
+
+</details>
+
+&nbsp;
 
 [Back to Readme](README.md)
