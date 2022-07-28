@@ -391,18 +391,12 @@ There is always room for improvement.  Some that are strikingly obvious include 
 # **Testing Phase**
 Separate document [TESTING.md](TESTING.md).
 
-## Known Issues
-- grey colour extending beyond gold border on searchbar on md+ resolutions
-- variable product card heights
-- page not filling full screen height for pages with limited content
-- card images appear skewed in product detail
-- on small screens in product detail, add to basket icon lacks margin and touches quantity element
-- on contact form, model fields left as `required=False` to preserve `form-input` format.  Otherwise bootstrap4 overriding with `is-vaild` and `is-invalid` classes therefore hiding gold borders.
-
-
 # **Deployment**
 The final Deployed site can be found [here](https://artisan-yarns.herokuapp.com/)
 Separate document [DEPLOYMENT.md](DEPLOYMENT.md).
+
+# **The requirements for an e-commerce business model:** STILL TO DO
+The necessity for the inclusion of an e-commerce business model, highlighting the purpose of the application as either B2B or B2C focused, and detailing the core business intents and marketing strategies for the application.
 
 # **Social Media Marketing & Search Engine Optimization (SEO)**
 Creating a strong social base (with participation) and linking that to the business site can help drive sales.  Using more popular providers with a wider user base such as Facebook typically maximises site views.
@@ -413,36 +407,23 @@ The below screen capture should hopefully demonstrate the developers intent.
 
 ![Facebook Marketing](media/social-media-marketing.png)
 
-Online Marketing is based on a site's ability to stand out from it's competitors.  Again the major market competitor drives this in the form of [Google] (https://www.google.com/).  A carefully choosen selection of long-tail/short-tail keywords can help promote a site.
-
-Representative long-tail and short-tail phrases/words for this site may include:
-
-- 
-- 
-- 
--  
--  
--  
-- 
-- 
-- 
-- 
-
 # **Technologies used**
 - Github for repository storage
 - Gitpod IDE/ CI template to develop site
+- [Django](https://www.djangoproject.com/)
+- [Bootstrap4](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+- [HTML5](https://developer.mozilla.org/en-US/docs/Glossary/HTML5)
+- [CSS3](https://www.w3.org/Style/CSS/Overview.en.html)
+- [JQuery](https://jquery.com/)
+- [Heroku](https://www.heroku.com)
+- [AWS](https://aws.amazon.com/)
+- [Stripe](https://stripe.com/en-gb)
 - Logo created using [Tailor Brands](https://studio.tailorbrands.com/)
 - Fonts generated using [Google Fonts](https://fonts.google.com/)
 - [Balsamiq Cloud](https://balsamiq.cloud/) to build wireframes
 - [Lucidchart](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning) to build/contectualize database tables/fields and their relationships.
 - [Adobe Express](https://express.adobe.com/sp) to crop/resize images
 - [Pillow](https://pillow.readthedocs.io/en/stable/index.html) to display product image fields.
-- Linter tools
-    - [HTML](https://validator.w3.org/)
-    - [CSS](https://jigsaw.w3.org/css-validator/)
-    - [Javascript/Jquery](https://jshint.com/)
-    - [Python](http://pep8online.com/)
-- [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)
 - [Chrome DevTools](https://developer.chrome.com/docs/devtools/) for testing, style checking and debugging
 
 # Resources
@@ -450,8 +431,9 @@ Reading and understanding the documentation made life easier.  You wouldn't buil
 - [Django documentation](https://www.djangoproject.com/).
 - [Bootstrap documentation](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
 - [Stripe](https://stripe.com/docs/payments?payments=popular)
-
 - [Code Institute Course Materials](https://codeinstitute.net/full-stack-software-development-diploma/?utm_term=code%20institute&utm_campaign=CI+-+UK+-+Search+-+Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=1578649861&hsa_grp=62188641240&hsa_ad=581730217381&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQjw2_OWBhDqARIsAAUNTTGuqjzZXJQaJfo7xNLguOc6Cu-9MDllgPV4dWDLkgOsNsrjeSacjc0aAjajEALw_wcB)
+
+General reference and troubleshooting
 - [Stack Overflow](https://stackoverflow.com/)
 - [MDN](https://developer.mozilla.org/en-US/)
 - [W3schools](https://www.w3schools.com/)
