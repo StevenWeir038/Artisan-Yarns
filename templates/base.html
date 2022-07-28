@@ -6,9 +6,13 @@
 {% include 'includes/head.html' %}
 
 <body>
-    {% include 'includes/header.html' %}
-    <div class="spacer-mobile d-md-none"></div>
-    <div class="spacer-tablet d-none d-md-block"></div>
+    {% block header %}
+        {% include 'includes/mobile_header.html' %}
+        {% include 'includes/main_header.html' %}
+    {% endblock %}
+    
+    <div class="spacer-mobile d-sm-none"></div>
+    <div class="spacer-tablet d-none d-sm-block"></div>
 
     {% if messages %}
     <div class="message-container">
@@ -41,8 +45,8 @@
     {% endblock %}
 
     {% block footer %}
-    {% include 'includes/mobile-footer.html' %}2
-    {% include 'includes/main-footer.html' %}
+        {% include 'includes/mobile-footer.html' %}
+        {% include 'includes/main-footer.html' %}
     {% endblock %}
 
     {% block postloadjs %}

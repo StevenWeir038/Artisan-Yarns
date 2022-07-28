@@ -38,9 +38,9 @@ body {
     height: calc(100vh - 290px);
 }
 
-/* spacer to keep header unobstructed < md screen */
+/* spacer to keep header unobstructed < sm screen */
 .spacer-mobile {
-    height: 257px;
+    height: 184px;
 }
 
 /* heading elements */
@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0;
 }
 
-/* link styling */
+/* overide link styling */
 a {
     color: black;
     text-decoration: none;
@@ -80,35 +80,33 @@ header {
 }
 
 /* menus */
+.navbar-toggler {
+    position: relative;
+    top: 6px;
+    left: 2px;
+}
+
 .navbar-collapse {
     background: rgba(var(--theme-pantone), 1);
 }
 
-.navbar-collapse a {
+.dropdown a,
+li .nav-link {
     color: white;
     text-decoration: none;
 }
 
-.nav-hamburger {
-    background: rgba(var(--theme-pantone), 1);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 3px;
-}
-
-.dropdown-menu a,
-li .nav-item {
-    text-decoration: none;
-}
-
+#navbarToggler .nav-link,
 .dropdown-menu button:hover,
 .dropdown-menu button:focus,
 .dropdown-item {
     background: rgba(var(--theme-pantone), 1);
     color: white;
     border: 2px solid rgba(var(--theme-pantone), 1);
+}
+
+#navbarToggler .nav-link {
+    padding-left: 8px;
 }
 
 .gold-icon-border {
@@ -129,28 +127,9 @@ li .nav-item {
     color: rgba(var(--theme-pantone), 1);
 }
 
-#search-form {
-    background: rgba(var(--theme-platinum), 1);
-    max-width: 384px;
-}
-
 .search-form-input:hover,
 .search-form-input:focus  {
     background: rgba(var(--theme-platinum), 1);
-}
-
-.product-navbar {
-    color: white;
-}
-
-.product-nav {
-    position: relative;
-    top: -16px;
-    left: -35px;
-}
-
-.navbar-toggler {
-    color: black;
 }
 
 /* footer */
@@ -336,22 +315,16 @@ li .nav-item {
 }
 
 
-/* media query md / 768px */
-@media only screen and (min-width: 768px) {
-    /* spacer to keep header unobstructed > md screen*/
-    .spacer-tablet {
-        height: 263px;
-    }
-    .product-nav {
-        background: rgba(var(--theme-pantone), 1);
+/* media query sm / 575px */
+@media only screen and (min-width: 575px) {
+    /* spacer to keep header unobstructed > sm screen*/
+    #search-form {
         position: relative;
-        top: 3px;
-        left: -0px;
-        width: 100vw;
+        right: 16px;
+
     }
 
-    .product-nav a{
-        color: white;
-        text-decoration: none;
+    .spacer-tablet {
+        height: 207px;
     }
 }
