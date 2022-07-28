@@ -444,7 +444,7 @@ views.py    |   0    | ![About wishlist_views.py file](/documents/readme/validat
 1- **As a** site user, **I can** contact the site owners using a webform, **so that** I can correspond with the store.
 
 <details>
-<summary>Supporting Images</summary>
+<summary>Supporting Document</summary>
 
 ![contact the site owners using a webform](/documents/readme/user_story_tests/user_story_1.png)
 
@@ -455,7 +455,7 @@ views.py    |   0    | ![About wishlist_views.py file](/documents/readme/validat
 2- **As a** site user, **I can** enter an email address, **so that** I can receive a newsletter from the site.
 
 <details>
-<summary>Supporting Images</summary>
+<summary>Supporting Document</summary>
 
 ![enter an email address to subscribe to a newsletter](/documents/readme/user_story_tests/user_story_2.png)
 
@@ -468,7 +468,7 @@ views.py    |   0    | ![About wishlist_views.py file](/documents/readme/validat
 3 - **As a** site user, **I can** view all products, **so that** I can decide what to purchase.
 
 <details>
-<summary>Supporting Images</summary>
+<summary>Supporting Document</summary>
 
 ![view all products using homepage link and product menu nav](/documents/readme/user_story_tests/user_story_3.png)
 
@@ -479,7 +479,7 @@ views.py    |   0    | ![About wishlist_views.py file](/documents/readme/validat
 4 - **As a** site user, **I can** view products by category, **so that** I can narrow my search range.
 
 <details>
-<summary>Supporting Images</summary>
+<summary>Supporting Document</summary>
 
 ![view all products by category using homepage links and product menu nav](/documents/readme/user_story_tests/user_story_4.png)
 
@@ -490,7 +490,7 @@ views.py    |   0    | ![About wishlist_views.py file](/documents/readme/validat
 5 - **As a** site user, **I can** view products by cost, **so that** I can shop within my budget.
 
 <details>
-<summary>Supporting Images</summary>
+<summary>Supporting Document</summary>
 
 ![view all products by cost in ascending and descending order using product menu nav and sort selector](/documents/readme/user_story_tests/user_story_5.png)
 
@@ -501,7 +501,7 @@ views.py    |   0    | ![About wishlist_views.py file](/documents/readme/validat
 6 - **As a** site user, **I can** view individual product details, **so that** I can view each product in greater detail.
 
 <details>
-<summary>Supporting Images</summary>
+<summary>Supporting Document</summary>
 
 ![view each product in greater detail when selecting product card](/documents/readme/user_story_tests/user_story_6.png)
 
@@ -512,7 +512,7 @@ views.py    |   0    | ![About wishlist_views.py file](/documents/readme/validat
 7 - **As a** site user, **I can** search for a product by name / description using the searchbar, **so that** I can see if the store has a product I want.
 
 <details>
-<summary>Supporting Images</summary>
+<summary>Supporting Document</summary>
 
 ![find a product using the searchbar to query from name or description](/documents/readme/user_story_tests/user_story_7.png)
 
@@ -525,7 +525,7 @@ views.py    |   0    | ![About wishlist_views.py file](/documents/readme/validat
 8 - **As a** site user, **I can** add products to a wishlist, **so that** I can view each product in greater detail before commiting to a purchase.
 
 <details>
-<summary>Supporting Images</summary>
+<summary>Supporting Document</summary>
 
 ![add product to the wishlist is signed in, I can consider adding to basket later](/documents/readme/user_story_tests/user_story_8.png)
 
@@ -536,7 +536,7 @@ views.py    |   0    | ![About wishlist_views.py file](/documents/readme/validat
 9 - **As a** site user, **I can** leave a review / rating for each product **so that** others can decide if they want to buy the product based upon my experience.
 
 <details>
-<summary>Supporting Images</summary>
+<summary>Supporting Document</summary>
 
 ![when signed in, a user can leave a review to weigh up other site users opinions](/documents/readme/user_story_tests/user_story_9.png)
 
@@ -549,7 +549,7 @@ views.py    |   0    | ![About wishlist_views.py file](/documents/readme/validat
 10 - **As a** site user, **I can** register for an account, **so that** I can create my own personal account.
 
 <details>
-<summary>Supporting Images</summary>
+<summary>Supporting Document</summary>
 
 ![sign up to the site](/documents/readme/user_story_tests/user_story_10.png)
 
@@ -560,7 +560,7 @@ views.py    |   0    | ![About wishlist_views.py file](/documents/readme/validat
 11 - **As a** site user, **I can** login/logout, **so that** I can access my personal account.
 
 <details>
-<summary>Supporting Images</summary>
+<summary>Supporting Document</summary>
 
 ![sign in and signout of my site account](/documents/readme/user_story_tests/user_story_11.png)
 
@@ -571,7 +571,7 @@ views.py    |   0    | ![About wishlist_views.py file](/documents/readme/validat
 12 - **As a** site user, **I can** recover my password, **so that** I can recover access to my personal account.
 
 <details>
-<summary>Supporting Images</summary>
+<summary>Supporting Document</summary>
 
 ![](/documents/readme/user_story_tests/FILENAME.png)
 
@@ -582,7 +582,7 @@ views.py    |   0    | ![About wishlist_views.py file](/documents/readme/validat
 13 - **As a** site user, **I can** edit my own unique profile, **so that** I can update my personal details, payment and delivery address information.
 
 <details>
-<summary>Supporting Images</summary>
+<summary>Supporting Document</summary>
 
 ![edit and save my personal information on my profile](/documents/readme/user_story_tests/user_story_13.png)
 
@@ -595,7 +595,7 @@ views.py    |   0    | ![About wishlist_views.py file](/documents/readme/validat
 14 - **As a** site user, **I can** view items in my shopping basket, **so that** I can see what I am purchasing.
 
 <details>
-<summary>Supporting Images</summary>
+<summary>Supporting Document</summary>
 
 ![add and view items in my shopping basket](/documents/readme/user_story_tests/user_story_14.png)
 
@@ -603,12 +603,12 @@ views.py    |   0    | ![About wishlist_views.py file](/documents/readme/validat
 
 &nbsp;
 
-15 - **As a** site user, **I can** adjust the number of items by product line in their shopping basket, **so that** I can purchase multiples of the same item.
+15 - **As a** site user, **I can** adjust the number of items by product line in my shopping basket, **so that** I can purchase multiples of the same item.
 
 <details>
-<summary>Supporting Images</summary>
+<summary>Supporting Document</summary>
 
-![](/documents/readme/user_story_tests/FILENAME.png)
+![adjust and remove items in my shopping basket](/documents/readme/user_story_tests/user_story_15.png)
 
 </details>
 
@@ -617,9 +617,9 @@ views.py    |   0    | ![About wishlist_views.py file](/documents/readme/validat
 16 - **As a** site user, **I can** enter payment details to make a purchase, **so that** I can make a payment.
 
 <details>
-<summary>Supporting Images</summary>
+<summary>Supporting Document</summary>
 
-![](/documents/readme/user_story_tests/FILENAME.png)
+![enter card detail and make a successful purchase](/documents/readme/user_story_tests/user_story_16.png)
 
 </details>
 
@@ -628,7 +628,7 @@ views.py    |   0    | ![About wishlist_views.py file](/documents/readme/validat
 17 - **As a** site user, **I can** receive a confirmation email following their purchase, **so that** I can confirm I made a purchase.
 
 <details>
-<summary>Supporting Images</summary>
+<summary>Supporting Document</summary>
 
 ![](/documents/readme/user_story_tests/FILENAME.png)
 
@@ -641,9 +641,10 @@ views.py    |   0    | ![About wishlist_views.py file](/documents/readme/validat
 18 - **As a** site administrator, **I can** add a product, **so that** I can add new items to the store.
 
 <details>
-<summary>Supporting Images</summary>
+<summary>Supporting Document</summary>
+NB. The image will only work if added to the AWS Bucket as this is where the deployed site's static and media files are stored.
 
-![](/documents/readme/user_story_tests/FILENAME.png)
+![store owner can add a product to the database from the frontend](/documents/readme/user_story_tests/user_story_18.png)
 
 </details>
 
@@ -652,9 +653,9 @@ views.py    |   0    | ![About wishlist_views.py file](/documents/readme/validat
 19 - **As a** site administrator, **I can** edit a product, **so that** I can change product prices, images and descriptions in the store.
 
 <details>
-<summary>Supporting Images</summary>
+<summary>Supporting Document</summary>
 
-![](/documents/readme/user_story_tests/FILENAME.png)
+![store owner can edit a product in the database from the frontend](/documents/readme/user_story_tests/user_story_19.png)
 
 </details>
 
@@ -663,9 +664,9 @@ views.py    |   0    | ![About wishlist_views.py file](/documents/readme/validat
 20 - **As a** site administrator, **I can** delete a product, **so that** I can remove items from the store.
 
 <details>
-<summary>Supporting Images</summary>
+<summary>Supporting Document</summary>
 
-![](/documents/readme/user_story_tests/FILENAME.png)
+![store owner can delete a product in the database from the frontend](/documents/readme/user_story_tests/user_story_20.png)
 
 </details>
 
