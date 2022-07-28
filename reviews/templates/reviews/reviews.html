@@ -15,19 +15,13 @@
         </div>
         <div class="col">
             <p>
-                The reviews app presents a similar problem to the newsletter app. The newsletter form object needed to
-                be
-                available to the whole site via the base.html footer (beyond the app). Therefore it was placed in a
-                context processor to act like a project level view.
+                As views are associated with a specific product, it is best to include the view logic in the products app.
             </p>
             <p>
-                Models and forms associated with the reviews app are actually to be used within the products app, more
-                specifically the product_detail template.
-            <p>
-                Rather than pass through a contect processor, just import the app object.  Template tags can do the rest...
+                If a user is authenticated they will have access to the form to post a review.
             </p>
             <p>
-                I opted to keep reviews as its own app due to separation of concern.
+                It they are unauthenticated they can only see reviews posted by other users.
             </p>
         </div>
     </div>
