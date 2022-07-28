@@ -551,7 +551,7 @@ views.py    |   0    | ![About wishlist_views.py file](/documents/readme/validat
 <details>
 <summary>Supporting Images</summary>
 
-![register for a personal account](/documents/readme/user_story_tests/user_story_10.png)
+![sign up to the site](/documents/readme/user_story_tests/user_story_10.png)
 
 </details>
 
@@ -562,7 +562,7 @@ views.py    |   0    | ![About wishlist_views.py file](/documents/readme/validat
 <details>
 <summary>Supporting Images</summary>
 
-![](/documents/readme/user_story_tests/FILENAME.png)
+![sign in and signout of my site account](/documents/readme/user_story_tests/user_story_11.png)
 
 </details>
 
@@ -584,7 +584,7 @@ views.py    |   0    | ![About wishlist_views.py file](/documents/readme/validat
 <details>
 <summary>Supporting Images</summary>
 
-![](/documents/readme/user_story_tests/FILENAME.png)
+![edit and save my personal information on my profile](/documents/readme/user_story_tests/user_story_13.png)
 
 </details>
 
@@ -592,12 +592,12 @@ views.py    |   0    | ![About wishlist_views.py file](/documents/readme/validat
 
 *EPIC - Payments & Checkout*
 
-14 - **As a** site user, **I can** view items in their shopping basket, **so that** I can see what I am purchasing.
+14 - **As a** site user, **I can** view items in my shopping basket, **so that** I can see what I am purchasing.
 
 <details>
 <summary>Supporting Images</summary>
 
-![](/documents/readme/user_story_tests/FILENAME.png)
+![add and view items in my shopping basket](/documents/readme/user_story_tests/user_story_14.png)
 
 </details>
 
