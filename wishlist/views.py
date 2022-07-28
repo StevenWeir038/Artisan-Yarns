@@ -32,6 +32,7 @@ def add_wishlist_item(request, product_id):
 
     my_wishlist = Wishlist.objects.filter(user_profile=user, product=product)
     if my_wishlist.count() >= 1:
+
         messages.info(request, f"{product.name} is already on your Wishlist!")
     else:
         Wishlist.objects.create(product=product, user_profile=user)
