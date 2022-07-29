@@ -650,12 +650,12 @@ views.py    |   0    | ![About wishlist_views.py file](/documents/readme/validat
 
 &nbsp;
 
-17 - **As a** site user, **I can** receive a confirmation email following my purchase, **so that** I can confirm I made a purchase. - STILL TO DO
+17 - **As a** site user, **I can** receive a confirmation email following my purchase, **so that** I can confirm I made a purchase.
 
 <details>
 <summary>Supporting Document</summary>
 
-![](/documents/readme/user_story_tests/FILENAME.png)
+![receiving an email after making a purchase](/documents/readme/user_story_tests/user_story_17.png)
 
 </details>
 
