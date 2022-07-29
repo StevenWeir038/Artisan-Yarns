@@ -204,6 +204,31 @@
 
 &nbsp;
 
+## Resolved Email Issue
+It's worth noting that my emails were working without issue until they weren't.
+The `settings.py` file was set up as follows and the config vars were correctly populated in Heroku.
+Pretty standard and works just fine.
+
+```python
+if 'DEVELOPMENT' in os.environ:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    DEFAULT_FROM_EMAIL = 'artisanyarns039@gmail.com'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_USE_TLS = True
+    EMAIL_PORT = 587
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+    EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
+    DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
+```
+
+To locate a different bug causing a 500 error on the deployed site, I added a new config var `DEVELOPMENT` with a value of `True` in Heroku settings.  This is because the platform defaults to `False` . So when a page throws an error, it doesn't display an info page to help troubleshoot. Just the generic one provided by the site. 
+
+As I forgot to remove this config var, the deployed site stopped using the `smtp` protocol and reverted to using `console.EmailBackend` which is used to display data in the developers terminal window rather than send or receive emails as trhe name smtp implies.
+
+The above gets me thinking.  It is necessary to also look beyond the code when solving issues as a developer.  Especially if your working with more than one platform/technology.
+
 ## Known Issues
 - Adding item to basket directly from Wishlist. This feature is intended only as a redirect but a better approach would be to add the item to the basket for the user rather than them do it from the product detail page itself.  More convenient for them.
 - variable product card heights
@@ -568,7 +593,7 @@ views.py    |   0    | ![About wishlist_views.py file](/documents/readme/validat
 
 &nbsp;
 
-12 - **As a** site user, **I can** recover my password, **so that** I can recover access to my personal account.
+12 - **As a** site user, **I can** recover my password, **so that** I can recover access to my personal account. - STILL TO DO
 
 <details>
 <summary>Supporting Document</summary>
@@ -625,7 +650,7 @@ views.py    |   0    | ![About wishlist_views.py file](/documents/readme/validat
 
 &nbsp;
 
-17 - **As a** site user, **I can** receive a confirmation email following their purchase, **so that** I can confirm I made a purchase.
+17 - **As a** site user, **I can** receive a confirmation email following my purchase, **so that** I can confirm I made a purchase. - STILL TO DO
 
 <details>
 <summary>Supporting Document</summary>
