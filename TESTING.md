@@ -471,7 +471,7 @@ views.py    |   0    | ![About wishlist_views.py file](/documents/readme/validat
 <details>
 <summary>Supporting Document</summary>
 
-![contact the site owners using a webform](/documents/readme/user_story_tests/user_story_1.png)
+![contact the site owner via email using a webform](/documents/readme/user_story_tests/user_story_1.png)
 
 </details>
 
