@@ -188,6 +188,8 @@ The category table became somewhat more redundant and served to identify clearan
 
 Best solution at this point was to add a brand and category field to the Product model.  Queries could be built of that.  This meant updating the model and making migrations again.
 
+Later in the project a `contact` model was added so the store owner can see all messages left by visitors.  They can access in the Django admin.  This supplements sending an email to the store owner when a message is left.  It is useful to store correspondance in a structured way.
+
 ## **Surface**
 ### **Color scheme**
 The development of this project fell close to the Queen's [Platinum Jubilee](https://www.royal.uk/sites/default/files/queens_platinum_jubilee_guidelines_2022.pdf).
