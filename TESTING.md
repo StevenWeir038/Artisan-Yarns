@@ -593,12 +593,12 @@ views.py    |   0    | ![About wishlist_views.py file](/documents/readme/validat
 
 &nbsp;
 
-12 - **As a** site user, **I can** recover my password, **so that** I can recover access to my personal account. - STILL TO DO
+12 - **As a** site user, **I can** recover my password, **so that** I can recover access to my personal account.
 
 <details>
 <summary>Supporting Document</summary>
 
-![](/documents/readme/user_story_tests/FILENAME.png)
+![regain access to my site account if I forgot my password](/documents/readme/user_story_tests/user_story_12.png)
 
 </details>
 
