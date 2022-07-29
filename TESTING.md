@@ -240,6 +240,7 @@ The above gets me thinking.  It is necessary to also look beyond the code when s
 &nbsp;
 
 ## Browsers
+Site viewed on Chrome, Opera and Edge browsers.  All appear similar on inspection.
 
 &nbsp;
 
@@ -247,10 +248,12 @@ The above gets me thinking.  It is necessary to also look beyond the code when s
 - Lighthouse was used to test overall performance, accessibility, best practices and SEO.
 
 Mobile
-![Lighthouse Mobile](documents/readme/lighthouse-mobile.png "Site quality assessment")
+
+![Lighthouse Mobile](documents/readme/lighthouse/lighthouse-mobile.png "Site quality assessment")
 
 Desktop
-![Lighthouse Desktop](documents/readme/lighthouse-desktop.png "Site quality assessment")
+
+![Lighthouse Desktop](documents/readme/lighthouse/lighthouse-desktop.png "Site quality assessment")
 
 &nbsp;
 
@@ -280,6 +283,21 @@ To reduce maintainence I used template tags such as `{% include 'includes/navbar
 
 The same was done for `header apps menu`, `footer-social`, `newsletter`, `help-modal` *et al*.
 
+With a few days to spare I hastity ripped up the existing header and footer setup and replaced with one of each.
+
+After doing so only a few error remained, all linked to Duplicate ID `id_email` coming from allauth password reset, signup and the contact form generated from its model.
+
+<details>
+<summary>3 files - 5 Errors all related to Duplicate ID `id_email`</summary>
+
+HTML file                                                    | Errors | Result |
+------------------------------------------------------------ | ------ | ------ |
+https://artisan-yarns.herokuapp.com/accounts/password/reset/ |   1    | ![About password reset file](/documents/readme/validation/html/password_reset_html.png)
+https://artisan-yarns.herokuapp.com/accounts/signup/         |   2    | ![About signup file](/documents/readme/validation/html/signup_html.png)
+https://artisan-yarns.herokuapp.com/contact/                 |   2    | ![About signup file](/documents/readme/validation/html/contact_html.png)
+
+</details>
+
 &nbsp;
 
 ### [CSS](https://jigsaw.w3.org/css-validator/)
@@ -287,7 +305,7 @@ The same was done for `header apps menu`, `footer-social`, `newsletter`, `help-m
 <summary>7 files - 6 Errors all related to fontawesome</summary>
 
 CSS file                                                                              | Errors | Result |
---------------------------------------------------------------------------------------|------- | ------ |
+--------------------------------------------------------------------------------------| ------ | ------ |
 base.css, home.css, products.css, basket.css, checkout.css, profile.css, wishlist.css | 6      | ![About all_files_css file](/documents/readme/validation/css/all_files_css.png)
 
 </details>
