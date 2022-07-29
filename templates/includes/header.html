@@ -9,10 +9,10 @@
         </div>
         <!-- searchbar -->
         <div class="col-10 col-sm-6 col-lg-4 search-form-container d-flex justify-content-sm-end pr-0">
-            <form id="search-form" method="GET" action="{% url 'products' %}" class="border-0 rounded w-100 h-100 d-flex justify-content-center">
+            <form id="search-form" method="GET" action="{% url 'products' %}"
+                class="border-0 rounded w-100 h-100 d-flex justify-content-center">
                 <div class="input-group gold-icon-border rounded">
-                    <input type="text" class="form-control search-form-input border-0" name="q"
-                        placeholder="Search..."
+                    <input type="text" class="form-control search-form-input border-0" name="q" placeholder="Search..."
                         aria-label="Type something and press enter or select the icon to search the site">
                     <div class="input-group-append">
                         <button class="btn btn-outline-none" type="submit">
@@ -31,17 +31,20 @@
         <!-- product nav menu (collapsible on lower resolutions) -->
         <div class="col-12 p-0">
             <nav class="navbar navbar-expand-sm p-0 m-0 fixed-top">
-                <button class="navbar-toggler float-left" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler float-left" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <i class="fa-solid fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto pl-2">
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">Products</a>
+                            <a class="nav-link" href="#" id="all-products-link" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Products</a>
                             <div class="dropdown-menu p-0 border-0" aria-labelledby="all-products-link">
                                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
-                                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By
+                                    Price</a>
                                 <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By
                                     Category</a>
                             </div>
@@ -50,11 +53,13 @@
                             <a class="nav-link" href="#" id="all-yarns-link" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">Yarns</a>
                             <div class="dropdown-menu p-0 border-0" aria-labelledby="all-yarns-link">
-                                <a href="{% url 'products' %}?category=adriafil,king_cole,new_fashion,scheepjes" class="dropdown-item ">
+                                <a href="{% url 'products' %}?category=adriafil,king_cole,new_fashion,scheepjes"
+                                    class="dropdown-item ">
                                     All Yarns</a>
                                 <a href="{% url 'products' %}?category=adriafil" class="dropdown-item">Adriafil</a>
                                 <a href="{% url 'products' %}?category=king_cole" class="dropdown-item ">King Cole</a>
-                                <a href="{% url 'products' %}?category=new_fashion" class="dropdown-item ">New Fashion</a>
+                                <a href="{% url 'products' %}?category=new_fashion" class="dropdown-item ">New
+                                    Fashion</a>
                                 <a href="{% url 'products' %}?category=scheepjes" class="dropdown-item ">Scheepjes</a>
                             </div>
                         </li>
