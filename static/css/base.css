@@ -90,6 +90,10 @@ header {
     background: rgba(var(--theme-pantone), 1);
 }
 
+.dropdown-menu {
+    z-index: 99999;
+}
+
 .dropdown a,
 li .nav-link {
     color: white;
